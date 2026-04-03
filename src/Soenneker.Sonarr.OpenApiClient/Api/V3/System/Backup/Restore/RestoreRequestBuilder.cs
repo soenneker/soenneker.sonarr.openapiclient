@@ -33,19 +33,6 @@ namespace Soenneker.Sonarr.OpenApiClient.Api.V3.System.Backup.Restore
                 return new global::Soenneker.Sonarr.OpenApiClient.Api.V3.System.Backup.Restore.Item.RestoreItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
-        /// <summary>Gets an item from the Soenneker.Sonarr.OpenApiClient.api.v3.system.backup.restore.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Sonarr.OpenApiClient.Api.V3.System.Backup.Restore.Item.RestoreItemRequestBuilder"/></returns>
-        [Obsolete("This indexer is deprecated and will be removed in the next major version. Use the one with the typed parameter instead.")]
-        public global::Soenneker.Sonarr.OpenApiClient.Api.V3.System.Backup.Restore.Item.RestoreItemRequestBuilder this[string position]
-        {
-            get
-            {
-                var urlTplParams = new Dictionary<string, object>(PathParameters);
-                if (!string.IsNullOrWhiteSpace(position)) urlTplParams.Add("id", position);
-                return new global::Soenneker.Sonarr.OpenApiClient.Api.V3.System.Backup.Restore.Item.RestoreItemRequestBuilder(urlTplParams, RequestAdapter);
-            }
-        }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Sonarr.OpenApiClient.Api.V3.System.Backup.Restore.RestoreRequestBuilder"/> and sets the default values.
         /// </summary>

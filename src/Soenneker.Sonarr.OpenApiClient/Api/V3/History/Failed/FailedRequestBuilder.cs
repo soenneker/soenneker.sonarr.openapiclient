@@ -27,19 +27,6 @@ namespace Soenneker.Sonarr.OpenApiClient.Api.V3.History.Failed
                 return new global::Soenneker.Sonarr.OpenApiClient.Api.V3.History.Failed.Item.FailedItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
-        /// <summary>Gets an item from the Soenneker.Sonarr.OpenApiClient.api.v3.history.failed.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Sonarr.OpenApiClient.Api.V3.History.Failed.Item.FailedItemRequestBuilder"/></returns>
-        [Obsolete("This indexer is deprecated and will be removed in the next major version. Use the one with the typed parameter instead.")]
-        public global::Soenneker.Sonarr.OpenApiClient.Api.V3.History.Failed.Item.FailedItemRequestBuilder this[string position]
-        {
-            get
-            {
-                var urlTplParams = new Dictionary<string, object>(PathParameters);
-                if (!string.IsNullOrWhiteSpace(position)) urlTplParams.Add("id", position);
-                return new global::Soenneker.Sonarr.OpenApiClient.Api.V3.History.Failed.Item.FailedItemRequestBuilder(urlTplParams, RequestAdapter);
-            }
-        }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Sonarr.OpenApiClient.Api.V3.History.Failed.FailedRequestBuilder"/> and sets the default values.
         /// </summary>
