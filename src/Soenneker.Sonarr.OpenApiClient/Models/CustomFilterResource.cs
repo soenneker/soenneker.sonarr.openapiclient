@@ -15,10 +15,10 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
         /// <summary>The filters property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Sonarr.OpenApiClient.Models.CustomFilterResource_filters>? Filters { get; set; }
+        public List<global::Soenneker.Sonarr.OpenApiClient.Models.CustomFilterResourceFiltersItemProperty>? Filters { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Sonarr.OpenApiClient.Models.CustomFilterResource_filters> Filters { get; set; }
+        public List<global::Soenneker.Sonarr.OpenApiClient.Models.CustomFilterResourceFiltersItemProperty> Filters { get; set; }
 #endif
         /// <summary>The id property</summary>
         public int? Id { get; set; }
@@ -56,7 +56,7 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "filters", n => { Filters = n.GetCollectionOfObjectValues<global::Soenneker.Sonarr.OpenApiClient.Models.CustomFilterResource_filters>(global::Soenneker.Sonarr.OpenApiClient.Models.CustomFilterResource_filters.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "filters", n => { Filters = n.GetCollectionOfObjectValues<global::Soenneker.Sonarr.OpenApiClient.Models.CustomFilterResourceFiltersItemProperty>(global::Soenneker.Sonarr.OpenApiClient.Models.CustomFilterResourceFiltersItemProperty.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "id", n => { Id = n.GetIntValue(); } },
                 { "label", n => { Label = n.GetStringValue(); } },
                 { "type", n => { Type = n.GetStringValue(); } },
@@ -69,7 +69,7 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Sonarr.OpenApiClient.Models.CustomFilterResource_filters>("filters", Filters);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Sonarr.OpenApiClient.Models.CustomFilterResourceFiltersItemProperty>("filters", Filters);
             writer.WriteIntValue("id", Id);
             writer.WriteStringValue("label", Label);
             writer.WriteStringValue("type", Type);

@@ -25,10 +25,10 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
         /// <summary>The data property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Sonarr.OpenApiClient.Models.HistoryResource_data? Data { get; set; }
+        public global::Soenneker.Sonarr.OpenApiClient.Models.HistoryResourceData? Data { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Sonarr.OpenApiClient.Models.HistoryResource_data Data { get; set; }
+        public global::Soenneker.Sonarr.OpenApiClient.Models.HistoryResourceData Data { get; set; }
 #endif
         /// <summary>The date property</summary>
         public DateTimeOffset? Date { get; set; }
@@ -110,7 +110,7 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
             {
                 { "customFormatScore", n => { CustomFormatScore = n.GetIntValue(); } },
                 { "customFormats", n => { CustomFormats = n.GetCollectionOfObjectValues<global::Soenneker.Sonarr.OpenApiClient.Models.CustomFormatResource>(global::Soenneker.Sonarr.OpenApiClient.Models.CustomFormatResource.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "data", n => { Data = n.GetObjectValue<global::Soenneker.Sonarr.OpenApiClient.Models.HistoryResource_data>(global::Soenneker.Sonarr.OpenApiClient.Models.HistoryResource_data.CreateFromDiscriminatorValue); } },
+                { "data", n => { Data = n.GetObjectValue<global::Soenneker.Sonarr.OpenApiClient.Models.HistoryResourceData>(global::Soenneker.Sonarr.OpenApiClient.Models.HistoryResourceData.CreateFromDiscriminatorValue); } },
                 { "date", n => { Date = n.GetDateTimeOffsetValue(); } },
                 { "downloadId", n => { DownloadId = n.GetStringValue(); } },
                 { "episode", n => { Episode = n.GetObjectValue<global::Soenneker.Sonarr.OpenApiClient.Models.EpisodeResource>(global::Soenneker.Sonarr.OpenApiClient.Models.EpisodeResource.CreateFromDiscriminatorValue); } },
@@ -134,7 +134,7 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.Sonarr.OpenApiClient.Models.CustomFormatResource>("customFormats", CustomFormats);
             writer.WriteIntValue("customFormatScore", CustomFormatScore);
-            writer.WriteObjectValue<global::Soenneker.Sonarr.OpenApiClient.Models.HistoryResource_data>("data", Data);
+            writer.WriteObjectValue<global::Soenneker.Sonarr.OpenApiClient.Models.HistoryResourceData>("data", Data);
             writer.WriteDateTimeOffsetValue("date", Date);
             writer.WriteStringValue("downloadId", DownloadId);
             writer.WriteObjectValue<global::Soenneker.Sonarr.OpenApiClient.Models.EpisodeResource>("episode", Episode);

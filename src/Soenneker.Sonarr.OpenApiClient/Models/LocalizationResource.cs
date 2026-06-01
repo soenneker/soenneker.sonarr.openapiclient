@@ -17,10 +17,10 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
         /// <summary>The strings property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Sonarr.OpenApiClient.Models.LocalizationResource_strings? Strings { get; set; }
+        public global::Soenneker.Sonarr.OpenApiClient.Models.LocalizationResourceStrings? Strings { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Sonarr.OpenApiClient.Models.LocalizationResource_strings Strings { get; set; }
+        public global::Soenneker.Sonarr.OpenApiClient.Models.LocalizationResourceStrings Strings { get; set; }
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -41,7 +41,7 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "id", n => { Id = n.GetIntValue(); } },
-                { "strings", n => { Strings = n.GetObjectValue<global::Soenneker.Sonarr.OpenApiClient.Models.LocalizationResource_strings>(global::Soenneker.Sonarr.OpenApiClient.Models.LocalizationResource_strings.CreateFromDiscriminatorValue); } },
+                { "strings", n => { Strings = n.GetObjectValue<global::Soenneker.Sonarr.OpenApiClient.Models.LocalizationResourceStrings>(global::Soenneker.Sonarr.OpenApiClient.Models.LocalizationResourceStrings.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -52,7 +52,7 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.Sonarr.OpenApiClient.Models.LocalizationResource_strings>("strings", Strings);
+            writer.WriteObjectValue<global::Soenneker.Sonarr.OpenApiClient.Models.LocalizationResourceStrings>("strings", Strings);
         }
     }
 }

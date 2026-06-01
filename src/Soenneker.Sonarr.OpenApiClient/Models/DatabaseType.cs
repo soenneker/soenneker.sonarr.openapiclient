@@ -14,7 +14,7 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
         #pragma warning restore CS1591
         [EnumMember(Value = "postgreSQL")]
         #pragma warning disable CS1591
-        PostgreSQL,
+        PostgreSql,
         #pragma warning restore CS1591
     }
 }
