@@ -65,7 +65,7 @@ namespace Soenneker.Sonarr.OpenApiClient.Api.V3.Importlist
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ImportlistRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v3/importlist{?forceSave*}", pathParameters)
+        public ImportlistRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "", pathParameters)
         {
         }
         /// <summary>
@@ -73,7 +73,7 @@ namespace Soenneker.Sonarr.OpenApiClient.Api.V3.Importlist
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ImportlistRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v3/importlist{?forceSave*}", rawUrl)
+        public ImportlistRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "", rawUrl)
         {
         }
         /// <returns>A List&lt;global::Soenneker.Sonarr.OpenApiClient.Models.ImportListResource&gt;</returns>
