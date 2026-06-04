@@ -83,7 +83,7 @@ namespace Soenneker.Sonarr.OpenApiClient.Api.V3.Release
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Sonarr.OpenApiClient.Api.V3.Release.ReleaseRequestBuilder.ReleaseRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/api/v3/release{?episodeId*,seasonNumber*,seriesId*}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
@@ -101,7 +101,7 @@ namespace Soenneker.Sonarr.OpenApiClient.Api.V3.Release
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.POST, "{+baseurl}/api/v3/release", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);

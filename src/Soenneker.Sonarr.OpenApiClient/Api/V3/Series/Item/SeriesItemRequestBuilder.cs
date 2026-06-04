@@ -96,7 +96,7 @@ namespace Soenneker.Sonarr.OpenApiClient.Api.V3.Series.Item
         public RequestInformation ToDeleteRequestInformation(Action<RequestConfiguration<global::Soenneker.Sonarr.OpenApiClient.Api.V3.Series.Item.SeriesItemRequestBuilder.SeriesItemRequestBuilderDeleteQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.DELETE, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.DELETE, "{+baseurl}/api/v3/series/{id}{?addImportListExclusion*,deleteFiles*}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
@@ -112,7 +112,7 @@ namespace Soenneker.Sonarr.OpenApiClient.Api.V3.Series.Item
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Sonarr.OpenApiClient.Api.V3.Series.Item.SeriesItemRequestBuilder.SeriesItemRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/api/v3/series/{id}{?includeSeasonImages*}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
@@ -130,7 +130,7 @@ namespace Soenneker.Sonarr.OpenApiClient.Api.V3.Series.Item
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = new RequestInformation(Method.PUT, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.PUT, "{+baseurl}/api/v3/series/{id}{?moveFiles*}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);
