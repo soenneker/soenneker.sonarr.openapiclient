@@ -22,7 +22,7 @@ namespace Soenneker.Sonarr.OpenApiClient.Api.V3.Manualimport
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ManualimportRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "", pathParameters)
+        public ManualimportRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v3/manualimport{?downloadId*,filterExistingFiles*,folder*,seasonNumber*,seriesId*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Sonarr.OpenApiClient.Api.V3.Manualimport
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ManualimportRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "", rawUrl)
+        public ManualimportRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v3/manualimport{?downloadId*,filterExistingFiles*,folder*,seasonNumber*,seriesId*}", rawUrl)
         {
         }
         /// <returns>A List&lt;global::Soenneker.Sonarr.OpenApiClient.Models.ManualImportResource&gt;</returns>
@@ -77,7 +77,7 @@ namespace Soenneker.Sonarr.OpenApiClient.Api.V3.Manualimport
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Sonarr.OpenApiClient.Api.V3.Manualimport.ManualimportRequestBuilder.ManualimportRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/api/v3/manualimport{?downloadId*,filterExistingFiles*,folder*,seasonNumber*,seriesId*}", PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
@@ -95,7 +95,7 @@ namespace Soenneker.Sonarr.OpenApiClient.Api.V3.Manualimport
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = new RequestInformation(Method.POST, "{+baseurl}/api/v3/manualimport", PathParameters);
+            var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);
