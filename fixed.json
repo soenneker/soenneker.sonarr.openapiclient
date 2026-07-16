@@ -9438,7 +9438,7 @@
             "nullable": true
           },
           "value": {
-            "nullable": true
+            "$ref": "#/components/schemas/FieldValue"
           },
           "type": {
             "type": "string",
@@ -12158,10 +12158,10 @@
             "type": "boolean"
           },
           "required": {
-            "nullable": true
+            "$ref": "#/components/schemas/ReleaseProfileResourceRequired"
           },
           "ignored": {
-            "nullable": true
+            "$ref": "#/components/schemas/ReleaseProfileResourceIgnored"
           },
           "indexerId": {
             "type": "integer",
@@ -14973,6 +14973,15 @@
         "additionalProperties": {
           "$ref": "#/components/schemas/CustomFilterResourceFiltersItemPropertyAdditionalProperties"
         }
+      },
+      "FieldValue": {
+        "type": "object"
+      },
+      "ReleaseProfileResourceRequired": {
+        "type": "object"
+      },
+      "ReleaseProfileResourceIgnored": {
+        "type": "object"
       },
       "CustomFilterResourceFiltersItemAdditionalProperties": {
         "type": "object"

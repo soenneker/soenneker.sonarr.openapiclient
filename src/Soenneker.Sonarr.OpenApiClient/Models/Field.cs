@@ -119,10 +119,10 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
         /// <summary>The value property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Value { get; set; }
+        public global::Soenneker.Sonarr.OpenApiClient.Models.FieldValue? Value { get; set; }
 #nullable restore
 #else
-        public UntypedNode Value { get; set; }
+        public global::Soenneker.Sonarr.OpenApiClient.Models.FieldValue Value { get; set; }
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -158,7 +158,7 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
                 { "selectOptionsProviderAction", n => { SelectOptionsProviderAction = n.GetStringValue(); } },
                 { "type", n => { Type = n.GetStringValue(); } },
                 { "unit", n => { Unit = n.GetStringValue(); } },
-                { "value", n => { Value = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "value", n => { Value = n.GetObjectValue<global::Soenneker.Sonarr.OpenApiClient.Models.FieldValue>(global::Soenneker.Sonarr.OpenApiClient.Models.FieldValue.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -184,7 +184,7 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
             writer.WriteStringValue("selectOptionsProviderAction", SelectOptionsProviderAction);
             writer.WriteStringValue("type", Type);
             writer.WriteStringValue("unit", Unit);
-            writer.WriteObjectValue<UntypedNode>("value", Value);
+            writer.WriteObjectValue<global::Soenneker.Sonarr.OpenApiClient.Models.FieldValue>("value", Value);
         }
     }
 }

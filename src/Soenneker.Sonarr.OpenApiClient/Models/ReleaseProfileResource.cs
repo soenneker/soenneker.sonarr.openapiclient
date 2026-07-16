@@ -19,10 +19,10 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
         /// <summary>The ignored property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Ignored { get; set; }
+        public global::Soenneker.Sonarr.OpenApiClient.Models.ReleaseProfileResourceIgnored? Ignored { get; set; }
 #nullable restore
 #else
-        public UntypedNode Ignored { get; set; }
+        public global::Soenneker.Sonarr.OpenApiClient.Models.ReleaseProfileResourceIgnored Ignored { get; set; }
 #endif
         /// <summary>The indexerId property</summary>
         public int? IndexerId { get; set; }
@@ -37,10 +37,10 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
         /// <summary>The required property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Required { get; set; }
+        public global::Soenneker.Sonarr.OpenApiClient.Models.ReleaseProfileResourceRequired? Required { get; set; }
 #nullable restore
 #else
-        public UntypedNode Required { get; set; }
+        public global::Soenneker.Sonarr.OpenApiClient.Models.ReleaseProfileResourceRequired Required { get; set; }
 #endif
         /// <summary>The tags property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -70,10 +70,10 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
             {
                 { "enabled", n => { Enabled = n.GetBoolValue(); } },
                 { "id", n => { Id = n.GetIntValue(); } },
-                { "ignored", n => { Ignored = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "ignored", n => { Ignored = n.GetObjectValue<global::Soenneker.Sonarr.OpenApiClient.Models.ReleaseProfileResourceIgnored>(global::Soenneker.Sonarr.OpenApiClient.Models.ReleaseProfileResourceIgnored.CreateFromDiscriminatorValue); } },
                 { "indexerId", n => { IndexerId = n.GetIntValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "required", n => { Required = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "required", n => { Required = n.GetObjectValue<global::Soenneker.Sonarr.OpenApiClient.Models.ReleaseProfileResourceRequired>(global::Soenneker.Sonarr.OpenApiClient.Models.ReleaseProfileResourceRequired.CreateFromDiscriminatorValue); } },
                 { "tags", n => { Tags = n.GetCollectionOfPrimitiveValues<int?>()?.AsList(); } },
             };
         }
@@ -86,10 +86,10 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("enabled", Enabled);
             writer.WriteIntValue("id", Id);
-            writer.WriteObjectValue<UntypedNode>("ignored", Ignored);
+            writer.WriteObjectValue<global::Soenneker.Sonarr.OpenApiClient.Models.ReleaseProfileResourceIgnored>("ignored", Ignored);
             writer.WriteIntValue("indexerId", IndexerId);
             writer.WriteStringValue("name", Name);
-            writer.WriteObjectValue<UntypedNode>("required", Required);
+            writer.WriteObjectValue<global::Soenneker.Sonarr.OpenApiClient.Models.ReleaseProfileResourceRequired>("required", Required);
             writer.WriteCollectionOfPrimitiveValues<int?>("tags", Tags);
         }
     }
