@@ -45,20 +45,20 @@ namespace Soenneker.Sonarr.OpenApiClient.Api.V3.Filesystem
         public FilesystemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v3/filesystem{?allowFoldersWithoutTrailingSlashes*,includeFiles*,path*}", rawUrl)
         {
         }
-        /// <returns>A <see cref="global::Soenneker.Sonarr.OpenApiClient.Models.DefaultResponseResponseJson28"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Sonarr.OpenApiClient.Models.GetApiV3Filesystem200Response"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Sonarr.OpenApiClient.Models.DefaultResponseResponseJson28?> GetAsync(Action<RequestConfiguration<global::Soenneker.Sonarr.OpenApiClient.Api.V3.Filesystem.FilesystemRequestBuilder.FilesystemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Sonarr.OpenApiClient.Models.GetApiV3Filesystem200Response?> GetAsync(Action<RequestConfiguration<global::Soenneker.Sonarr.OpenApiClient.Api.V3.Filesystem.FilesystemRequestBuilder.FilesystemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Sonarr.OpenApiClient.Models.DefaultResponseResponseJson28> GetAsync(Action<RequestConfiguration<global::Soenneker.Sonarr.OpenApiClient.Api.V3.Filesystem.FilesystemRequestBuilder.FilesystemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Sonarr.OpenApiClient.Models.GetApiV3Filesystem200Response> GetAsync(Action<RequestConfiguration<global::Soenneker.Sonarr.OpenApiClient.Api.V3.Filesystem.FilesystemRequestBuilder.FilesystemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Sonarr.OpenApiClient.Models.DefaultResponseResponseJson28>(requestInfo, global::Soenneker.Sonarr.OpenApiClient.Models.DefaultResponseResponseJson28.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Sonarr.OpenApiClient.Models.GetApiV3Filesystem200Response>(requestInfo, global::Soenneker.Sonarr.OpenApiClient.Models.GetApiV3Filesystem200Response.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
