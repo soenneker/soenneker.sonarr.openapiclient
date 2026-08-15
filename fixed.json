@@ -9617,7 +9617,7 @@
             "$ref": "#/components/schemas/EpisodeHistoryEventType"
           },
           "data": {
-            "$ref": "#/components/schemas/HistoryResourceData"
+            "$ref": "#/components/schemas/HistoryResourceDataProperty"
           },
           "episode": {
             "$ref": "#/components/schemas/EpisodeResource"
@@ -10415,7 +10415,7 @@
             "format": "int32"
           },
           "strings": {
-            "$ref": "#/components/schemas/LocalizationResourceStrings"
+            "$ref": "#/components/schemas/LocalizationResourceStringsProperty"
           }
         },
         "additionalProperties": false
@@ -14976,6 +14976,20 @@
       },
       "FieldValue": {
         "type": "object"
+      },
+      "HistoryResourceDataProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string",
+          "nullable": true
+        }
+      },
+      "LocalizationResourceStringsProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string",
+          "nullable": true
+        }
       },
       "ReleaseProfileResourceRequired": {
         "type": "object"
