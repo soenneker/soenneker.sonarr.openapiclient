@@ -12,6 +12,14 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
     public partial class HostConfigResource : IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>The allowedHosts property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? AllowedHosts { get; set; }
+#nullable restore
+#else
+        public string AllowedHosts { get; set; }
+#endif
         /// <summary>The analyticsEnabled property</summary>
         public bool? AnalyticsEnabled { get; set; }
         /// <summary>The apiKey property</summary>
@@ -174,6 +182,14 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
         public int? SslPort { get; set; }
         /// <summary>The trustCgnatIpAddresses property</summary>
         public bool? TrustCgnatIpAddresses { get; set; }
+        /// <summary>The trustedNetworks property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? TrustedNetworks { get; set; }
+#nullable restore
+#else
+        public string TrustedNetworks { get; set; }
+#endif
         /// <summary>The updateAutomatically property</summary>
         public bool? UpdateAutomatically { get; set; }
         /// <summary>The updateMechanism property</summary>
@@ -220,6 +236,7 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "allowedHosts", n => { AllowedHosts = n.GetStringValue(); } },
                 { "analyticsEnabled", n => { AnalyticsEnabled = n.GetBoolValue(); } },
                 { "apiKey", n => { ApiKey = n.GetStringValue(); } },
                 { "applicationUrl", n => { ApplicationUrl = n.GetStringValue(); } },
@@ -253,6 +270,7 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
                 { "sslCertPath", n => { SslCertPath = n.GetStringValue(); } },
                 { "sslPort", n => { SslPort = n.GetIntValue(); } },
                 { "trustCgnatIpAddresses", n => { TrustCgnatIpAddresses = n.GetBoolValue(); } },
+                { "trustedNetworks", n => { TrustedNetworks = n.GetStringValue(); } },
                 { "updateAutomatically", n => { UpdateAutomatically = n.GetBoolValue(); } },
                 { "updateMechanism", n => { UpdateMechanism = n.GetEnumValue<global::Soenneker.Sonarr.OpenApiClient.Models.UpdateMechanism>(); } },
                 { "updateScriptPath", n => { UpdateScriptPath = n.GetStringValue(); } },
@@ -267,6 +285,7 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteStringValue("allowedHosts", AllowedHosts);
             writer.WriteBoolValue("analyticsEnabled", AnalyticsEnabled);
             writer.WriteStringValue("apiKey", ApiKey);
             writer.WriteStringValue("applicationUrl", ApplicationUrl);
@@ -300,6 +319,7 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
             writer.WriteStringValue("sslCertPath", SslCertPath);
             writer.WriteIntValue("sslPort", SslPort);
             writer.WriteBoolValue("trustCgnatIpAddresses", TrustCgnatIpAddresses);
+            writer.WriteStringValue("trustedNetworks", TrustedNetworks);
             writer.WriteBoolValue("updateAutomatically", UpdateAutomatically);
             writer.WriteEnumValue<global::Soenneker.Sonarr.OpenApiClient.Models.UpdateMechanism>("updateMechanism", UpdateMechanism);
             writer.WriteStringValue("updateScriptPath", UpdateScriptPath);
