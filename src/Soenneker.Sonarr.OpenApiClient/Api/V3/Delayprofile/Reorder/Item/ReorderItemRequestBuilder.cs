@@ -79,8 +79,10 @@ namespace Soenneker.Sonarr.OpenApiClient.Api.V3.Delayprofile.Reorder.Item
         public partial class ReorderItemRequestBuilderPutQueryParameters 
         #pragma warning restore CS1591
         {
+            #pragma warning disable CS1591
             [QueryParameter("after")]
             public int? After { get; set; }
+            #pragma warning restore CS1591
         }
     }
 }

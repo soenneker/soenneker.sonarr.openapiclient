@@ -79,10 +79,14 @@ namespace Soenneker.Sonarr.OpenApiClient.Api.V3.Rename
         public partial class RenameRequestBuilderGetQueryParameters 
         #pragma warning restore CS1591
         {
+            #pragma warning disable CS1591
             [QueryParameter("seasonNumber")]
             public int? SeasonNumber { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
             [QueryParameter("seriesId")]
             public int? SeriesId { get; set; }
+            #pragma warning restore CS1591
         }
     }
 }

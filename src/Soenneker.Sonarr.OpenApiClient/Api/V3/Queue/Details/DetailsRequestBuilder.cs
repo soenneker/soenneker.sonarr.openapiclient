@@ -81,19 +81,29 @@ namespace Soenneker.Sonarr.OpenApiClient.Api.V3.Queue.Details
         {
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
+            #pragma warning disable CS1591
             [QueryParameter("episodeIds")]
             public int?[]? EpisodeIds { get; set; }
+            #pragma warning restore CS1591
 #nullable restore
 #else
+            #pragma warning disable CS1591
             [QueryParameter("episodeIds")]
             public int?[] EpisodeIds { get; set; }
+            #pragma warning restore CS1591
 #endif
+            #pragma warning disable CS1591
             [QueryParameter("includeEpisode")]
             public bool? IncludeEpisode { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
             [QueryParameter("includeSeries")]
             public bool? IncludeSeries { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
             [QueryParameter("seriesId")]
             public int? SeriesId { get; set; }
+            #pragma warning restore CS1591
         }
     }
 }

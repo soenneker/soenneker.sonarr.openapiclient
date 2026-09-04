@@ -88,18 +88,26 @@ namespace Soenneker.Sonarr.OpenApiClient.Api.V3.Filesystem
         public partial class FilesystemRequestBuilderGetQueryParameters 
         #pragma warning restore CS1591
         {
+            #pragma warning disable CS1591
             [QueryParameter("allowFoldersWithoutTrailingSlashes")]
             public bool? AllowFoldersWithoutTrailingSlashes { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
             [QueryParameter("includeFiles")]
             public bool? IncludeFiles { get; set; }
+            #pragma warning restore CS1591
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
+            #pragma warning disable CS1591
             [QueryParameter("path")]
             public string? Path { get; set; }
+            #pragma warning restore CS1591
 #nullable restore
 #else
+            #pragma warning disable CS1591
             [QueryParameter("path")]
             public string Path { get; set; }
+            #pragma warning restore CS1591
 #endif
         }
     }

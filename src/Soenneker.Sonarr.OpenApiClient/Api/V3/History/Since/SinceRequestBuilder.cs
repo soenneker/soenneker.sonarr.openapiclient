@@ -79,14 +79,22 @@ namespace Soenneker.Sonarr.OpenApiClient.Api.V3.History.Since
         public partial class SinceRequestBuilderGetQueryParameters 
         #pragma warning restore CS1591
         {
+            #pragma warning disable CS1591
             [QueryParameter("date")]
             public DateTimeOffset? Date { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
             [QueryParameter("eventType")]
             public global::Soenneker.Sonarr.OpenApiClient.Models.EpisodeHistoryEventType? EventType { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
             [QueryParameter("includeEpisode")]
             public bool? IncludeEpisode { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
             [QueryParameter("includeSeries")]
             public bool? IncludeSeries { get; set; }
+            #pragma warning restore CS1591
         }
     }
 }

@@ -82,14 +82,22 @@ namespace Soenneker.Sonarr.OpenApiClient.Api.V3.Queue.Bulk
         public partial class BulkRequestBuilderDeleteQueryParameters 
         #pragma warning restore CS1591
         {
+            #pragma warning disable CS1591
             [QueryParameter("blocklist")]
             public bool? Blocklist { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
             [QueryParameter("changeCategory")]
             public bool? ChangeCategory { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
             [QueryParameter("removeFromClient")]
             public bool? RemoveFromClient { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
             [QueryParameter("skipRedownload")]
             public bool? SkipRedownload { get; set; }
+            #pragma warning restore CS1591
         }
     }
 }

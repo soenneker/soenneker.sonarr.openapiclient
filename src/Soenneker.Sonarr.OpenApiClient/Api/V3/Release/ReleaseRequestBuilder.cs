@@ -120,12 +120,18 @@ namespace Soenneker.Sonarr.OpenApiClient.Api.V3.Release
         public partial class ReleaseRequestBuilderGetQueryParameters 
         #pragma warning restore CS1591
         {
+            #pragma warning disable CS1591
             [QueryParameter("episodeId")]
             public int? EpisodeId { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
             [QueryParameter("seasonNumber")]
             public int? SeasonNumber { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
             [QueryParameter("seriesId")]
             public int? SeriesId { get; set; }
+            #pragma warning restore CS1591
         }
     }
 }

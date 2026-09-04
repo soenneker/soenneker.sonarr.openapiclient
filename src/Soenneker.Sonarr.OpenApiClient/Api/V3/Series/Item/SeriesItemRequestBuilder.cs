@@ -150,26 +150,34 @@ namespace Soenneker.Sonarr.OpenApiClient.Api.V3.Series.Item
         public partial class SeriesItemRequestBuilderDeleteQueryParameters 
         #pragma warning restore CS1591
         {
+            #pragma warning disable CS1591
             [QueryParameter("addImportListExclusion")]
             public bool? AddImportListExclusion { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
             [QueryParameter("deleteFiles")]
             public bool? DeleteFiles { get; set; }
+            #pragma warning restore CS1591
         }
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         #pragma warning disable CS1591
         public partial class SeriesItemRequestBuilderGetQueryParameters 
         #pragma warning restore CS1591
         {
+            #pragma warning disable CS1591
             [QueryParameter("includeSeasonImages")]
             public bool? IncludeSeasonImages { get; set; }
+            #pragma warning restore CS1591
         }
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         #pragma warning disable CS1591
         public partial class SeriesItemRequestBuilderPutQueryParameters 
         #pragma warning restore CS1591
         {
+            #pragma warning disable CS1591
             [QueryParameter("moveFiles")]
             public bool? MoveFiles { get; set; }
+            #pragma warning restore CS1591
         }
     }
 }

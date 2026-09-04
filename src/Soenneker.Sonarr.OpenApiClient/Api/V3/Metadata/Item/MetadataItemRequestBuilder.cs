@@ -144,8 +144,10 @@ namespace Soenneker.Sonarr.OpenApiClient.Api.V3.Metadata.Item
         public partial class MetadataItemRequestBuilderPutQueryParameters 
         #pragma warning restore CS1591
         {
+            #pragma warning disable CS1591
             [QueryParameter("forceSave")]
             public bool? ForceSave { get; set; }
+            #pragma warning restore CS1591
         }
     }
 }

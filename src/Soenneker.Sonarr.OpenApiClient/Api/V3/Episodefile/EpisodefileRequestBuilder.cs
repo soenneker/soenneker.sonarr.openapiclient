@@ -106,15 +106,21 @@ namespace Soenneker.Sonarr.OpenApiClient.Api.V3.Episodefile
         {
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
+            #pragma warning disable CS1591
             [QueryParameter("episodeFileIds")]
             public int?[]? EpisodeFileIds { get; set; }
+            #pragma warning restore CS1591
 #nullable restore
 #else
+            #pragma warning disable CS1591
             [QueryParameter("episodeFileIds")]
             public int?[] EpisodeFileIds { get; set; }
+            #pragma warning restore CS1591
 #endif
+            #pragma warning disable CS1591
             [QueryParameter("seriesId")]
             public int? SeriesId { get; set; }
+            #pragma warning restore CS1591
         }
     }
 }

@@ -146,10 +146,14 @@ namespace Soenneker.Sonarr.OpenApiClient.Api.V3.Series
         public partial class SeriesRequestBuilderGetQueryParameters 
         #pragma warning restore CS1591
         {
+            #pragma warning disable CS1591
             [QueryParameter("includeSeasonImages")]
             public bool? IncludeSeasonImages { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
             [QueryParameter("tvdbId")]
             public int? TvdbId { get; set; }
+            #pragma warning restore CS1591
         }
     }
 }

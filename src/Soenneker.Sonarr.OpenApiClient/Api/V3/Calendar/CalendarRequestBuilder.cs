@@ -92,27 +92,43 @@ namespace Soenneker.Sonarr.OpenApiClient.Api.V3.Calendar
         public partial class CalendarRequestBuilderGetQueryParameters 
         #pragma warning restore CS1591
         {
+            #pragma warning disable CS1591
             [QueryParameter("end")]
             public DateTimeOffset? End { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
             [QueryParameter("includeEpisodeFile")]
             public bool? IncludeEpisodeFile { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
             [QueryParameter("includeEpisodeImages")]
             public bool? IncludeEpisodeImages { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
             [QueryParameter("includeSeries")]
             public bool? IncludeSeries { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
             [QueryParameter("start")]
             public DateTimeOffset? Start { get; set; }
+            #pragma warning restore CS1591
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
+            #pragma warning disable CS1591
             [QueryParameter("tags")]
             public string? Tags { get; set; }
+            #pragma warning restore CS1591
 #nullable restore
 #else
+            #pragma warning disable CS1591
             [QueryParameter("tags")]
             public string Tags { get; set; }
+            #pragma warning restore CS1591
 #endif
+            #pragma warning disable CS1591
             [QueryParameter("unmonitored")]
             public bool? Unmonitored { get; set; }
+            #pragma warning restore CS1591
         }
     }
 }

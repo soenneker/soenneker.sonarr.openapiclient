@@ -82,8 +82,10 @@ namespace Soenneker.Sonarr.OpenApiClient.Api.V3.Episode.Monitor
         public partial class MonitorRequestBuilderPutQueryParameters 
         #pragma warning restore CS1591
         {
+            #pragma warning disable CS1591
             [QueryParameter("includeImages")]
             public bool? IncludeImages { get; set; }
+            #pragma warning restore CS1591
         }
     }
 }

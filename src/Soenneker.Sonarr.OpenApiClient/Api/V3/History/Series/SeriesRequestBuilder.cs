@@ -79,16 +79,26 @@ namespace Soenneker.Sonarr.OpenApiClient.Api.V3.History.Series
         public partial class SeriesRequestBuilderGetQueryParameters 
         #pragma warning restore CS1591
         {
+            #pragma warning disable CS1591
             [QueryParameter("eventType")]
             public global::Soenneker.Sonarr.OpenApiClient.Models.EpisodeHistoryEventType? EventType { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
             [QueryParameter("includeEpisode")]
             public bool? IncludeEpisode { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
             [QueryParameter("includeSeries")]
             public bool? IncludeSeries { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
             [QueryParameter("seasonNumber")]
             public int? SeasonNumber { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
             [QueryParameter("seriesId")]
             public int? SeriesId { get; set; }
+            #pragma warning restore CS1591
         }
     }
 }

@@ -82,8 +82,10 @@ namespace Soenneker.Sonarr.OpenApiClient.Api.V3.Notification.Test
         public partial class TestRequestBuilderPostQueryParameters 
         #pragma warning restore CS1591
         {
+            #pragma warning disable CS1591
             [QueryParameter("forceTest")]
             public bool? ForceTest { get; set; }
+            #pragma warning restore CS1591
         }
     }
 }

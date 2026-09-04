@@ -144,8 +144,10 @@ namespace Soenneker.Sonarr.OpenApiClient.Api.V3.Indexer.Item
         public partial class IndexerItemRequestBuilderPutQueryParameters 
         #pragma warning restore CS1591
         {
+            #pragma warning disable CS1591
             [QueryParameter("forceSave")]
             public bool? ForceSave { get; set; }
+            #pragma warning restore CS1591
         }
     }
 }
