@@ -18,21 +18,7 @@
           "enum": [
             "http",
             "https"
-          ],
-          "x-ms-enum": {
-            "name": "GeneratedEnum",
-            "modelAsString": false,
-            "values": [
-              {
-                "value": "http",
-                "name": "Http"
-              },
-              {
-                "value": "https",
-                "name": "Https"
-              }
-            ]
-          }
+          ]
         },
         "hostpath": {
           "default": "localhost:8989"
@@ -494,6 +480,11 @@
               }
             },
             "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BlocklistBulkResource"
+              }
+            },
+            "application/*\u002Bjson": {
               "schema": {
                 "$ref": "#/components/schemas/BlocklistBulkResource"
               }
@@ -2721,6 +2712,11 @@
               "schema": {
                 "$ref": "#/components/schemas/HostConfigResource"
               }
+            },
+            "application/*\u002Bjson": {
+              "schema": {
+                "$ref": "#/components/schemas/HostConfigResource"
+              }
             }
           }
         },
@@ -3403,6 +3399,11 @@
               }
             },
             "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ImportListExclusionBulkResource"
+              }
+            },
+            "application/*\u002Bjson": {
               "schema": {
                 "$ref": "#/components/schemas/ImportListExclusionBulkResource"
               }
@@ -4875,6 +4876,11 @@
               "schema": {
                 "$ref": "#/components/schemas/NamingConfigResource"
               }
+            },
+            "application/*\u002Bjson": {
+              "schema": {
+                "$ref": "#/components/schemas/NamingConfigResource"
+              }
             }
           }
         },
@@ -5394,6 +5400,11 @@
               "schema": {
                 "$ref": "#/components/schemas/QualityDefinitionResource"
               }
+            },
+            "application/*\u002Bjson": {
+              "schema": {
+                "$ref": "#/components/schemas/QualityDefinitionResource"
+              }
             }
           }
         },
@@ -5496,6 +5507,11 @@
             "text/json": {
               "schema": {
                 "$ref": "#/components/schemas/PutApiV3QualitydefinitionUpdateRequestRequestBody"
+              }
+            },
+            "application/*\u002Bjson": {
+              "schema": {
+                "$ref": "#/components/schemas/PutApiV3QualitydefinitionUpdateMediaRequestRequestBody"
               }
             }
           }
@@ -5828,6 +5844,11 @@
               }
             },
             "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/QueueBulkResource"
+              }
+            },
+            "application/*\u002Bjson": {
               "schema": {
                 "$ref": "#/components/schemas/QueueBulkResource"
               }
@@ -6175,6 +6196,11 @@
               "schema": {
                 "$ref": "#/components/schemas/ReleaseProfileResource"
               }
+            },
+            "application/*\u002Bjson": {
+              "schema": {
+                "$ref": "#/components/schemas/ReleaseProfileResource"
+              }
             }
           }
         },
@@ -6276,6 +6302,11 @@
               }
             },
             "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReleaseProfileResource"
+              }
+            },
+            "application/*\u002Bjson": {
               "schema": {
                 "$ref": "#/components/schemas/ReleaseProfileResource"
               }
@@ -6477,6 +6508,11 @@
               }
             },
             "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RemotePathMappingResource"
+              }
+            },
+            "application/*\u002Bjson": {
               "schema": {
                 "$ref": "#/components/schemas/RemotePathMappingResource"
               }
@@ -6910,6 +6946,11 @@
               "schema": {
                 "$ref": "#/components/schemas/SeriesEditorResource"
               }
+            },
+            "application/*\u002Bjson": {
+              "schema": {
+                "$ref": "#/components/schemas/SeriesEditorResource"
+              }
             }
           }
         },
@@ -6932,6 +6973,11 @@
               }
             },
             "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SeriesEditorResource"
+              }
+            },
+            "application/*\u002Bjson": {
               "schema": {
                 "$ref": "#/components/schemas/SeriesEditorResource"
               }
@@ -6985,6 +7031,11 @@
             "text/json": {
               "schema": {
                 "$ref": "#/components/schemas/PostApiV3SeriesImportRequestRequestBody"
+              }
+            },
+            "application/*\u002Bjson": {
+              "schema": {
+                "$ref": "#/components/schemas/PostApiV3SeriesImportMediaRequestRequestBody"
               }
             }
           }
@@ -14018,6 +14069,12 @@
           "$ref": "#/components/schemas/QualityDefinitionResource"
         }
       },
+      "PutApiV3QualitydefinitionUpdateMediaRequestRequestBody": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/QualityDefinitionResource"
+        }
+      },
       "GetApiV3Qualityprofile200ResponseSchema": {
         "type": "array",
         "items": {
@@ -14103,6 +14160,12 @@
         }
       },
       "PostApiV3SeriesImportRequestRequestBody": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/SeriesResource"
+        }
+      },
+      "PostApiV3SeriesImportMediaRequestRequestBody": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/SeriesResource"
