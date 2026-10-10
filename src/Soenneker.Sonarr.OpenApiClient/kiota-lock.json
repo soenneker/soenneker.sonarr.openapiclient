@@ -2,7 +2,7 @@
   "descriptionHash": "7D580FAD95422652CFD9C8989C421D904D8A85C574D8025C44E863E9CFC787CE18017B57D672DA271ABB834681B75B2F38974876AEAD7B5AD97AF0DFFF675B16",
   "descriptionLocation": "../../fixed.json",
   "lockFileVersion": "1.0.0",
-  "kiotaVersion": "1.35.0",
+  "kiotaVersion": "1.36.0",
   "clientClassName": "SonarrOpenApiClient",
   "typeAccessModifier": "Public",
   "clientNamespaceName": "Soenneker.Sonarr.OpenApiClient",
