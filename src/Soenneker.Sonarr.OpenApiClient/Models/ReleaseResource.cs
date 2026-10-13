@@ -250,6 +250,14 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
         public bool? SceneSource { get; set; }
         /// <summary>The seasonNumber property</summary>
         public int? SeasonNumber { get; set; }
+        /// <summary>The seasonNumbers property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<int?>? SeasonNumbers { get; set; }
+#nullable restore
+#else
+        public List<int?> SeasonNumbers { get; set; }
+#endif
         /// <summary>The seeders property</summary>
         public int? Seeders { get; set; }
         /// <summary>The seriesId property</summary>
@@ -358,6 +366,7 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
                 { "sceneMapping", n => { SceneMapping = n.GetObjectValue<global::Soenneker.Sonarr.OpenApiClient.Models.AlternateTitleResource>(global::Soenneker.Sonarr.OpenApiClient.Models.AlternateTitleResource.CreateFromDiscriminatorValue); } },
                 { "sceneSource", n => { SceneSource = n.GetBoolValue(); } },
                 { "seasonNumber", n => { SeasonNumber = n.GetIntValue(); } },
+                { "seasonNumbers", n => { SeasonNumbers = n.GetCollectionOfPrimitiveValues<int?>()?.AsList(); } },
                 { "seeders", n => { Seeders = n.GetIntValue(); } },
                 { "seriesId", n => { SeriesId = n.GetIntValue(); } },
                 { "seriesTitle", n => { SeriesTitle = n.GetStringValue(); } },
@@ -428,6 +437,7 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Sonarr.OpenApiClient.Models.AlternateTitleResource>("sceneMapping", SceneMapping);
             writer.WriteBoolValue("sceneSource", SceneSource);
             writer.WriteIntValue("seasonNumber", SeasonNumber);
+            writer.WriteCollectionOfPrimitiveValues<int?>("seasonNumbers", SeasonNumbers);
             writer.WriteIntValue("seeders", Seeders);
             writer.WriteIntValue("seriesId", SeriesId);
             writer.WriteStringValue("seriesTitle", SeriesTitle);

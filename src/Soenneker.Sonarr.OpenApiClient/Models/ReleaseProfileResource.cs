@@ -12,8 +12,22 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
     public partial class ReleaseProfileResource : IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>The airDateGracePeriod property</summary>
+        public int? AirDateGracePeriod { get; set; }
+        /// <summary>The airDateRestriction property</summary>
+        public bool? AirDateRestriction { get; set; }
+        /// <summary>The allowSeasonPackWithoutAllEpisodesAired property</summary>
+        public bool? AllowSeasonPackWithoutAllEpisodesAired { get; set; }
         /// <summary>The enabled property</summary>
         public bool? Enabled { get; set; }
+        /// <summary>The excludedTags property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<int?>? ExcludedTags { get; set; }
+#nullable restore
+#else
+        public List<int?> ExcludedTags { get; set; }
+#endif
         /// <summary>The id property</summary>
         public int? Id { get; set; }
         /// <summary>The ignored property</summary>
@@ -68,7 +82,11 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "airDateGracePeriod", n => { AirDateGracePeriod = n.GetIntValue(); } },
+                { "airDateRestriction", n => { AirDateRestriction = n.GetBoolValue(); } },
+                { "allowSeasonPackWithoutAllEpisodesAired", n => { AllowSeasonPackWithoutAllEpisodesAired = n.GetBoolValue(); } },
                 { "enabled", n => { Enabled = n.GetBoolValue(); } },
+                { "excludedTags", n => { ExcludedTags = n.GetCollectionOfPrimitiveValues<int?>()?.AsList(); } },
                 { "id", n => { Id = n.GetIntValue(); } },
                 { "ignored", n => { Ignored = n.GetObjectValue<global::Soenneker.Sonarr.OpenApiClient.Models.ReleaseProfileResourceIgnored>(global::Soenneker.Sonarr.OpenApiClient.Models.ReleaseProfileResourceIgnored.CreateFromDiscriminatorValue); } },
                 { "indexerId", n => { IndexerId = n.GetIntValue(); } },
@@ -84,7 +102,11 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteIntValue("airDateGracePeriod", AirDateGracePeriod);
+            writer.WriteBoolValue("airDateRestriction", AirDateRestriction);
+            writer.WriteBoolValue("allowSeasonPackWithoutAllEpisodesAired", AllowSeasonPackWithoutAllEpisodesAired);
             writer.WriteBoolValue("enabled", Enabled);
+            writer.WriteCollectionOfPrimitiveValues<int?>("excludedTags", ExcludedTags);
             writer.WriteIntValue("id", Id);
             writer.WriteObjectValue<global::Soenneker.Sonarr.OpenApiClient.Models.ReleaseProfileResourceIgnored>("ignored", Ignored);
             writer.WriteIntValue("indexerId", IndexerId);

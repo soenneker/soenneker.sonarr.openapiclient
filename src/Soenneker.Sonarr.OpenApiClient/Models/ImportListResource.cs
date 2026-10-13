@@ -56,6 +56,14 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
 #else
         public string InfoLink { get; set; }
 #endif
+        /// <summary>The language property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Sonarr.OpenApiClient.Models.Language? Language { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Sonarr.OpenApiClient.Models.Language Language { get; set; }
+#endif
         /// <summary>The listOrder property</summary>
         public int? ListOrder { get; set; }
         /// <summary>The listType property</summary>
@@ -112,6 +120,8 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
         public global::Soenneker.Sonarr.OpenApiClient.Models.SeriesTypes? SeriesType { get; set; }
         /// <summary>The shouldMonitor property</summary>
         public global::Soenneker.Sonarr.OpenApiClient.Models.MonitorTypes? ShouldMonitor { get; set; }
+        /// <summary>The tagExisting property</summary>
+        public global::Soenneker.Sonarr.OpenApiClient.Models.TagExistingType? TagExisting { get; set; }
         /// <summary>The tags property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -145,6 +155,7 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
                 { "implementation", n => { Implementation = n.GetStringValue(); } },
                 { "implementationName", n => { ImplementationName = n.GetStringValue(); } },
                 { "infoLink", n => { InfoLink = n.GetStringValue(); } },
+                { "language", n => { Language = n.GetObjectValue<global::Soenneker.Sonarr.OpenApiClient.Models.Language>(global::Soenneker.Sonarr.OpenApiClient.Models.Language.CreateFromDiscriminatorValue); } },
                 { "listOrder", n => { ListOrder = n.GetIntValue(); } },
                 { "listType", n => { ListType = n.GetEnumValue<global::Soenneker.Sonarr.OpenApiClient.Models.ImportListType>(); } },
                 { "message", n => { Message = n.GetObjectValue<global::Soenneker.Sonarr.OpenApiClient.Models.ProviderMessage>(global::Soenneker.Sonarr.OpenApiClient.Models.ProviderMessage.CreateFromDiscriminatorValue); } },
@@ -158,6 +169,7 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
                 { "seasonFolder", n => { SeasonFolder = n.GetBoolValue(); } },
                 { "seriesType", n => { SeriesType = n.GetEnumValue<global::Soenneker.Sonarr.OpenApiClient.Models.SeriesTypes>(); } },
                 { "shouldMonitor", n => { ShouldMonitor = n.GetEnumValue<global::Soenneker.Sonarr.OpenApiClient.Models.MonitorTypes>(); } },
+                { "tagExisting", n => { TagExisting = n.GetEnumValue<global::Soenneker.Sonarr.OpenApiClient.Models.TagExistingType>(); } },
                 { "tags", n => { Tags = n.GetCollectionOfPrimitiveValues<int?>()?.AsList(); } },
             };
         }
@@ -175,6 +187,7 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
             writer.WriteStringValue("implementation", Implementation);
             writer.WriteStringValue("implementationName", ImplementationName);
             writer.WriteStringValue("infoLink", InfoLink);
+            writer.WriteObjectValue<global::Soenneker.Sonarr.OpenApiClient.Models.Language>("language", Language);
             writer.WriteIntValue("listOrder", ListOrder);
             writer.WriteEnumValue<global::Soenneker.Sonarr.OpenApiClient.Models.ImportListType>("listType", ListType);
             writer.WriteObjectValue<global::Soenneker.Sonarr.OpenApiClient.Models.ProviderMessage>("message", Message);
@@ -188,6 +201,7 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
             writer.WriteBoolValue("seasonFolder", SeasonFolder);
             writer.WriteEnumValue<global::Soenneker.Sonarr.OpenApiClient.Models.SeriesTypes>("seriesType", SeriesType);
             writer.WriteEnumValue<global::Soenneker.Sonarr.OpenApiClient.Models.MonitorTypes>("shouldMonitor", ShouldMonitor);
+            writer.WriteEnumValue<global::Soenneker.Sonarr.OpenApiClient.Models.TagExistingType>("tagExisting", TagExisting);
             writer.WriteCollectionOfPrimitiveValues<int?>("tags", Tags);
         }
     }

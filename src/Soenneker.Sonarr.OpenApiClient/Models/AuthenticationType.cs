@@ -24,5 +24,9 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
         #pragma warning disable CS1591
         External,
         #pragma warning restore CS1591
+        [EnumMember(Value = "oidc")]
+        #pragma warning disable CS1591
+        Oidc,
+        #pragma warning restore CS1591
     }
 }

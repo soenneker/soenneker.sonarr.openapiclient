@@ -104,6 +104,46 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
 #endif
         /// <summary>The logSizeLimit property</summary>
         public int? LogSizeLimit { get; set; }
+        /// <summary>The oidcAuthority property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? OidcAuthority { get; set; }
+#nullable restore
+#else
+        public string OidcAuthority { get; set; }
+#endif
+        /// <summary>The oidcClientId property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? OidcClientId { get; set; }
+#nullable restore
+#else
+        public string OidcClientId { get; set; }
+#endif
+        /// <summary>The oidcClientSecret property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? OidcClientSecret { get; set; }
+#nullable restore
+#else
+        public string OidcClientSecret { get; set; }
+#endif
+        /// <summary>The oidcScopes property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? OidcScopes { get; set; }
+#nullable restore
+#else
+        public string OidcScopes { get; set; }
+#endif
+        /// <summary>The oidcUserIdentifier property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? OidcUserIdentifier { get; set; }
+#nullable restore
+#else
+        public string OidcUserIdentifier { get; set; }
+#endif
         /// <summary>The password property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -177,6 +217,14 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
 #nullable restore
 #else
         public string SslCertPath { get; set; }
+#endif
+        /// <summary>The sslKeyPath property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? SslKeyPath { get; set; }
+#nullable restore
+#else
+        public string SslKeyPath { get; set; }
 #endif
         /// <summary>The sslPort property</summary>
         public int? SslPort { get; set; }
@@ -255,6 +303,11 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
                 { "launchBrowser", n => { LaunchBrowser = n.GetBoolValue(); } },
                 { "logLevel", n => { LogLevel = n.GetStringValue(); } },
                 { "logSizeLimit", n => { LogSizeLimit = n.GetIntValue(); } },
+                { "oidcAuthority", n => { OidcAuthority = n.GetStringValue(); } },
+                { "oidcClientId", n => { OidcClientId = n.GetStringValue(); } },
+                { "oidcClientSecret", n => { OidcClientSecret = n.GetStringValue(); } },
+                { "oidcScopes", n => { OidcScopes = n.GetStringValue(); } },
+                { "oidcUserIdentifier", n => { OidcUserIdentifier = n.GetStringValue(); } },
                 { "password", n => { Password = n.GetStringValue(); } },
                 { "passwordConfirmation", n => { PasswordConfirmation = n.GetStringValue(); } },
                 { "port", n => { Port = n.GetIntValue(); } },
@@ -268,6 +321,7 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
                 { "proxyUsername", n => { ProxyUsername = n.GetStringValue(); } },
                 { "sslCertPassword", n => { SslCertPassword = n.GetStringValue(); } },
                 { "sslCertPath", n => { SslCertPath = n.GetStringValue(); } },
+                { "sslKeyPath", n => { SslKeyPath = n.GetStringValue(); } },
                 { "sslPort", n => { SslPort = n.GetIntValue(); } },
                 { "trustCgnatIpAddresses", n => { TrustCgnatIpAddresses = n.GetBoolValue(); } },
                 { "trustedNetworks", n => { TrustedNetworks = n.GetStringValue(); } },
@@ -304,6 +358,11 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
             writer.WriteBoolValue("launchBrowser", LaunchBrowser);
             writer.WriteStringValue("logLevel", LogLevel);
             writer.WriteIntValue("logSizeLimit", LogSizeLimit);
+            writer.WriteStringValue("oidcAuthority", OidcAuthority);
+            writer.WriteStringValue("oidcClientId", OidcClientId);
+            writer.WriteStringValue("oidcClientSecret", OidcClientSecret);
+            writer.WriteStringValue("oidcScopes", OidcScopes);
+            writer.WriteStringValue("oidcUserIdentifier", OidcUserIdentifier);
             writer.WriteStringValue("password", Password);
             writer.WriteStringValue("passwordConfirmation", PasswordConfirmation);
             writer.WriteIntValue("port", Port);
@@ -317,6 +376,7 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
             writer.WriteStringValue("proxyUsername", ProxyUsername);
             writer.WriteStringValue("sslCertPassword", SslCertPassword);
             writer.WriteStringValue("sslCertPath", SslCertPath);
+            writer.WriteStringValue("sslKeyPath", SslKeyPath);
             writer.WriteIntValue("sslPort", SslPort);
             writer.WriteBoolValue("trustCgnatIpAddresses", TrustCgnatIpAddresses);
             writer.WriteStringValue("trustedNetworks", TrustedNetworks);

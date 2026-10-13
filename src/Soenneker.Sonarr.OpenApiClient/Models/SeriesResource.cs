@@ -46,6 +46,14 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
 #else
         public string Certification { get; set; }
 #endif
+        /// <summary>The cleanOriginalTitle property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? CleanOriginalTitle { get; set; }
+#nullable restore
+#else
+        public string CleanOriginalTitle { get; set; }
+#endif
         /// <summary>The cleanTitle property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -67,6 +75,14 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
 #nullable restore
 #else
         public string Folder { get; set; }
+#endif
+        /// <summary>The folders property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.Sonarr.OpenApiClient.Models.SeriesFolderResource>? Folders { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.Sonarr.OpenApiClient.Models.SeriesFolderResource> Folders { get; set; }
 #endif
         /// <summary>The genres property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -94,6 +110,14 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
 #else
         public string ImdbId { get; set; }
 #endif
+        /// <summary>The language property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Sonarr.OpenApiClient.Models.Language? Language { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Sonarr.OpenApiClient.Models.Language Language { get; set; }
+#endif
         /// <summary>The languageProfileId property</summary>
         [Obsolete("")]
         public int? LanguageProfileId { get; private set; }
@@ -120,6 +144,14 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
 #nullable restore
 #else
         public global::Soenneker.Sonarr.OpenApiClient.Models.Language OriginalLanguage { get; set; }
+#endif
+        /// <summary>The originalTitle property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? OriginalTitle { get; set; }
+#nullable restore
+#else
+        public string OriginalTitle { get; set; }
 #endif
         /// <summary>The overview property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -185,6 +217,22 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
 #else
         public List<global::Soenneker.Sonarr.OpenApiClient.Models.SeasonResource> Seasons { get; set; }
 #endif
+        /// <summary>The seasonType property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? SeasonType { get; set; }
+#nullable restore
+#else
+        public string SeasonType { get; set; }
+#endif
+        /// <summary>The seasonTypes property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.Sonarr.OpenApiClient.Models.SeasonTypeResource>? SeasonTypes { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.Sonarr.OpenApiClient.Models.SeasonTypeResource> SeasonTypes { get; set; }
+#endif
         /// <summary>The seriesType property</summary>
         public global::Soenneker.Sonarr.OpenApiClient.Models.SeriesTypes? SeriesType { get; set; }
         /// <summary>The sortTitle property</summary>
@@ -231,6 +279,14 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
 #endif
         /// <summary>The tmdbId property</summary>
         public int? TmdbId { get; set; }
+        /// <summary>The translations property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.Sonarr.OpenApiClient.Models.SeriesTranslationResource>? Translations { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.Sonarr.OpenApiClient.Models.SeriesTranslationResource> Translations { get; set; }
+#endif
         /// <summary>The tvdbId property</summary>
         public int? TvdbId { get; set; }
         /// <summary>The tvMazeId property</summary>
@@ -264,15 +320,18 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
                 { "airTime", n => { AirTime = n.GetStringValue(); } },
                 { "alternateTitles", n => { AlternateTitles = n.GetCollectionOfObjectValues<global::Soenneker.Sonarr.OpenApiClient.Models.AlternateTitleResource>(global::Soenneker.Sonarr.OpenApiClient.Models.AlternateTitleResource.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "certification", n => { Certification = n.GetStringValue(); } },
+                { "cleanOriginalTitle", n => { CleanOriginalTitle = n.GetStringValue(); } },
                 { "cleanTitle", n => { CleanTitle = n.GetStringValue(); } },
                 { "ended", n => { Ended = n.GetBoolValue(); } },
                 { "episodesChanged", n => { EpisodesChanged = n.GetBoolValue(); } },
                 { "firstAired", n => { FirstAired = n.GetDateTimeOffsetValue(); } },
                 { "folder", n => { Folder = n.GetStringValue(); } },
+                { "folders", n => { Folders = n.GetCollectionOfObjectValues<global::Soenneker.Sonarr.OpenApiClient.Models.SeriesFolderResource>(global::Soenneker.Sonarr.OpenApiClient.Models.SeriesFolderResource.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "genres", n => { Genres = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "id", n => { Id = n.GetIntValue(); } },
                 { "images", n => { Images = n.GetCollectionOfObjectValues<global::Soenneker.Sonarr.OpenApiClient.Models.MediaCover>(global::Soenneker.Sonarr.OpenApiClient.Models.MediaCover.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "imdbId", n => { ImdbId = n.GetStringValue(); } },
+                { "language", n => { Language = n.GetObjectValue<global::Soenneker.Sonarr.OpenApiClient.Models.Language>(global::Soenneker.Sonarr.OpenApiClient.Models.Language.CreateFromDiscriminatorValue); } },
                 { "languageProfileId", n => { LanguageProfileId = n.GetIntValue(); } },
                 { "lastAired", n => { LastAired = n.GetDateTimeOffsetValue(); } },
                 { "monitorNewItems", n => { MonitorNewItems = n.GetEnumValue<global::Soenneker.Sonarr.OpenApiClient.Models.NewItemMonitorTypes>(); } },
@@ -280,6 +339,7 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
                 { "network", n => { Network = n.GetStringValue(); } },
                 { "nextAiring", n => { NextAiring = n.GetDateTimeOffsetValue(); } },
                 { "originalLanguage", n => { OriginalLanguage = n.GetObjectValue<global::Soenneker.Sonarr.OpenApiClient.Models.Language>(global::Soenneker.Sonarr.OpenApiClient.Models.Language.CreateFromDiscriminatorValue); } },
+                { "originalTitle", n => { OriginalTitle = n.GetStringValue(); } },
                 { "overview", n => { Overview = n.GetStringValue(); } },
                 { "path", n => { Path = n.GetStringValue(); } },
                 { "previousAiring", n => { PreviousAiring = n.GetDateTimeOffsetValue(); } },
@@ -290,6 +350,8 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
                 { "rootFolderPath", n => { RootFolderPath = n.GetStringValue(); } },
                 { "runtime", n => { Runtime = n.GetIntValue(); } },
                 { "seasonFolder", n => { SeasonFolder = n.GetBoolValue(); } },
+                { "seasonType", n => { SeasonType = n.GetStringValue(); } },
+                { "seasonTypes", n => { SeasonTypes = n.GetCollectionOfObjectValues<global::Soenneker.Sonarr.OpenApiClient.Models.SeasonTypeResource>(global::Soenneker.Sonarr.OpenApiClient.Models.SeasonTypeResource.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "seasons", n => { Seasons = n.GetCollectionOfObjectValues<global::Soenneker.Sonarr.OpenApiClient.Models.SeasonResource>(global::Soenneker.Sonarr.OpenApiClient.Models.SeasonResource.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "seriesType", n => { SeriesType = n.GetEnumValue<global::Soenneker.Sonarr.OpenApiClient.Models.SeriesTypes>(); } },
                 { "sortTitle", n => { SortTitle = n.GetStringValue(); } },
@@ -299,6 +361,7 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
                 { "title", n => { Title = n.GetStringValue(); } },
                 { "titleSlug", n => { TitleSlug = n.GetStringValue(); } },
                 { "tmdbId", n => { TmdbId = n.GetIntValue(); } },
+                { "translations", n => { Translations = n.GetCollectionOfObjectValues<global::Soenneker.Sonarr.OpenApiClient.Models.SeriesTranslationResource>(global::Soenneker.Sonarr.OpenApiClient.Models.SeriesTranslationResource.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "tvMazeId", n => { TvMazeId = n.GetIntValue(); } },
                 { "tvRageId", n => { TvRageId = n.GetIntValue(); } },
                 { "tvdbId", n => { TvdbId = n.GetIntValue(); } },
@@ -318,20 +381,24 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
             writer.WriteStringValue("airTime", AirTime);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Sonarr.OpenApiClient.Models.AlternateTitleResource>("alternateTitles", AlternateTitles);
             writer.WriteStringValue("certification", Certification);
+            writer.WriteStringValue("cleanOriginalTitle", CleanOriginalTitle);
             writer.WriteStringValue("cleanTitle", CleanTitle);
             writer.WriteBoolValue("episodesChanged", EpisodesChanged);
             writer.WriteDateTimeOffsetValue("firstAired", FirstAired);
             writer.WriteStringValue("folder", Folder);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Sonarr.OpenApiClient.Models.SeriesFolderResource>("folders", Folders);
             writer.WriteCollectionOfPrimitiveValues<string>("genres", Genres);
             writer.WriteIntValue("id", Id);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Sonarr.OpenApiClient.Models.MediaCover>("images", Images);
             writer.WriteStringValue("imdbId", ImdbId);
+            writer.WriteObjectValue<global::Soenneker.Sonarr.OpenApiClient.Models.Language>("language", Language);
             writer.WriteDateTimeOffsetValue("lastAired", LastAired);
             writer.WriteBoolValue("monitored", Monitored);
             writer.WriteEnumValue<global::Soenneker.Sonarr.OpenApiClient.Models.NewItemMonitorTypes>("monitorNewItems", MonitorNewItems);
             writer.WriteStringValue("network", Network);
             writer.WriteDateTimeOffsetValue("nextAiring", NextAiring);
             writer.WriteObjectValue<global::Soenneker.Sonarr.OpenApiClient.Models.Language>("originalLanguage", OriginalLanguage);
+            writer.WriteStringValue("originalTitle", OriginalTitle);
             writer.WriteStringValue("overview", Overview);
             writer.WriteStringValue("path", Path);
             writer.WriteDateTimeOffsetValue("previousAiring", PreviousAiring);
@@ -343,6 +410,8 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
             writer.WriteIntValue("runtime", Runtime);
             writer.WriteBoolValue("seasonFolder", SeasonFolder);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Sonarr.OpenApiClient.Models.SeasonResource>("seasons", Seasons);
+            writer.WriteStringValue("seasonType", SeasonType);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Sonarr.OpenApiClient.Models.SeasonTypeResource>("seasonTypes", SeasonTypes);
             writer.WriteEnumValue<global::Soenneker.Sonarr.OpenApiClient.Models.SeriesTypes>("seriesType", SeriesType);
             writer.WriteStringValue("sortTitle", SortTitle);
             writer.WriteObjectValue<global::Soenneker.Sonarr.OpenApiClient.Models.SeriesStatisticsResource>("statistics", Statistics);
@@ -351,6 +420,7 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
             writer.WriteStringValue("title", Title);
             writer.WriteStringValue("titleSlug", TitleSlug);
             writer.WriteIntValue("tmdbId", TmdbId);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Sonarr.OpenApiClient.Models.SeriesTranslationResource>("translations", Translations);
             writer.WriteIntValue("tvdbId", TvdbId);
             writer.WriteIntValue("tvMazeId", TvMazeId);
             writer.WriteIntValue("tvRageId", TvRageId);

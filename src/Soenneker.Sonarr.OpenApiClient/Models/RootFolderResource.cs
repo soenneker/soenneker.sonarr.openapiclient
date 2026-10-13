@@ -26,6 +26,8 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
 #else
         public string Path { get; set; }
 #endif
+        /// <summary>The totalSpace property</summary>
+        public long? TotalSpace { get; set; }
         /// <summary>The unmappedFolders property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -56,6 +58,7 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
                 { "freeSpace", n => { FreeSpace = n.GetLongValue(); } },
                 { "id", n => { Id = n.GetIntValue(); } },
                 { "path", n => { Path = n.GetStringValue(); } },
+                { "totalSpace", n => { TotalSpace = n.GetLongValue(); } },
                 { "unmappedFolders", n => { UnmappedFolders = n.GetCollectionOfObjectValues<global::Soenneker.Sonarr.OpenApiClient.Models.UnmappedFolder>(global::Soenneker.Sonarr.OpenApiClient.Models.UnmappedFolder.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
@@ -70,6 +73,7 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
             writer.WriteLongValue("freeSpace", FreeSpace);
             writer.WriteIntValue("id", Id);
             writer.WriteStringValue("path", Path);
+            writer.WriteLongValue("totalSpace", TotalSpace);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Sonarr.OpenApiClient.Models.UnmappedFolder>("unmappedFolders", UnmappedFolders);
         }
     }

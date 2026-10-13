@@ -32,6 +32,14 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
 #else
         public global::Soenneker.Sonarr.OpenApiClient.Models.SeasonStatisticsResource Statistics { get; set; }
 #endif
+        /// <summary>The title property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Title { get; set; }
+#nullable restore
+#else
+        public string Title { get; set; }
+#endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -54,6 +62,7 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
                 { "monitored", n => { Monitored = n.GetBoolValue(); } },
                 { "seasonNumber", n => { SeasonNumber = n.GetIntValue(); } },
                 { "statistics", n => { Statistics = n.GetObjectValue<global::Soenneker.Sonarr.OpenApiClient.Models.SeasonStatisticsResource>(global::Soenneker.Sonarr.OpenApiClient.Models.SeasonStatisticsResource.CreateFromDiscriminatorValue); } },
+                { "title", n => { Title = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -67,6 +76,7 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
             writer.WriteBoolValue("monitored", Monitored);
             writer.WriteIntValue("seasonNumber", SeasonNumber);
             writer.WriteObjectValue<global::Soenneker.Sonarr.OpenApiClient.Models.SeasonStatisticsResource>("statistics", Statistics);
+            writer.WriteStringValue("title", Title);
         }
     }
 }

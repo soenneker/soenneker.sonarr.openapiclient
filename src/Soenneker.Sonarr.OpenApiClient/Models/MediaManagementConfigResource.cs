@@ -78,10 +78,24 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
 #else
         public string ScriptImportPath { get; set; }
 #endif
+        /// <summary>The seasonPackUpgrade property</summary>
+        public global::Soenneker.Sonarr.OpenApiClient.Models.SeasonPackUpgradeType? SeasonPackUpgrade { get; set; }
+        /// <summary>The seasonPackUpgradeThreshold property</summary>
+        public double? SeasonPackUpgradeThreshold { get; set; }
         /// <summary>The setPermissionsLinux property</summary>
         public bool? SetPermissionsLinux { get; set; }
+        /// <summary>The skipFreeSpaceCheckWhenGrabbing property</summary>
+        public bool? SkipFreeSpaceCheckWhenGrabbing { get; set; }
         /// <summary>The skipFreeSpaceCheckWhenImporting property</summary>
         public bool? SkipFreeSpaceCheckWhenImporting { get; set; }
+        /// <summary>The userRejectedExtensions property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? UserRejectedExtensions { get; set; }
+#nullable restore
+#else
+        public string UserRejectedExtensions { get; set; }
+#endif
         /// <summary>The useScriptImport property</summary>
         public bool? UseScriptImport { get; set; }
         /// <summary>
@@ -120,9 +134,13 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
                 { "recycleBinCleanupDays", n => { RecycleBinCleanupDays = n.GetIntValue(); } },
                 { "rescanAfterRefresh", n => { RescanAfterRefresh = n.GetEnumValue<global::Soenneker.Sonarr.OpenApiClient.Models.RescanAfterRefreshType>(); } },
                 { "scriptImportPath", n => { ScriptImportPath = n.GetStringValue(); } },
+                { "seasonPackUpgrade", n => { SeasonPackUpgrade = n.GetEnumValue<global::Soenneker.Sonarr.OpenApiClient.Models.SeasonPackUpgradeType>(); } },
+                { "seasonPackUpgradeThreshold", n => { SeasonPackUpgradeThreshold = n.GetDoubleValue(); } },
                 { "setPermissionsLinux", n => { SetPermissionsLinux = n.GetBoolValue(); } },
+                { "skipFreeSpaceCheckWhenGrabbing", n => { SkipFreeSpaceCheckWhenGrabbing = n.GetBoolValue(); } },
                 { "skipFreeSpaceCheckWhenImporting", n => { SkipFreeSpaceCheckWhenImporting = n.GetBoolValue(); } },
                 { "useScriptImport", n => { UseScriptImport = n.GetBoolValue(); } },
+                { "userRejectedExtensions", n => { UserRejectedExtensions = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -150,8 +168,12 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
             writer.WriteIntValue("recycleBinCleanupDays", RecycleBinCleanupDays);
             writer.WriteEnumValue<global::Soenneker.Sonarr.OpenApiClient.Models.RescanAfterRefreshType>("rescanAfterRefresh", RescanAfterRefresh);
             writer.WriteStringValue("scriptImportPath", ScriptImportPath);
+            writer.WriteEnumValue<global::Soenneker.Sonarr.OpenApiClient.Models.SeasonPackUpgradeType>("seasonPackUpgrade", SeasonPackUpgrade);
+            writer.WriteDoubleValue("seasonPackUpgradeThreshold", SeasonPackUpgradeThreshold);
             writer.WriteBoolValue("setPermissionsLinux", SetPermissionsLinux);
+            writer.WriteBoolValue("skipFreeSpaceCheckWhenGrabbing", SkipFreeSpaceCheckWhenGrabbing);
             writer.WriteBoolValue("skipFreeSpaceCheckWhenImporting", SkipFreeSpaceCheckWhenImporting);
+            writer.WriteStringValue("userRejectedExtensions", UserRejectedExtensions);
             writer.WriteBoolValue("useScriptImport", UseScriptImport);
         }
     }

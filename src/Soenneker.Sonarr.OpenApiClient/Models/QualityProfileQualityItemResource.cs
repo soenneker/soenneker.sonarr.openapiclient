@@ -24,6 +24,10 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
 #else
         public List<global::Soenneker.Sonarr.OpenApiClient.Models.QualityProfileQualityItemResource> Items { get; set; }
 #endif
+        /// <summary>The maxSize property</summary>
+        public double? MaxSize { get; set; }
+        /// <summary>The minSize property</summary>
+        public double? MinSize { get; set; }
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -32,6 +36,8 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
+        /// <summary>The preferredSize property</summary>
+        public double? PreferredSize { get; set; }
         /// <summary>The quality property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -61,7 +67,10 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
                 { "allowed", n => { Allowed = n.GetBoolValue(); } },
                 { "id", n => { Id = n.GetIntValue(); } },
                 { "items", n => { Items = n.GetCollectionOfObjectValues<global::Soenneker.Sonarr.OpenApiClient.Models.QualityProfileQualityItemResource>(global::Soenneker.Sonarr.OpenApiClient.Models.QualityProfileQualityItemResource.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "maxSize", n => { MaxSize = n.GetDoubleValue(); } },
+                { "minSize", n => { MinSize = n.GetDoubleValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
+                { "preferredSize", n => { PreferredSize = n.GetDoubleValue(); } },
                 { "quality", n => { Quality = n.GetObjectValue<global::Soenneker.Sonarr.OpenApiClient.Models.Quality>(global::Soenneker.Sonarr.OpenApiClient.Models.Quality.CreateFromDiscriminatorValue); } },
             };
         }
@@ -75,7 +84,10 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
             writer.WriteBoolValue("allowed", Allowed);
             writer.WriteIntValue("id", Id);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Sonarr.OpenApiClient.Models.QualityProfileQualityItemResource>("items", Items);
+            writer.WriteDoubleValue("maxSize", MaxSize);
+            writer.WriteDoubleValue("minSize", MinSize);
             writer.WriteStringValue("name", Name);
+            writer.WriteDoubleValue("preferredSize", PreferredSize);
             writer.WriteObjectValue<global::Soenneker.Sonarr.OpenApiClient.Models.Quality>("quality", Quality);
         }
     }

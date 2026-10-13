@@ -35,10 +35,10 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
         /// <summary>The wikiUrl property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Sonarr.OpenApiClient.Models.HttpUri? WikiUrl { get; set; }
+        public string? WikiUrl { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Sonarr.OpenApiClient.Models.HttpUri WikiUrl { get; set; }
+        public string WikiUrl { get; set; }
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -62,7 +62,7 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
                 { "message", n => { Message = n.GetStringValue(); } },
                 { "source", n => { Source = n.GetStringValue(); } },
                 { "type", n => { Type = n.GetEnumValue<global::Soenneker.Sonarr.OpenApiClient.Models.HealthCheckResult>(); } },
-                { "wikiUrl", n => { WikiUrl = n.GetObjectValue<global::Soenneker.Sonarr.OpenApiClient.Models.HttpUri>(global::Soenneker.Sonarr.OpenApiClient.Models.HttpUri.CreateFromDiscriminatorValue); } },
+                { "wikiUrl", n => { WikiUrl = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -76,7 +76,7 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
             writer.WriteStringValue("message", Message);
             writer.WriteStringValue("source", Source);
             writer.WriteEnumValue<global::Soenneker.Sonarr.OpenApiClient.Models.HealthCheckResult>("type", Type);
-            writer.WriteObjectValue<global::Soenneker.Sonarr.OpenApiClient.Models.HttpUri>("wikiUrl", WikiUrl);
+            writer.WriteStringValue("wikiUrl", WikiUrl);
         }
     }
 }

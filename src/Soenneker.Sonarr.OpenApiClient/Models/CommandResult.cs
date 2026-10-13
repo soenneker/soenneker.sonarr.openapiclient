@@ -20,5 +20,9 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
         #pragma warning disable CS1591
         Unsuccessful,
         #pragma warning restore CS1591
+        [EnumMember(Value = "indeterminate")]
+        #pragma warning disable CS1591
+        Indeterminate,
+        #pragma warning restore CS1591
     }
 }

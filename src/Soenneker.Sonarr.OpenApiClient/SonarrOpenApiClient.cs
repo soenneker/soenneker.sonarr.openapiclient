@@ -11,9 +11,11 @@ using Soenneker.Sonarr.OpenApiClient.Api;
 using Soenneker.Sonarr.OpenApiClient.Content;
 using Soenneker.Sonarr.OpenApiClient.Feed;
 using Soenneker.Sonarr.OpenApiClient.Item;
+using Soenneker.Sonarr.OpenApiClient.Loggedout;
 using Soenneker.Sonarr.OpenApiClient.Login;
 using Soenneker.Sonarr.OpenApiClient.Logout;
 using Soenneker.Sonarr.OpenApiClient.Ping;
+using Soenneker.Sonarr.OpenApiClient.ResetPassword;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -42,6 +44,11 @@ namespace Soenneker.Sonarr.OpenApiClient
         {
             get => new global::Soenneker.Sonarr.OpenApiClient.Feed.FeedRequestBuilder(PathParameters, RequestAdapter);
         }
+        /// <summary>The loggedout property</summary>
+        public global::Soenneker.Sonarr.OpenApiClient.Loggedout.LoggedoutRequestBuilder Loggedout
+        {
+            get => new global::Soenneker.Sonarr.OpenApiClient.Loggedout.LoggedoutRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The login property</summary>
         public global::Soenneker.Sonarr.OpenApiClient.Login.LoginRequestBuilder Login
         {
@@ -56,6 +63,11 @@ namespace Soenneker.Sonarr.OpenApiClient
         public global::Soenneker.Sonarr.OpenApiClient.Ping.PingRequestBuilder Ping
         {
             get => new global::Soenneker.Sonarr.OpenApiClient.Ping.PingRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The resetPassword property</summary>
+        public global::Soenneker.Sonarr.OpenApiClient.ResetPassword.ResetPasswordRequestBuilder ResetPassword
+        {
+            get => new global::Soenneker.Sonarr.OpenApiClient.ResetPassword.ResetPasswordRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.Sonarr.OpenApiClient.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>

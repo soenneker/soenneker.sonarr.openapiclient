@@ -36,6 +36,14 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
 #else
         public List<int?> DownloadClientIds { get; set; }
 #endif
+        /// <summary>The excludedReleaseProfileIds property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<int?>? ExcludedReleaseProfileIds { get; set; }
+#nullable restore
+#else
+        public List<int?> ExcludedReleaseProfileIds { get; set; }
+#endif
         /// <summary>The id property</summary>
         public int? Id { get; set; }
         /// <summary>The importListIds property</summary>
@@ -107,6 +115,7 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
                 { "autoTagIds", n => { AutoTagIds = n.GetCollectionOfPrimitiveValues<int?>()?.AsList(); } },
                 { "delayProfileIds", n => { DelayProfileIds = n.GetCollectionOfPrimitiveValues<int?>()?.AsList(); } },
                 { "downloadClientIds", n => { DownloadClientIds = n.GetCollectionOfPrimitiveValues<int?>()?.AsList(); } },
+                { "excludedReleaseProfileIds", n => { ExcludedReleaseProfileIds = n.GetCollectionOfPrimitiveValues<int?>()?.AsList(); } },
                 { "id", n => { Id = n.GetIntValue(); } },
                 { "importListIds", n => { ImportListIds = n.GetCollectionOfPrimitiveValues<int?>()?.AsList(); } },
                 { "indexerIds", n => { IndexerIds = n.GetCollectionOfPrimitiveValues<int?>()?.AsList(); } },
@@ -126,6 +135,7 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<int?>("autoTagIds", AutoTagIds);
             writer.WriteCollectionOfPrimitiveValues<int?>("delayProfileIds", DelayProfileIds);
             writer.WriteCollectionOfPrimitiveValues<int?>("downloadClientIds", DownloadClientIds);
+            writer.WriteCollectionOfPrimitiveValues<int?>("excludedReleaseProfileIds", ExcludedReleaseProfileIds);
             writer.WriteIntValue("id", Id);
             writer.WriteCollectionOfPrimitiveValues<int?>("importListIds", ImportListIds);
             writer.WriteCollectionOfPrimitiveValues<int?>("indexerIds", IndexerIds);

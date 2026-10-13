@@ -16,5 +16,9 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
         #pragma warning disable CS1591
         DisabledForLocalAddresses,
         #pragma warning restore CS1591
+        [EnumMember(Value = "disabledForLocalhost")]
+        #pragma warning disable CS1591
+        DisabledForLocalhost,
+        #pragma warning restore CS1591
     }
 }

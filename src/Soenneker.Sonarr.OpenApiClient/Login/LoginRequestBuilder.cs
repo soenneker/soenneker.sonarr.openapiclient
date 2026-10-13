@@ -3,6 +3,8 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.Sonarr.OpenApiClient.Login.Sso;
+using Soenneker.Sonarr.OpenApiClient.Models;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -16,6 +18,11 @@ namespace Soenneker.Sonarr.OpenApiClient.Login
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class LoginRequestBuilder : BaseRequestBuilder
     {
+        /// <summary>The sso property</summary>
+        public global::Soenneker.Sonarr.OpenApiClient.Login.Sso.SsoRequestBuilder Sso
+        {
+            get => new global::Soenneker.Sonarr.OpenApiClient.Login.Sso.SsoRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Sonarr.OpenApiClient.Login.LoginRequestBuilder"/> and sets the default values.
         /// </summary>
@@ -47,22 +54,26 @@ namespace Soenneker.Sonarr.OpenApiClient.Login
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, default, cancellationToken).ConfigureAwait(false);
         }
-        /// <returns>A <see cref="Stream"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Sonarr.OpenApiClient.Models.ProblemDetails">When receiving a 401 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<Stream?> PostAsync(MultipartBody body, Action<RequestConfiguration<global::Soenneker.Sonarr.OpenApiClient.Login.LoginRequestBuilder.LoginRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task PostAsync(MultipartBody body, Action<RequestConfiguration<global::Soenneker.Sonarr.OpenApiClient.Login.LoginRequestBuilder.LoginRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<Stream> PostAsync(MultipartBody body, Action<RequestConfiguration<global::Soenneker.Sonarr.OpenApiClient.Login.LoginRequestBuilder.LoginRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task PostAsync(MultipartBody body, Action<RequestConfiguration<global::Soenneker.Sonarr.OpenApiClient.Login.LoginRequestBuilder.LoginRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, default, cancellationToken).ConfigureAwait(false);
+            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
+            {
+                { "401", global::Soenneker.Sonarr.OpenApiClient.Models.ProblemDetails.CreateFromDiscriminatorValue },
+            };
+            await RequestAdapter.SendNoContentAsync(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -94,6 +105,7 @@ namespace Soenneker.Sonarr.OpenApiClient.Login
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
+            requestInfo.Headers.TryAdd("Accept", "application/json");
             requestInfo.SetContentFromParsable(RequestAdapter, "multipart/form-data", body);
             return requestInfo;
         }

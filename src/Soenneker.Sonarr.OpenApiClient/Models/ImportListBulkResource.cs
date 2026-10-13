@@ -34,6 +34,8 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
 #else
         public string RootFolderPath { get; set; }
 #endif
+        /// <summary>The tagExisting property</summary>
+        public global::Soenneker.Sonarr.OpenApiClient.Models.TagExistingType? TagExisting { get; set; }
         /// <summary>The tags property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -65,6 +67,7 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
                 { "ids", n => { Ids = n.GetCollectionOfPrimitiveValues<int?>()?.AsList(); } },
                 { "qualityProfileId", n => { QualityProfileId = n.GetIntValue(); } },
                 { "rootFolderPath", n => { RootFolderPath = n.GetStringValue(); } },
+                { "tagExisting", n => { TagExisting = n.GetEnumValue<global::Soenneker.Sonarr.OpenApiClient.Models.TagExistingType>(); } },
                 { "tags", n => { Tags = n.GetCollectionOfPrimitiveValues<int?>()?.AsList(); } },
             };
         }
@@ -80,6 +83,7 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<int?>("ids", Ids);
             writer.WriteIntValue("qualityProfileId", QualityProfileId);
             writer.WriteStringValue("rootFolderPath", RootFolderPath);
+            writer.WriteEnumValue<global::Soenneker.Sonarr.OpenApiClient.Models.TagExistingType>("tagExisting", TagExisting);
             writer.WriteCollectionOfPrimitiveValues<int?>("tags", Tags);
         }
     }

@@ -24,8 +24,6 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
 #endif
         /// <summary>The airDateUtc property</summary>
         public DateTimeOffset? AirDateUtc { get; set; }
-        /// <summary>The endTime property</summary>
-        public DateTimeOffset? EndTime { get; set; }
         /// <summary>The episodeFile property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -46,8 +44,6 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
 #else
         public string FinaleType { get; set; }
 #endif
-        /// <summary>The grabDate property</summary>
-        public DateTimeOffset? GrabDate { get; set; }
         /// <summary>The hasFile property</summary>
         public bool? HasFile { get; set; }
         /// <summary>The id property</summary>
@@ -125,12 +121,10 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
                 { "absoluteEpisodeNumber", n => { AbsoluteEpisodeNumber = n.GetIntValue(); } },
                 { "airDate", n => { AirDate = n.GetStringValue(); } },
                 { "airDateUtc", n => { AirDateUtc = n.GetDateTimeOffsetValue(); } },
-                { "endTime", n => { EndTime = n.GetDateTimeOffsetValue(); } },
                 { "episodeFile", n => { EpisodeFile = n.GetObjectValue<global::Soenneker.Sonarr.OpenApiClient.Models.EpisodeFileResource>(global::Soenneker.Sonarr.OpenApiClient.Models.EpisodeFileResource.CreateFromDiscriminatorValue); } },
                 { "episodeFileId", n => { EpisodeFileId = n.GetIntValue(); } },
                 { "episodeNumber", n => { EpisodeNumber = n.GetIntValue(); } },
                 { "finaleType", n => { FinaleType = n.GetStringValue(); } },
-                { "grabDate", n => { GrabDate = n.GetDateTimeOffsetValue(); } },
                 { "hasFile", n => { HasFile = n.GetBoolValue(); } },
                 { "id", n => { Id = n.GetIntValue(); } },
                 { "images", n => { Images = n.GetCollectionOfObjectValues<global::Soenneker.Sonarr.OpenApiClient.Models.MediaCover>(global::Soenneker.Sonarr.OpenApiClient.Models.MediaCover.CreateFromDiscriminatorValue)?.AsList(); } },
@@ -159,12 +153,10 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
             writer.WriteIntValue("absoluteEpisodeNumber", AbsoluteEpisodeNumber);
             writer.WriteStringValue("airDate", AirDate);
             writer.WriteDateTimeOffsetValue("airDateUtc", AirDateUtc);
-            writer.WriteDateTimeOffsetValue("endTime", EndTime);
             writer.WriteObjectValue<global::Soenneker.Sonarr.OpenApiClient.Models.EpisodeFileResource>("episodeFile", EpisodeFile);
             writer.WriteIntValue("episodeFileId", EpisodeFileId);
             writer.WriteIntValue("episodeNumber", EpisodeNumber);
             writer.WriteStringValue("finaleType", FinaleType);
-            writer.WriteDateTimeOffsetValue("grabDate", GrabDate);
             writer.WriteBoolValue("hasFile", HasFile);
             writer.WriteIntValue("id", Id);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Sonarr.OpenApiClient.Models.MediaCover>("images", Images);

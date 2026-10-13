@@ -1,8 +1,8 @@
 {
-  "descriptionHash": "7D580FAD95422652CFD9C8989C421D904D8A85C574D8025C44E863E9CFC787CE18017B57D672DA271ABB834681B75B2F38974876AEAD7B5AD97AF0DFFF675B16",
+  "descriptionHash": "8485F718BB93187EF3BC0B1F3D2923BDBA565D3F71C1CB27033A8C41989718423E38455CE01F33661AD79A37BAB0114A26C1ACDF61548DAB9B563A105AF025C2",
   "descriptionLocation": "../../fixed.json",
   "lockFileVersion": "1.0.0",
-  "kiotaVersion": "1.36.0",
+  "kiotaVersion": "1.36.1",
   "clientClassName": "SonarrOpenApiClient",
   "typeAccessModifier": "Public",
   "clientNamespaceName": "Soenneker.Sonarr.OpenApiClient",

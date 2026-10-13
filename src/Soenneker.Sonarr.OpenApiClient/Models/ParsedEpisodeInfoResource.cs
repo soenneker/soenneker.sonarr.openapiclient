@@ -9,7 +9,7 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class ParsedEpisodeInfo : IParsable
+    public partial class ParsedEpisodeInfoResource : IParsable
     #pragma warning restore CS1591
     {
         /// <summary>The absoluteEpisodeNumbers property</summary>
@@ -41,9 +41,9 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
         /// <summary>The fullSeason property</summary>
         public bool? FullSeason { get; set; }
         /// <summary>The isAbsoluteNumbering property</summary>
-        public bool? IsAbsoluteNumbering { get; private set; }
+        public bool? IsAbsoluteNumbering { get; set; }
         /// <summary>The isDaily property</summary>
-        public bool? IsDaily { get; private set; }
+        public bool? IsDaily { get; set; }
         /// <summary>The isMiniSeries property</summary>
         public bool? IsMiniSeries { get; set; }
         /// <summary>The isMultiSeason property</summary>
@@ -51,9 +51,9 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
         /// <summary>The isPartialSeason property</summary>
         public bool? IsPartialSeason { get; set; }
         /// <summary>The isPossibleSceneSeasonSpecial property</summary>
-        public bool? IsPossibleSceneSeasonSpecial { get; private set; }
+        public bool? IsPossibleSceneSeasonSpecial { get; set; }
         /// <summary>The isPossibleSpecialEpisode property</summary>
-        public bool? IsPossibleSpecialEpisode { get; private set; }
+        public bool? IsPossibleSpecialEpisode { get; set; }
         /// <summary>The isSeasonExtra property</summary>
         public bool? IsSeasonExtra { get; set; }
         /// <summary>The isSplitEpisode property</summary>
@@ -110,6 +110,14 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
         public global::Soenneker.Sonarr.OpenApiClient.Models.ReleaseType? ReleaseType { get; set; }
         /// <summary>The seasonNumber property</summary>
         public int? SeasonNumber { get; set; }
+        /// <summary>The seasonNumbers property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<int?>? SeasonNumbers { get; set; }
+#nullable restore
+#else
+        public List<int?> SeasonNumbers { get; set; }
+#endif
         /// <summary>The seasonPart property</summary>
         public int? SeasonPart { get; set; }
         /// <summary>The seriesTitle property</summary>
@@ -141,12 +149,12 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Sonarr.OpenApiClient.Models.ParsedEpisodeInfo"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Sonarr.OpenApiClient.Models.ParsedEpisodeInfoResource"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Sonarr.OpenApiClient.Models.ParsedEpisodeInfo CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Sonarr.OpenApiClient.Models.ParsedEpisodeInfoResource CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Sonarr.OpenApiClient.Models.ParsedEpisodeInfo();
+            return new global::Soenneker.Sonarr.OpenApiClient.Models.ParsedEpisodeInfoResource();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -178,6 +186,7 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
                 { "releaseTokens", n => { ReleaseTokens = n.GetStringValue(); } },
                 { "releaseType", n => { ReleaseType = n.GetEnumValue<global::Soenneker.Sonarr.OpenApiClient.Models.ReleaseType>(); } },
                 { "seasonNumber", n => { SeasonNumber = n.GetIntValue(); } },
+                { "seasonNumbers", n => { SeasonNumbers = n.GetCollectionOfPrimitiveValues<int?>()?.AsList(); } },
                 { "seasonPart", n => { SeasonPart = n.GetIntValue(); } },
                 { "seriesTitle", n => { SeriesTitle = n.GetStringValue(); } },
                 { "seriesTitleInfo", n => { SeriesTitleInfo = n.GetObjectValue<global::Soenneker.Sonarr.OpenApiClient.Models.SeriesTitleInfo>(global::Soenneker.Sonarr.OpenApiClient.Models.SeriesTitleInfo.CreateFromDiscriminatorValue); } },
@@ -197,9 +206,13 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
             writer.WriteIntValue("dailyPart", DailyPart);
             writer.WriteCollectionOfPrimitiveValues<int?>("episodeNumbers", EpisodeNumbers);
             writer.WriteBoolValue("fullSeason", FullSeason);
+            writer.WriteBoolValue("isAbsoluteNumbering", IsAbsoluteNumbering);
+            writer.WriteBoolValue("isDaily", IsDaily);
             writer.WriteBoolValue("isMiniSeries", IsMiniSeries);
             writer.WriteBoolValue("isMultiSeason", IsMultiSeason);
             writer.WriteBoolValue("isPartialSeason", IsPartialSeason);
+            writer.WriteBoolValue("isPossibleSceneSeasonSpecial", IsPossibleSceneSeasonSpecial);
+            writer.WriteBoolValue("isPossibleSpecialEpisode", IsPossibleSpecialEpisode);
             writer.WriteBoolValue("isSeasonExtra", IsSeasonExtra);
             writer.WriteBoolValue("isSplitEpisode", IsSplitEpisode);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Sonarr.OpenApiClient.Models.Language>("languages", Languages);
@@ -210,6 +223,7 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
             writer.WriteStringValue("releaseTokens", ReleaseTokens);
             writer.WriteEnumValue<global::Soenneker.Sonarr.OpenApiClient.Models.ReleaseType>("releaseType", ReleaseType);
             writer.WriteIntValue("seasonNumber", SeasonNumber);
+            writer.WriteCollectionOfPrimitiveValues<int?>("seasonNumbers", SeasonNumbers);
             writer.WriteIntValue("seasonPart", SeasonPart);
             writer.WriteStringValue("seriesTitle", SeriesTitle);
             writer.WriteObjectValue<global::Soenneker.Sonarr.OpenApiClient.Models.SeriesTitleInfo>("seriesTitleInfo", SeriesTitleInfo);

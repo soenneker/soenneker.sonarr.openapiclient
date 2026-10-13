@@ -60,6 +60,14 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
 #else
         public string TimeFormat { get; set; }
 #endif
+        /// <summary>The timeZone property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? TimeZone { get; set; }
+#nullable restore
+#else
+        public string TimeZone { get; set; }
+#endif
         /// <summary>The uiLanguage property</summary>
         public int? UiLanguage { get; set; }
         /// <summary>
@@ -89,6 +97,7 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
                 { "showRelativeDates", n => { ShowRelativeDates = n.GetBoolValue(); } },
                 { "theme", n => { Theme = n.GetStringValue(); } },
                 { "timeFormat", n => { TimeFormat = n.GetStringValue(); } },
+                { "timeZone", n => { TimeZone = n.GetStringValue(); } },
                 { "uiLanguage", n => { UiLanguage = n.GetIntValue(); } },
             };
         }
@@ -108,6 +117,7 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
             writer.WriteBoolValue("showRelativeDates", ShowRelativeDates);
             writer.WriteStringValue("theme", Theme);
             writer.WriteStringValue("timeFormat", TimeFormat);
+            writer.WriteStringValue("timeZone", TimeZone);
             writer.WriteIntValue("uiLanguage", UiLanguage);
         }
     }

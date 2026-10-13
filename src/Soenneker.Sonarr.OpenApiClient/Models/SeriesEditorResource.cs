@@ -18,6 +18,14 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
         public global::Soenneker.Sonarr.OpenApiClient.Models.ApplyTags? ApplyTags { get; set; }
         /// <summary>The deleteFiles property</summary>
         public bool? DeleteFiles { get; set; }
+        /// <summary>The language property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Sonarr.OpenApiClient.Models.Language? Language { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Sonarr.OpenApiClient.Models.Language Language { get; set; }
+#endif
         /// <summary>The monitored property</summary>
         public bool? Monitored { get; set; }
         /// <summary>The monitorNewItems property</summary>
@@ -75,6 +83,7 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
                 { "addImportListExclusion", n => { AddImportListExclusion = n.GetBoolValue(); } },
                 { "applyTags", n => { ApplyTags = n.GetEnumValue<global::Soenneker.Sonarr.OpenApiClient.Models.ApplyTags>(); } },
                 { "deleteFiles", n => { DeleteFiles = n.GetBoolValue(); } },
+                { "language", n => { Language = n.GetObjectValue<global::Soenneker.Sonarr.OpenApiClient.Models.Language>(global::Soenneker.Sonarr.OpenApiClient.Models.Language.CreateFromDiscriminatorValue); } },
                 { "monitorNewItems", n => { MonitorNewItems = n.GetEnumValue<global::Soenneker.Sonarr.OpenApiClient.Models.NewItemMonitorTypes>(); } },
                 { "monitored", n => { Monitored = n.GetBoolValue(); } },
                 { "moveFiles", n => { MoveFiles = n.GetBoolValue(); } },
@@ -96,6 +105,7 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
             writer.WriteBoolValue("addImportListExclusion", AddImportListExclusion);
             writer.WriteEnumValue<global::Soenneker.Sonarr.OpenApiClient.Models.ApplyTags>("applyTags", ApplyTags);
             writer.WriteBoolValue("deleteFiles", DeleteFiles);
+            writer.WriteObjectValue<global::Soenneker.Sonarr.OpenApiClient.Models.Language>("language", Language);
             writer.WriteBoolValue("monitored", Monitored);
             writer.WriteEnumValue<global::Soenneker.Sonarr.OpenApiClient.Models.NewItemMonitorTypes>("monitorNewItems", MonitorNewItems);
             writer.WriteBoolValue("moveFiles", MoveFiles);

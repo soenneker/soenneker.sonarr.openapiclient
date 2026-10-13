@@ -37,6 +37,7 @@ namespace Soenneker.Sonarr.OpenApiClient.Api.V3.Episodefile.Editor
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        [Obsolete("")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<Stream?> PutAsync(global::Soenneker.Sonarr.OpenApiClient.Models.EpisodeFileListResource body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -53,6 +54,7 @@ namespace Soenneker.Sonarr.OpenApiClient.Api.V3.Episodefile.Editor
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        [Obsolete("")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public RequestInformation ToPutRequestInformation(global::Soenneker.Sonarr.OpenApiClient.Models.EpisodeFileListResource body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
@@ -73,6 +75,7 @@ namespace Soenneker.Sonarr.OpenApiClient.Api.V3.Episodefile.Editor
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Sonarr.OpenApiClient.Api.V3.Episodefile.Editor.EditorRequestBuilder"/></returns>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
+        [Obsolete("")]
         public global::Soenneker.Sonarr.OpenApiClient.Api.V3.Episodefile.Editor.EditorRequestBuilder WithUrl(string rawUrl)
         {
             return new global::Soenneker.Sonarr.OpenApiClient.Api.V3.Episodefile.Editor.EditorRequestBuilder(rawUrl, RequestAdapter);

@@ -43,10 +43,10 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
         /// <summary>The parsedEpisodeInfo property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Sonarr.OpenApiClient.Models.ParsedEpisodeInfo? ParsedEpisodeInfo { get; set; }
+        public global::Soenneker.Sonarr.OpenApiClient.Models.ParsedEpisodeInfoResource? ParsedEpisodeInfo { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Sonarr.OpenApiClient.Models.ParsedEpisodeInfo ParsedEpisodeInfo { get; set; }
+        public global::Soenneker.Sonarr.OpenApiClient.Models.ParsedEpisodeInfoResource ParsedEpisodeInfo { get; set; }
 #endif
         /// <summary>The series property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -87,7 +87,7 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
                 { "episodes", n => { Episodes = n.GetCollectionOfObjectValues<global::Soenneker.Sonarr.OpenApiClient.Models.EpisodeResource>(global::Soenneker.Sonarr.OpenApiClient.Models.EpisodeResource.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "id", n => { Id = n.GetIntValue(); } },
                 { "languages", n => { Languages = n.GetCollectionOfObjectValues<global::Soenneker.Sonarr.OpenApiClient.Models.Language>(global::Soenneker.Sonarr.OpenApiClient.Models.Language.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "parsedEpisodeInfo", n => { ParsedEpisodeInfo = n.GetObjectValue<global::Soenneker.Sonarr.OpenApiClient.Models.ParsedEpisodeInfo>(global::Soenneker.Sonarr.OpenApiClient.Models.ParsedEpisodeInfo.CreateFromDiscriminatorValue); } },
+                { "parsedEpisodeInfo", n => { ParsedEpisodeInfo = n.GetObjectValue<global::Soenneker.Sonarr.OpenApiClient.Models.ParsedEpisodeInfoResource>(global::Soenneker.Sonarr.OpenApiClient.Models.ParsedEpisodeInfoResource.CreateFromDiscriminatorValue); } },
                 { "series", n => { Series = n.GetObjectValue<global::Soenneker.Sonarr.OpenApiClient.Models.SeriesResource>(global::Soenneker.Sonarr.OpenApiClient.Models.SeriesResource.CreateFromDiscriminatorValue); } },
                 { "title", n => { Title = n.GetStringValue(); } },
             };
@@ -104,7 +104,7 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Sonarr.OpenApiClient.Models.EpisodeResource>("episodes", Episodes);
             writer.WriteIntValue("id", Id);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Sonarr.OpenApiClient.Models.Language>("languages", Languages);
-            writer.WriteObjectValue<global::Soenneker.Sonarr.OpenApiClient.Models.ParsedEpisodeInfo>("parsedEpisodeInfo", ParsedEpisodeInfo);
+            writer.WriteObjectValue<global::Soenneker.Sonarr.OpenApiClient.Models.ParsedEpisodeInfoResource>("parsedEpisodeInfo", ParsedEpisodeInfo);
             writer.WriteObjectValue<global::Soenneker.Sonarr.OpenApiClient.Models.SeriesResource>("series", Series);
             writer.WriteStringValue("title", Title);
         }

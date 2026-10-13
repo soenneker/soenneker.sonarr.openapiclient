@@ -30,6 +30,8 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
 #endif
         /// <summary>The priority property</summary>
         public int? Priority { get; set; }
+        /// <summary>The seasonSearchMaximumSingleEpisodeAge property</summary>
+        public int? SeasonSearchMaximumSingleEpisodeAge { get; set; }
         /// <summary>The tags property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -62,6 +64,7 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
                 { "enableRss", n => { EnableRss = n.GetBoolValue(); } },
                 { "ids", n => { Ids = n.GetCollectionOfPrimitiveValues<int?>()?.AsList(); } },
                 { "priority", n => { Priority = n.GetIntValue(); } },
+                { "seasonSearchMaximumSingleEpisodeAge", n => { SeasonSearchMaximumSingleEpisodeAge = n.GetIntValue(); } },
                 { "tags", n => { Tags = n.GetCollectionOfPrimitiveValues<int?>()?.AsList(); } },
             };
         }
@@ -78,6 +81,7 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
             writer.WriteBoolValue("enableRss", EnableRss);
             writer.WriteCollectionOfPrimitiveValues<int?>("ids", Ids);
             writer.WriteIntValue("priority", Priority);
+            writer.WriteIntValue("seasonSearchMaximumSingleEpisodeAge", SeasonSearchMaximumSingleEpisodeAge);
             writer.WriteCollectionOfPrimitiveValues<int?>("tags", Tags);
         }
     }

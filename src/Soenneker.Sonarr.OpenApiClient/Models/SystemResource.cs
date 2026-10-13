@@ -60,6 +60,8 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
 #endif
         /// <summary>The isAdmin property</summary>
         public bool? IsAdmin { get; set; }
+        /// <summary>The isContainerized property</summary>
+        public bool? IsContainerized { get; set; }
         /// <summary>The isDebug property</summary>
         public bool? IsDebug { get; set; }
         /// <summary>The isDocker property</summary>
@@ -199,6 +201,7 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
                 { "databaseVersion", n => { DatabaseVersion = n.GetStringValue(); } },
                 { "instanceName", n => { InstanceName = n.GetStringValue(); } },
                 { "isAdmin", n => { IsAdmin = n.GetBoolValue(); } },
+                { "isContainerized", n => { IsContainerized = n.GetBoolValue(); } },
                 { "isDebug", n => { IsDebug = n.GetBoolValue(); } },
                 { "isDocker", n => { IsDocker = n.GetBoolValue(); } },
                 { "isLinux", n => { IsLinux = n.GetBoolValue(); } },
@@ -240,6 +243,7 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
             writer.WriteStringValue("databaseVersion", DatabaseVersion);
             writer.WriteStringValue("instanceName", InstanceName);
             writer.WriteBoolValue("isAdmin", IsAdmin);
+            writer.WriteBoolValue("isContainerized", IsContainerized);
             writer.WriteBoolValue("isDebug", IsDebug);
             writer.WriteBoolValue("isDocker", IsDocker);
             writer.WriteBoolValue("isLinux", IsLinux);

@@ -3,6 +3,7 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.Sonarr.OpenApiClient.Api.V3.Rename.Bulk;
 using Soenneker.Sonarr.OpenApiClient.Models;
 using System.Collections.Generic;
 using System.IO;
@@ -17,6 +18,11 @@ namespace Soenneker.Sonarr.OpenApiClient.Api.V3.Rename
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class RenameRequestBuilder : BaseRequestBuilder
     {
+        /// <summary>The bulk property</summary>
+        public global::Soenneker.Sonarr.OpenApiClient.Api.V3.Rename.Bulk.BulkRequestBuilder Bulk
+        {
+            get => new global::Soenneker.Sonarr.OpenApiClient.Api.V3.Rename.Bulk.BulkRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Sonarr.OpenApiClient.Api.V3.Rename.RenameRequestBuilder"/> and sets the default values.
         /// </summary>
