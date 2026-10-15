@@ -169,6 +169,14 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
 #else
         public string Path { get; set; }
 #endif
+        /// <summary>The pendingPath property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? PendingPath { get; set; }
+#nullable restore
+#else
+        public string PendingPath { get; set; }
+#endif
         /// <summary>The previousAiring property</summary>
         public DateTimeOffset? PreviousAiring { get; set; }
         /// <summary>The profileName property</summary>
@@ -342,6 +350,7 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
                 { "originalTitle", n => { OriginalTitle = n.GetStringValue(); } },
                 { "overview", n => { Overview = n.GetStringValue(); } },
                 { "path", n => { Path = n.GetStringValue(); } },
+                { "pendingPath", n => { PendingPath = n.GetStringValue(); } },
                 { "previousAiring", n => { PreviousAiring = n.GetDateTimeOffsetValue(); } },
                 { "profileName", n => { ProfileName = n.GetStringValue(); } },
                 { "qualityProfileId", n => { QualityProfileId = n.GetIntValue(); } },
@@ -401,6 +410,7 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
             writer.WriteStringValue("originalTitle", OriginalTitle);
             writer.WriteStringValue("overview", Overview);
             writer.WriteStringValue("path", Path);
+            writer.WriteStringValue("pendingPath", PendingPath);
             writer.WriteDateTimeOffsetValue("previousAiring", PreviousAiring);
             writer.WriteStringValue("profileName", ProfileName);
             writer.WriteIntValue("qualityProfileId", QualityProfileId);

@@ -13017,6 +13017,10 @@
             "type": "string",
             "nullable": true
           },
+          "pendingPath": {
+            "type": "string",
+            "nullable": true
+          },
           "qualityProfileId": {
             "type": "integer",
             "format": "int32"
