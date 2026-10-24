@@ -7991,7 +7991,6 @@
           "replace"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ApplyTags",
           "modelAsString": false,
@@ -8018,7 +8017,6 @@
           "disabledForLocalhost"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "AuthenticationRequiredType",
           "modelAsString": false,
@@ -8047,7 +8045,6 @@
           "oidc"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "AuthenticationType",
           "modelAsString": false,
@@ -8179,7 +8176,6 @@
           "update"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "BackupType",
           "modelAsString": false,
@@ -8313,7 +8309,6 @@
           "disabled"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "CertificateValidationType",
           "modelAsString": false,
@@ -8395,7 +8390,6 @@
           "low"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "CommandPriority",
           "modelAsString": false,
@@ -8503,7 +8497,6 @@
           "indeterminate"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "CommandResult",
           "modelAsString": false,
@@ -8538,7 +8531,6 @@
           "orphaned"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "CommandStatus",
           "modelAsString": false,
@@ -8581,7 +8573,6 @@
           "scheduled"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "CommandTrigger",
           "modelAsString": false,
@@ -8722,7 +8713,6 @@
           "postgreSQL"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "DatabaseType",
           "modelAsString": false,
@@ -8958,7 +8948,6 @@
           "torrent"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "DownloadProtocol",
           "modelAsString": false,
@@ -9099,7 +9088,6 @@
           "downloadIgnored"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "EpisodeHistoryEventType",
           "modelAsString": false,
@@ -9280,7 +9268,6 @@
           "never"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "EpisodeTitleRequiredType",
           "modelAsString": false,
@@ -9348,9 +9335,7 @@
             "type": "string",
             "nullable": true
           },
-          "value": {
-            "$ref": "#/components/schemas/FieldValue"
-          },
+          "value": {},
           "type": {
             "type": "string",
             "nullable": true
@@ -9397,7 +9382,6 @@
           "utcAirDate"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "FileDateType",
           "modelAsString": false,
@@ -9425,7 +9409,6 @@
           "error"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "HealthCheckResult",
           "modelAsString": false,
@@ -9982,7 +9965,6 @@
           "advanced"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ImportListType",
           "modelAsString": false,
@@ -10289,7 +10271,6 @@
           "keepAndTag"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ListSyncLevelType",
           "modelAsString": false,
@@ -10638,7 +10619,6 @@
           "clearlogo"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "MediaCoverTypes",
           "modelAsString": false,
@@ -10912,7 +10892,6 @@
           "skip"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "MonitorTypes",
           "modelAsString": false,
@@ -11049,7 +11028,6 @@
           "none"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "NewItemMonitorTypes",
           "modelAsString": false,
@@ -11397,7 +11375,6 @@
           "userName"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "PrivacyLevel",
           "modelAsString": false,
@@ -11446,9 +11423,7 @@
             "nullable": true
           }
         },
-        "additionalProperties": {
-          "$ref": "#/components/schemas/ProblemDetailsAdditionalProperties"
-        }
+        "additionalProperties": {}
       },
       "ProfileFormatItemResource": {
         "type": "object",
@@ -11479,7 +11454,6 @@
           "doNotPrefer"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ProperDownloadTypes",
           "modelAsString": false,
@@ -11519,7 +11493,6 @@
           "error"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ProviderMessageType",
           "modelAsString": false,
@@ -11546,7 +11519,6 @@
           "socks5"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ProxyType",
           "modelAsString": false,
@@ -11750,7 +11722,6 @@
           "blurayRaw"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "QualitySource",
           "modelAsString": false,
@@ -11976,7 +11947,6 @@
           "fallback"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "QueueStatus",
           "modelAsString": false,
@@ -12078,7 +12048,6 @@
           "temporary"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "RejectionType",
           "modelAsString": false,
@@ -12135,12 +12104,8 @@
           "enabled": {
             "type": "boolean"
           },
-          "required": {
-            "$ref": "#/components/schemas/ReleaseProfileResourceRequired"
-          },
-          "ignored": {
-            "$ref": "#/components/schemas/ReleaseProfileResourceIgnored"
-          },
+          "required": {},
+          "ignored": {},
           "airDateRestriction": {
             "type": "boolean"
           },
@@ -12467,7 +12432,6 @@
           "seasonPack"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ReleaseType",
           "modelAsString": false,
@@ -12558,7 +12522,6 @@
           "never"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "RescanAfterRefreshType",
           "modelAsString": false,
@@ -12636,7 +12599,6 @@
           "tray"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "RuntimeMode",
           "modelAsString": false,
@@ -12663,7 +12625,6 @@
           "any"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "SeasonPackUpgradeType",
           "modelAsString": false,
@@ -13197,7 +13158,6 @@
           "deleted"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "SeriesStatusType",
           "modelAsString": false,
@@ -13270,7 +13230,6 @@
           "anime"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "SeriesTypes",
           "modelAsString": false,
@@ -13297,7 +13256,6 @@
           "descending"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "SortDirection",
           "modelAsString": false,
@@ -13534,7 +13492,6 @@
           "sync"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "TagExistingType",
           "modelAsString": false,
@@ -13619,7 +13576,6 @@
           "ignored"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "TrackedDownloadState",
           "modelAsString": false,
@@ -13666,7 +13622,6 @@
           "error"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "TrackedDownloadStatus",
           "modelAsString": false,
@@ -13798,7 +13753,6 @@
           "docker"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "UpdateMechanism",
           "modelAsString": false,
@@ -13915,9 +13869,7 @@
       },
       "CustomFilterResourceFiltersItem": {
         "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/CustomFilterResourceFiltersItemAdditionalProperties"
-        }
+        "additionalProperties": {}
       },
       "HistoryResourceData": {
         "type": "object",
@@ -14812,41 +14764,23 @@
       },
       "CustomFilterResourceFiltersItemProperty": {
         "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/CustomFilterResourceFiltersItemPropertyAdditionalProperties"
-        }
-      },
-      "FieldValue": {
-        "type": "object"
+        "additionalProperties": {}
       },
       "HistoryResourceDataProperty": {
         "type": "object",
         "additionalProperties": {
           "type": "string",
           "nullable": true
-        }
+        },
+        "nullable": true
       },
       "LocalizationResourceStringsProperty": {
         "type": "object",
         "additionalProperties": {
           "type": "string",
           "nullable": true
-        }
-      },
-      "ProblemDetailsAdditionalProperties": {
-        "type": "object"
-      },
-      "ReleaseProfileResourceRequired": {
-        "type": "object"
-      },
-      "ReleaseProfileResourceIgnored": {
-        "type": "object"
-      },
-      "CustomFilterResourceFiltersItemAdditionalProperties": {
-        "type": "object"
-      },
-      "CustomFilterResourceFiltersItemPropertyAdditionalProperties": {
-        "type": "object"
+        },
+        "nullable": true
       }
     },
     "securitySchemes": {
