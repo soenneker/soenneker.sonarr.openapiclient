@@ -1254,7 +1254,14 @@
         "operationId": "GetApiV3CustomformatSchema",
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetApiV3CustomformatSchema200ResponseSchema"
+                }
+              }
+            }
           }
         }
       }
@@ -13974,6 +13981,12 @@
           "$ref": "#/components/schemas/CustomFormatResource"
         }
       },
+      "GetApiV3CustomformatSchema200Response": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/CustomFormatSpecificationSchema"
+        }
+      },
       "GetApiV3Delayprofile200Response": {
         "type": "array",
         "items": {
@@ -14378,6 +14391,12 @@
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/CustomFormatResource"
+        }
+      },
+      "GetApiV3CustomformatSchema200ResponseSchema": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/CustomFormatSpecificationSchema"
         }
       },
       "GetApiV3Delayprofile200ResponseSchema": {
