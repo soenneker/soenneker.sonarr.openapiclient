@@ -11,35 +11,65 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class DelayProfileResource : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("bypassIfAboveCustomFormatScore") is { } nullNodeBypassIfAboveCustomFormatScore && nullNodeBypassIfAboveCustomFormatScore.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BypassIfAboveCustomFormatScore = null;
+            if (parseNode.GetChildNode("bypassIfHighestQuality") is { } nullNodeBypassIfHighestQuality && nullNodeBypassIfHighestQuality.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BypassIfHighestQuality = null;
+            if (parseNode.GetChildNode("enableTorrent") is { } nullNodeEnableTorrent && nullNodeEnableTorrent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnableTorrent = null;
+            if (parseNode.GetChildNode("enableUsenet") is { } nullNodeEnableUsenet && nullNodeEnableUsenet.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnableUsenet = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("minimumCustomFormatScore") is { } nullNodeMinimumCustomFormatScore && nullNodeMinimumCustomFormatScore.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinimumCustomFormatScore = null;
+            if (parseNode.GetChildNode("order") is { } nullNodeOrder && nullNodeOrder.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Order = null;
+            if (parseNode.GetChildNode("preferredProtocol") is { } nullNodePreferredProtocol && nullNodePreferredProtocol.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreferredProtocol = null;
+            if (parseNode.GetChildNode("tags") is { } nullNodeTags && nullNodeTags.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Tags = null;
+            if (parseNode.GetChildNode("torrentDelay") is { } nullNodeTorrentDelay && nullNodeTorrentDelay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TorrentDelay = null;
+            if (parseNode.GetChildNode("usenetDelay") is { } nullNodeUsenetDelay && nullNodeUsenetDelay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UsenetDelay = null;
+        }
+
         /// <summary>The bypassIfAboveCustomFormatScore property</summary>
-        public bool? BypassIfAboveCustomFormatScore { get; set; }
+        public bool? BypassIfAboveCustomFormatScore { get => _explicitNullValueBypassIfAboveCustomFormatScore; set { _explicitNullValueBypassIfAboveCustomFormatScore = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bypassIfAboveCustomFormatScore"); else _explicitNullProperties?.Remove("bypassIfAboveCustomFormatScore"); } }
+        private bool? _explicitNullValueBypassIfAboveCustomFormatScore = default!;
         /// <summary>The bypassIfHighestQuality property</summary>
-        public bool? BypassIfHighestQuality { get; set; }
+        public bool? BypassIfHighestQuality { get => _explicitNullValueBypassIfHighestQuality; set { _explicitNullValueBypassIfHighestQuality = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bypassIfHighestQuality"); else _explicitNullProperties?.Remove("bypassIfHighestQuality"); } }
+        private bool? _explicitNullValueBypassIfHighestQuality = default!;
         /// <summary>The enableTorrent property</summary>
-        public bool? EnableTorrent { get; set; }
+        public bool? EnableTorrent { get => _explicitNullValueEnableTorrent; set { _explicitNullValueEnableTorrent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enableTorrent"); else _explicitNullProperties?.Remove("enableTorrent"); } }
+        private bool? _explicitNullValueEnableTorrent = default!;
         /// <summary>The enableUsenet property</summary>
-        public bool? EnableUsenet { get; set; }
+        public bool? EnableUsenet { get => _explicitNullValueEnableUsenet; set { _explicitNullValueEnableUsenet = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enableUsenet"); else _explicitNullProperties?.Remove("enableUsenet"); } }
+        private bool? _explicitNullValueEnableUsenet = default!;
         /// <summary>The id property</summary>
-        public int? Id { get; set; }
+        public int? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private int? _explicitNullValueId = default!;
         /// <summary>The minimumCustomFormatScore property</summary>
-        public int? MinimumCustomFormatScore { get; set; }
+        public int? MinimumCustomFormatScore { get => _explicitNullValueMinimumCustomFormatScore; set { _explicitNullValueMinimumCustomFormatScore = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minimumCustomFormatScore"); else _explicitNullProperties?.Remove("minimumCustomFormatScore"); } }
+        private int? _explicitNullValueMinimumCustomFormatScore = default!;
         /// <summary>The order property</summary>
-        public int? Order { get; set; }
+        public int? Order { get => _explicitNullValueOrder; set { _explicitNullValueOrder = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("order"); else _explicitNullProperties?.Remove("order"); } }
+        private int? _explicitNullValueOrder = default!;
         /// <summary>The preferredProtocol property</summary>
-        public global::Soenneker.Sonarr.OpenApiClient.Models.DownloadProtocol? PreferredProtocol { get; set; }
+        public global::Soenneker.Sonarr.OpenApiClient.Models.DownloadProtocol? PreferredProtocol { get => _explicitNullValuePreferredProtocol; set { _explicitNullValuePreferredProtocol = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("preferredProtocol"); else _explicitNullProperties?.Remove("preferredProtocol"); } }
+        private global::Soenneker.Sonarr.OpenApiClient.Models.DownloadProtocol? _explicitNullValuePreferredProtocol = default!;
         /// <summary>The tags property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<int?>? Tags { get; set; }
+        public List<int?>? Tags { get => _explicitNullValueTags; set { _explicitNullValueTags = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tags"); else _explicitNullProperties?.Remove("tags"); } }
+        private List<int?>? _explicitNullValueTags = default!;
 #nullable restore
 #else
-        public List<int?> Tags { get; set; }
+        public List<int?> Tags { get => _explicitNullValueTags; set { _explicitNullValueTags = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tags"); else _explicitNullProperties?.Remove("tags"); } }
+        private List<int?> _explicitNullValueTags = default!;
 #endif
         /// <summary>The torrentDelay property</summary>
-        public int? TorrentDelay { get; set; }
+        public int? TorrentDelay { get => _explicitNullValueTorrentDelay; set { _explicitNullValueTorrentDelay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("torrentDelay"); else _explicitNullProperties?.Remove("torrentDelay"); } }
+        private int? _explicitNullValueTorrentDelay = default!;
         /// <summary>The usenetDelay property</summary>
-        public int? UsenetDelay { get; set; }
+        public int? UsenetDelay { get => _explicitNullValueUsenetDelay; set { _explicitNullValueUsenetDelay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("usenetDelay"); else _explicitNullProperties?.Remove("usenetDelay"); } }
+        private int? _explicitNullValueUsenetDelay = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -48,7 +78,7 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
         public static global::Soenneker.Sonarr.OpenApiClient.Models.DelayProfileResource CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Sonarr.OpenApiClient.Models.DelayProfileResource();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Sonarr.OpenApiClient.Models.DelayProfileResource(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -88,7 +118,8 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Sonarr.OpenApiClient.Models.DownloadProtocol>("preferredProtocol", PreferredProtocol);
             writer.WriteCollectionOfPrimitiveValues<int?>("tags", Tags);
             writer.WriteIntValue("torrentDelay", TorrentDelay);
-            writer.WriteIntValue("usenetDelay", UsenetDelay);
+            writer.WriteIntValue("usenetDelay", UsenetDelay);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

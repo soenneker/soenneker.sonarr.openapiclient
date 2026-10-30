@@ -11,26 +11,43 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class CustomFormatResource : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("includeCustomFormatWhenRenaming") is { } nullNodeIncludeCustomFormatWhenRenaming && nullNodeIncludeCustomFormatWhenRenaming.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IncludeCustomFormatWhenRenaming = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("specifications") is { } nullNodeSpecifications && nullNodeSpecifications.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Specifications = null;
+        }
+
         /// <summary>The id property</summary>
-        public int? Id { get; set; }
+        public int? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private int? _explicitNullValueId = default!;
         /// <summary>The includeCustomFormatWhenRenaming property</summary>
-        public bool? IncludeCustomFormatWhenRenaming { get; set; }
+        public bool? IncludeCustomFormatWhenRenaming { get => _explicitNullValueIncludeCustomFormatWhenRenaming; set { _explicitNullValueIncludeCustomFormatWhenRenaming = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("includeCustomFormatWhenRenaming"); else _explicitNullProperties?.Remove("includeCustomFormatWhenRenaming"); } }
+        private bool? _explicitNullValueIncludeCustomFormatWhenRenaming = default!;
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>The specifications property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Sonarr.OpenApiClient.Models.CustomFormatSpecificationSchema>? Specifications { get; set; }
+        public List<global::Soenneker.Sonarr.OpenApiClient.Models.CustomFormatSpecificationSchema>? Specifications { get => _explicitNullValueSpecifications; set { _explicitNullValueSpecifications = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("specifications"); else _explicitNullProperties?.Remove("specifications"); } }
+        private List<global::Soenneker.Sonarr.OpenApiClient.Models.CustomFormatSpecificationSchema>? _explicitNullValueSpecifications = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Sonarr.OpenApiClient.Models.CustomFormatSpecificationSchema> Specifications { get; set; }
+        public List<global::Soenneker.Sonarr.OpenApiClient.Models.CustomFormatSpecificationSchema> Specifications { get => _explicitNullValueSpecifications; set { _explicitNullValueSpecifications = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("specifications"); else _explicitNullProperties?.Remove("specifications"); } }
+        private List<global::Soenneker.Sonarr.OpenApiClient.Models.CustomFormatSpecificationSchema> _explicitNullValueSpecifications = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -40,7 +57,7 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
         public static global::Soenneker.Sonarr.OpenApiClient.Models.CustomFormatResource CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Sonarr.OpenApiClient.Models.CustomFormatResource();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Sonarr.OpenApiClient.Models.CustomFormatResource(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -66,7 +83,8 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
             writer.WriteIntValue("id", Id);
             writer.WriteBoolValue("includeCustomFormatWhenRenaming", IncludeCustomFormatWhenRenaming);
             writer.WriteStringValue("name", Name);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Sonarr.OpenApiClient.Models.CustomFormatSpecificationSchema>("specifications", Specifications);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Sonarr.OpenApiClient.Models.CustomFormatSpecificationSchema>("specifications", Specifications);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

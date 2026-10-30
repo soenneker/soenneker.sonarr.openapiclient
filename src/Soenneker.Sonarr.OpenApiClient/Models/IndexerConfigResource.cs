@@ -11,17 +11,34 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class IndexerConfigResource : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("maximumSize") is { } nullNodeMaximumSize && nullNodeMaximumSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaximumSize = null;
+            if (parseNode.GetChildNode("minimumAge") is { } nullNodeMinimumAge && nullNodeMinimumAge.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinimumAge = null;
+            if (parseNode.GetChildNode("retention") is { } nullNodeRetention && nullNodeRetention.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Retention = null;
+            if (parseNode.GetChildNode("rssSyncInterval") is { } nullNodeRssSyncInterval && nullNodeRssSyncInterval.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RssSyncInterval = null;
+        }
+
         /// <summary>The id property</summary>
-        public int? Id { get; set; }
+        public int? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private int? _explicitNullValueId = default!;
         /// <summary>The maximumSize property</summary>
-        public int? MaximumSize { get; set; }
+        public int? MaximumSize { get => _explicitNullValueMaximumSize; set { _explicitNullValueMaximumSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maximumSize"); else _explicitNullProperties?.Remove("maximumSize"); } }
+        private int? _explicitNullValueMaximumSize = default!;
         /// <summary>The minimumAge property</summary>
-        public int? MinimumAge { get; set; }
+        public int? MinimumAge { get => _explicitNullValueMinimumAge; set { _explicitNullValueMinimumAge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minimumAge"); else _explicitNullProperties?.Remove("minimumAge"); } }
+        private int? _explicitNullValueMinimumAge = default!;
         /// <summary>The retention property</summary>
-        public int? Retention { get; set; }
+        public int? Retention { get => _explicitNullValueRetention; set { _explicitNullValueRetention = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("retention"); else _explicitNullProperties?.Remove("retention"); } }
+        private int? _explicitNullValueRetention = default!;
         /// <summary>The rssSyncInterval property</summary>
-        public int? RssSyncInterval { get; set; }
+        public int? RssSyncInterval { get => _explicitNullValueRssSyncInterval; set { _explicitNullValueRssSyncInterval = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rssSyncInterval"); else _explicitNullProperties?.Remove("rssSyncInterval"); } }
+        private int? _explicitNullValueRssSyncInterval = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -30,7 +47,7 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
         public static global::Soenneker.Sonarr.OpenApiClient.Models.IndexerConfigResource CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Sonarr.OpenApiClient.Models.IndexerConfigResource();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Sonarr.OpenApiClient.Models.IndexerConfigResource(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -58,7 +75,8 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
             writer.WriteIntValue("maximumSize", MaximumSize);
             writer.WriteIntValue("minimumAge", MinimumAge);
             writer.WriteIntValue("retention", Retention);
-            writer.WriteIntValue("rssSyncInterval", RssSyncInterval);
+            writer.WriteIntValue("rssSyncInterval", RssSyncInterval);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

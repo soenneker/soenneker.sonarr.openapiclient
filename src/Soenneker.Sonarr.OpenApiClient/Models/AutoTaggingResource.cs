@@ -11,34 +11,54 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class AutoTaggingResource : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("removeTagsAutomatically") is { } nullNodeRemoveTagsAutomatically && nullNodeRemoveTagsAutomatically.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RemoveTagsAutomatically = null;
+            if (parseNode.GetChildNode("specifications") is { } nullNodeSpecifications && nullNodeSpecifications.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Specifications = null;
+            if (parseNode.GetChildNode("tags") is { } nullNodeTags && nullNodeTags.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Tags = null;
+        }
+
         /// <summary>The id property</summary>
-        public int? Id { get; set; }
+        public int? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private int? _explicitNullValueId = default!;
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>The removeTagsAutomatically property</summary>
-        public bool? RemoveTagsAutomatically { get; set; }
+        public bool? RemoveTagsAutomatically { get => _explicitNullValueRemoveTagsAutomatically; set { _explicitNullValueRemoveTagsAutomatically = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("removeTagsAutomatically"); else _explicitNullProperties?.Remove("removeTagsAutomatically"); } }
+        private bool? _explicitNullValueRemoveTagsAutomatically = default!;
         /// <summary>The specifications property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Sonarr.OpenApiClient.Models.AutoTaggingSpecificationSchema>? Specifications { get; set; }
+        public List<global::Soenneker.Sonarr.OpenApiClient.Models.AutoTaggingSpecificationSchema>? Specifications { get => _explicitNullValueSpecifications; set { _explicitNullValueSpecifications = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("specifications"); else _explicitNullProperties?.Remove("specifications"); } }
+        private List<global::Soenneker.Sonarr.OpenApiClient.Models.AutoTaggingSpecificationSchema>? _explicitNullValueSpecifications = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Sonarr.OpenApiClient.Models.AutoTaggingSpecificationSchema> Specifications { get; set; }
+        public List<global::Soenneker.Sonarr.OpenApiClient.Models.AutoTaggingSpecificationSchema> Specifications { get => _explicitNullValueSpecifications; set { _explicitNullValueSpecifications = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("specifications"); else _explicitNullProperties?.Remove("specifications"); } }
+        private List<global::Soenneker.Sonarr.OpenApiClient.Models.AutoTaggingSpecificationSchema> _explicitNullValueSpecifications = default!;
 #endif
         /// <summary>The tags property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<int?>? Tags { get; set; }
+        public List<int?>? Tags { get => _explicitNullValueTags; set { _explicitNullValueTags = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tags"); else _explicitNullProperties?.Remove("tags"); } }
+        private List<int?>? _explicitNullValueTags = default!;
 #nullable restore
 #else
-        public List<int?> Tags { get; set; }
+        public List<int?> Tags { get => _explicitNullValueTags; set { _explicitNullValueTags = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tags"); else _explicitNullProperties?.Remove("tags"); } }
+        private List<int?> _explicitNullValueTags = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -48,7 +68,7 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
         public static global::Soenneker.Sonarr.OpenApiClient.Models.AutoTaggingResource CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Sonarr.OpenApiClient.Models.AutoTaggingResource();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Sonarr.OpenApiClient.Models.AutoTaggingResource(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -76,7 +96,8 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
             writer.WriteStringValue("name", Name);
             writer.WriteBoolValue("removeTagsAutomatically", RemoveTagsAutomatically);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Sonarr.OpenApiClient.Models.AutoTaggingSpecificationSchema>("specifications", Specifications);
-            writer.WriteCollectionOfPrimitiveValues<int?>("tags", Tags);
+            writer.WriteCollectionOfPrimitiveValues<int?>("tags", Tags);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

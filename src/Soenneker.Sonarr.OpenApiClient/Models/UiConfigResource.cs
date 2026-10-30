@@ -11,65 +11,100 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class UiConfigResource : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("calendarWeekColumnHeader") is { } nullNodeCalendarWeekColumnHeader && nullNodeCalendarWeekColumnHeader.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CalendarWeekColumnHeader = null;
+            if (parseNode.GetChildNode("enableColorImpairedMode") is { } nullNodeEnableColorImpairedMode && nullNodeEnableColorImpairedMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnableColorImpairedMode = null;
+            if (parseNode.GetChildNode("firstDayOfWeek") is { } nullNodeFirstDayOfWeek && nullNodeFirstDayOfWeek.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FirstDayOfWeek = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("longDateFormat") is { } nullNodeLongDateFormat && nullNodeLongDateFormat.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LongDateFormat = null;
+            if (parseNode.GetChildNode("shortDateFormat") is { } nullNodeShortDateFormat && nullNodeShortDateFormat.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShortDateFormat = null;
+            if (parseNode.GetChildNode("showRelativeDates") is { } nullNodeShowRelativeDates && nullNodeShowRelativeDates.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShowRelativeDates = null;
+            if (parseNode.GetChildNode("theme") is { } nullNodeTheme && nullNodeTheme.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Theme = null;
+            if (parseNode.GetChildNode("timeFormat") is { } nullNodeTimeFormat && nullNodeTimeFormat.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TimeFormat = null;
+            if (parseNode.GetChildNode("timeZone") is { } nullNodeTimeZone && nullNodeTimeZone.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TimeZone = null;
+            if (parseNode.GetChildNode("uiLanguage") is { } nullNodeUiLanguage && nullNodeUiLanguage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UiLanguage = null;
+        }
+
         /// <summary>The calendarWeekColumnHeader property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CalendarWeekColumnHeader { get; set; }
+        public string? CalendarWeekColumnHeader { get => _explicitNullValueCalendarWeekColumnHeader; set { _explicitNullValueCalendarWeekColumnHeader = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("calendarWeekColumnHeader"); else _explicitNullProperties?.Remove("calendarWeekColumnHeader"); } }
+        private string? _explicitNullValueCalendarWeekColumnHeader = default!;
 #nullable restore
 #else
-        public string CalendarWeekColumnHeader { get; set; }
+        public string CalendarWeekColumnHeader { get => _explicitNullValueCalendarWeekColumnHeader; set { _explicitNullValueCalendarWeekColumnHeader = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("calendarWeekColumnHeader"); else _explicitNullProperties?.Remove("calendarWeekColumnHeader"); } }
+        private string _explicitNullValueCalendarWeekColumnHeader = default!;
 #endif
         /// <summary>The enableColorImpairedMode property</summary>
-        public bool? EnableColorImpairedMode { get; set; }
+        public bool? EnableColorImpairedMode { get => _explicitNullValueEnableColorImpairedMode; set { _explicitNullValueEnableColorImpairedMode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enableColorImpairedMode"); else _explicitNullProperties?.Remove("enableColorImpairedMode"); } }
+        private bool? _explicitNullValueEnableColorImpairedMode = default!;
         /// <summary>The firstDayOfWeek property</summary>
-        public int? FirstDayOfWeek { get; set; }
+        public int? FirstDayOfWeek { get => _explicitNullValueFirstDayOfWeek; set { _explicitNullValueFirstDayOfWeek = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("firstDayOfWeek"); else _explicitNullProperties?.Remove("firstDayOfWeek"); } }
+        private int? _explicitNullValueFirstDayOfWeek = default!;
         /// <summary>The id property</summary>
-        public int? Id { get; set; }
+        public int? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private int? _explicitNullValueId = default!;
         /// <summary>The longDateFormat property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LongDateFormat { get; set; }
+        public string? LongDateFormat { get => _explicitNullValueLongDateFormat; set { _explicitNullValueLongDateFormat = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("longDateFormat"); else _explicitNullProperties?.Remove("longDateFormat"); } }
+        private string? _explicitNullValueLongDateFormat = default!;
 #nullable restore
 #else
-        public string LongDateFormat { get; set; }
+        public string LongDateFormat { get => _explicitNullValueLongDateFormat; set { _explicitNullValueLongDateFormat = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("longDateFormat"); else _explicitNullProperties?.Remove("longDateFormat"); } }
+        private string _explicitNullValueLongDateFormat = default!;
 #endif
         /// <summary>The shortDateFormat property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ShortDateFormat { get; set; }
+        public string? ShortDateFormat { get => _explicitNullValueShortDateFormat; set { _explicitNullValueShortDateFormat = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shortDateFormat"); else _explicitNullProperties?.Remove("shortDateFormat"); } }
+        private string? _explicitNullValueShortDateFormat = default!;
 #nullable restore
 #else
-        public string ShortDateFormat { get; set; }
+        public string ShortDateFormat { get => _explicitNullValueShortDateFormat; set { _explicitNullValueShortDateFormat = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shortDateFormat"); else _explicitNullProperties?.Remove("shortDateFormat"); } }
+        private string _explicitNullValueShortDateFormat = default!;
 #endif
         /// <summary>The showRelativeDates property</summary>
-        public bool? ShowRelativeDates { get; set; }
+        public bool? ShowRelativeDates { get => _explicitNullValueShowRelativeDates; set { _explicitNullValueShowRelativeDates = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("showRelativeDates"); else _explicitNullProperties?.Remove("showRelativeDates"); } }
+        private bool? _explicitNullValueShowRelativeDates = default!;
         /// <summary>The theme property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Theme { get; set; }
+        public string? Theme { get => _explicitNullValueTheme; set { _explicitNullValueTheme = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("theme"); else _explicitNullProperties?.Remove("theme"); } }
+        private string? _explicitNullValueTheme = default!;
 #nullable restore
 #else
-        public string Theme { get; set; }
+        public string Theme { get => _explicitNullValueTheme; set { _explicitNullValueTheme = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("theme"); else _explicitNullProperties?.Remove("theme"); } }
+        private string _explicitNullValueTheme = default!;
 #endif
         /// <summary>The timeFormat property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TimeFormat { get; set; }
+        public string? TimeFormat { get => _explicitNullValueTimeFormat; set { _explicitNullValueTimeFormat = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timeFormat"); else _explicitNullProperties?.Remove("timeFormat"); } }
+        private string? _explicitNullValueTimeFormat = default!;
 #nullable restore
 #else
-        public string TimeFormat { get; set; }
+        public string TimeFormat { get => _explicitNullValueTimeFormat; set { _explicitNullValueTimeFormat = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timeFormat"); else _explicitNullProperties?.Remove("timeFormat"); } }
+        private string _explicitNullValueTimeFormat = default!;
 #endif
         /// <summary>The timeZone property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TimeZone { get; set; }
+        public string? TimeZone { get => _explicitNullValueTimeZone; set { _explicitNullValueTimeZone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timeZone"); else _explicitNullProperties?.Remove("timeZone"); } }
+        private string? _explicitNullValueTimeZone = default!;
 #nullable restore
 #else
-        public string TimeZone { get; set; }
+        public string TimeZone { get => _explicitNullValueTimeZone; set { _explicitNullValueTimeZone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timeZone"); else _explicitNullProperties?.Remove("timeZone"); } }
+        private string _explicitNullValueTimeZone = default!;
 #endif
         /// <summary>The uiLanguage property</summary>
-        public int? UiLanguage { get; set; }
+        public int? UiLanguage { get => _explicitNullValueUiLanguage; set { _explicitNullValueUiLanguage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("uiLanguage"); else _explicitNullProperties?.Remove("uiLanguage"); } }
+        private int? _explicitNullValueUiLanguage = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -78,7 +113,7 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
         public static global::Soenneker.Sonarr.OpenApiClient.Models.UiConfigResource CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Sonarr.OpenApiClient.Models.UiConfigResource();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Sonarr.OpenApiClient.Models.UiConfigResource(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -118,7 +153,8 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
             writer.WriteStringValue("theme", Theme);
             writer.WriteStringValue("timeFormat", TimeFormat);
             writer.WriteStringValue("timeZone", TimeZone);
-            writer.WriteIntValue("uiLanguage", UiLanguage);
+            writer.WriteIntValue("uiLanguage", UiLanguage);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

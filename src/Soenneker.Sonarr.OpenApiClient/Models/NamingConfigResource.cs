@@ -11,72 +11,110 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class NamingConfigResource : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("animeEpisodeFormat") is { } nullNodeAnimeEpisodeFormat && nullNodeAnimeEpisodeFormat.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AnimeEpisodeFormat = null;
+            if (parseNode.GetChildNode("colonReplacementFormat") is { } nullNodeColonReplacementFormat && nullNodeColonReplacementFormat.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ColonReplacementFormat = null;
+            if (parseNode.GetChildNode("customColonReplacementFormat") is { } nullNodeCustomColonReplacementFormat && nullNodeCustomColonReplacementFormat.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomColonReplacementFormat = null;
+            if (parseNode.GetChildNode("dailyEpisodeFormat") is { } nullNodeDailyEpisodeFormat && nullNodeDailyEpisodeFormat.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DailyEpisodeFormat = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("multiEpisodeStyle") is { } nullNodeMultiEpisodeStyle && nullNodeMultiEpisodeStyle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MultiEpisodeStyle = null;
+            if (parseNode.GetChildNode("renameEpisodes") is { } nullNodeRenameEpisodes && nullNodeRenameEpisodes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RenameEpisodes = null;
+            if (parseNode.GetChildNode("replaceIllegalCharacters") is { } nullNodeReplaceIllegalCharacters && nullNodeReplaceIllegalCharacters.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReplaceIllegalCharacters = null;
+            if (parseNode.GetChildNode("seasonFolderFormat") is { } nullNodeSeasonFolderFormat && nullNodeSeasonFolderFormat.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SeasonFolderFormat = null;
+            if (parseNode.GetChildNode("seriesFolderFormat") is { } nullNodeSeriesFolderFormat && nullNodeSeriesFolderFormat.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SeriesFolderFormat = null;
+            if (parseNode.GetChildNode("specialsFolderFormat") is { } nullNodeSpecialsFolderFormat && nullNodeSpecialsFolderFormat.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SpecialsFolderFormat = null;
+            if (parseNode.GetChildNode("standardEpisodeFormat") is { } nullNodeStandardEpisodeFormat && nullNodeStandardEpisodeFormat.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StandardEpisodeFormat = null;
+        }
+
         /// <summary>The animeEpisodeFormat property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AnimeEpisodeFormat { get; set; }
+        public string? AnimeEpisodeFormat { get => _explicitNullValueAnimeEpisodeFormat; set { _explicitNullValueAnimeEpisodeFormat = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("animeEpisodeFormat"); else _explicitNullProperties?.Remove("animeEpisodeFormat"); } }
+        private string? _explicitNullValueAnimeEpisodeFormat = default!;
 #nullable restore
 #else
-        public string AnimeEpisodeFormat { get; set; }
+        public string AnimeEpisodeFormat { get => _explicitNullValueAnimeEpisodeFormat; set { _explicitNullValueAnimeEpisodeFormat = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("animeEpisodeFormat"); else _explicitNullProperties?.Remove("animeEpisodeFormat"); } }
+        private string _explicitNullValueAnimeEpisodeFormat = default!;
 #endif
         /// <summary>The colonReplacementFormat property</summary>
-        public int? ColonReplacementFormat { get; set; }
+        public int? ColonReplacementFormat { get => _explicitNullValueColonReplacementFormat; set { _explicitNullValueColonReplacementFormat = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("colonReplacementFormat"); else _explicitNullProperties?.Remove("colonReplacementFormat"); } }
+        private int? _explicitNullValueColonReplacementFormat = default!;
         /// <summary>The customColonReplacementFormat property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CustomColonReplacementFormat { get; set; }
+        public string? CustomColonReplacementFormat { get => _explicitNullValueCustomColonReplacementFormat; set { _explicitNullValueCustomColonReplacementFormat = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customColonReplacementFormat"); else _explicitNullProperties?.Remove("customColonReplacementFormat"); } }
+        private string? _explicitNullValueCustomColonReplacementFormat = default!;
 #nullable restore
 #else
-        public string CustomColonReplacementFormat { get; set; }
+        public string CustomColonReplacementFormat { get => _explicitNullValueCustomColonReplacementFormat; set { _explicitNullValueCustomColonReplacementFormat = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customColonReplacementFormat"); else _explicitNullProperties?.Remove("customColonReplacementFormat"); } }
+        private string _explicitNullValueCustomColonReplacementFormat = default!;
 #endif
         /// <summary>The dailyEpisodeFormat property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DailyEpisodeFormat { get; set; }
+        public string? DailyEpisodeFormat { get => _explicitNullValueDailyEpisodeFormat; set { _explicitNullValueDailyEpisodeFormat = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dailyEpisodeFormat"); else _explicitNullProperties?.Remove("dailyEpisodeFormat"); } }
+        private string? _explicitNullValueDailyEpisodeFormat = default!;
 #nullable restore
 #else
-        public string DailyEpisodeFormat { get; set; }
+        public string DailyEpisodeFormat { get => _explicitNullValueDailyEpisodeFormat; set { _explicitNullValueDailyEpisodeFormat = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dailyEpisodeFormat"); else _explicitNullProperties?.Remove("dailyEpisodeFormat"); } }
+        private string _explicitNullValueDailyEpisodeFormat = default!;
 #endif
         /// <summary>The id property</summary>
-        public int? Id { get; set; }
+        public int? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private int? _explicitNullValueId = default!;
         /// <summary>The multiEpisodeStyle property</summary>
-        public int? MultiEpisodeStyle { get; set; }
+        public int? MultiEpisodeStyle { get => _explicitNullValueMultiEpisodeStyle; set { _explicitNullValueMultiEpisodeStyle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("multiEpisodeStyle"); else _explicitNullProperties?.Remove("multiEpisodeStyle"); } }
+        private int? _explicitNullValueMultiEpisodeStyle = default!;
         /// <summary>The renameEpisodes property</summary>
-        public bool? RenameEpisodes { get; set; }
+        public bool? RenameEpisodes { get => _explicitNullValueRenameEpisodes; set { _explicitNullValueRenameEpisodes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("renameEpisodes"); else _explicitNullProperties?.Remove("renameEpisodes"); } }
+        private bool? _explicitNullValueRenameEpisodes = default!;
         /// <summary>The replaceIllegalCharacters property</summary>
-        public bool? ReplaceIllegalCharacters { get; set; }
+        public bool? ReplaceIllegalCharacters { get => _explicitNullValueReplaceIllegalCharacters; set { _explicitNullValueReplaceIllegalCharacters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("replaceIllegalCharacters"); else _explicitNullProperties?.Remove("replaceIllegalCharacters"); } }
+        private bool? _explicitNullValueReplaceIllegalCharacters = default!;
         /// <summary>The seasonFolderFormat property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SeasonFolderFormat { get; set; }
+        public string? SeasonFolderFormat { get => _explicitNullValueSeasonFolderFormat; set { _explicitNullValueSeasonFolderFormat = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("seasonFolderFormat"); else _explicitNullProperties?.Remove("seasonFolderFormat"); } }
+        private string? _explicitNullValueSeasonFolderFormat = default!;
 #nullable restore
 #else
-        public string SeasonFolderFormat { get; set; }
+        public string SeasonFolderFormat { get => _explicitNullValueSeasonFolderFormat; set { _explicitNullValueSeasonFolderFormat = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("seasonFolderFormat"); else _explicitNullProperties?.Remove("seasonFolderFormat"); } }
+        private string _explicitNullValueSeasonFolderFormat = default!;
 #endif
         /// <summary>The seriesFolderFormat property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SeriesFolderFormat { get; set; }
+        public string? SeriesFolderFormat { get => _explicitNullValueSeriesFolderFormat; set { _explicitNullValueSeriesFolderFormat = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("seriesFolderFormat"); else _explicitNullProperties?.Remove("seriesFolderFormat"); } }
+        private string? _explicitNullValueSeriesFolderFormat = default!;
 #nullable restore
 #else
-        public string SeriesFolderFormat { get; set; }
+        public string SeriesFolderFormat { get => _explicitNullValueSeriesFolderFormat; set { _explicitNullValueSeriesFolderFormat = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("seriesFolderFormat"); else _explicitNullProperties?.Remove("seriesFolderFormat"); } }
+        private string _explicitNullValueSeriesFolderFormat = default!;
 #endif
         /// <summary>The specialsFolderFormat property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SpecialsFolderFormat { get; set; }
+        public string? SpecialsFolderFormat { get => _explicitNullValueSpecialsFolderFormat; set { _explicitNullValueSpecialsFolderFormat = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("specialsFolderFormat"); else _explicitNullProperties?.Remove("specialsFolderFormat"); } }
+        private string? _explicitNullValueSpecialsFolderFormat = default!;
 #nullable restore
 #else
-        public string SpecialsFolderFormat { get; set; }
+        public string SpecialsFolderFormat { get => _explicitNullValueSpecialsFolderFormat; set { _explicitNullValueSpecialsFolderFormat = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("specialsFolderFormat"); else _explicitNullProperties?.Remove("specialsFolderFormat"); } }
+        private string _explicitNullValueSpecialsFolderFormat = default!;
 #endif
         /// <summary>The standardEpisodeFormat property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StandardEpisodeFormat { get; set; }
+        public string? StandardEpisodeFormat { get => _explicitNullValueStandardEpisodeFormat; set { _explicitNullValueStandardEpisodeFormat = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("standardEpisodeFormat"); else _explicitNullProperties?.Remove("standardEpisodeFormat"); } }
+        private string? _explicitNullValueStandardEpisodeFormat = default!;
 #nullable restore
 #else
-        public string StandardEpisodeFormat { get; set; }
+        public string StandardEpisodeFormat { get => _explicitNullValueStandardEpisodeFormat; set { _explicitNullValueStandardEpisodeFormat = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("standardEpisodeFormat"); else _explicitNullProperties?.Remove("standardEpisodeFormat"); } }
+        private string _explicitNullValueStandardEpisodeFormat = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -86,7 +124,7 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
         public static global::Soenneker.Sonarr.OpenApiClient.Models.NamingConfigResource CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Sonarr.OpenApiClient.Models.NamingConfigResource();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Sonarr.OpenApiClient.Models.NamingConfigResource(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -128,7 +166,8 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
             writer.WriteStringValue("seasonFolderFormat", SeasonFolderFormat);
             writer.WriteStringValue("seriesFolderFormat", SeriesFolderFormat);
             writer.WriteStringValue("specialsFolderFormat", SpecialsFolderFormat);
-            writer.WriteStringValue("standardEpisodeFormat", StandardEpisodeFormat);
+            writer.WriteStringValue("standardEpisodeFormat", StandardEpisodeFormat);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

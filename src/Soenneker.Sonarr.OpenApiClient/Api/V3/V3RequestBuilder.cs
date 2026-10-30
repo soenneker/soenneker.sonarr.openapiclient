@@ -157,6 +157,7 @@ namespace Soenneker.Sonarr.OpenApiClient.Api.V3
             get => new global::Soenneker.Sonarr.OpenApiClient.Api.V3.Language.LanguageRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The languageprofile property</summary>
+        [Obsolete("")]
         public global::Soenneker.Sonarr.OpenApiClient.Api.V3.Languageprofile.LanguageprofileRequestBuilder Languageprofile
         {
             get => new global::Soenneker.Sonarr.OpenApiClient.Api.V3.Languageprofile.LanguageprofileRequestBuilder(PathParameters, RequestAdapter);

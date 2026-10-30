@@ -59,7 +59,7 @@ namespace Soenneker.Sonarr.OpenApiClient.Api.V3.Rootfolder
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            var collectionResult = await RequestAdapter.SendCollectionAsync<global::Soenneker.Sonarr.OpenApiClient.Models.RootFolderResource>(requestInfo, global::Soenneker.Sonarr.OpenApiClient.Models.RootFolderResource.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            var collectionResult = await RequestAdapter.SendCollectionAsync<global::Soenneker.Sonarr.OpenApiClient.Models.RootFolderResource>(requestInfo, global::Soenneker.Sonarr.OpenApiClient.Models.RootFolderResource.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
             return collectionResult?.AsList();
         }
         /// <returns>A <see cref="global::Soenneker.Sonarr.OpenApiClient.Models.RootFolderResource"/></returns>
@@ -77,7 +77,7 @@ namespace Soenneker.Sonarr.OpenApiClient.Api.V3.Rootfolder
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Sonarr.OpenApiClient.Models.RootFolderResource>(requestInfo, global::Soenneker.Sonarr.OpenApiClient.Models.RootFolderResource.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Sonarr.OpenApiClient.Models.RootFolderResource>(requestInfo, global::Soenneker.Sonarr.OpenApiClient.Models.RootFolderResource.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

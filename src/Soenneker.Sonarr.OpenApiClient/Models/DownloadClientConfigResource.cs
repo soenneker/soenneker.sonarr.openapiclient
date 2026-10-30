@@ -11,23 +11,41 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class DownloadClientConfigResource : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("autoRedownloadFailed") is { } nullNodeAutoRedownloadFailed && nullNodeAutoRedownloadFailed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AutoRedownloadFailed = null;
+            if (parseNode.GetChildNode("autoRedownloadFailedFromInteractiveSearch") is { } nullNodeAutoRedownloadFailedFromInteractiveSearch && nullNodeAutoRedownloadFailedFromInteractiveSearch.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AutoRedownloadFailedFromInteractiveSearch = null;
+            if (parseNode.GetChildNode("downloadClientWorkingFolders") is { } nullNodeDownloadClientWorkingFolders && nullNodeDownloadClientWorkingFolders.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DownloadClientWorkingFolders = null;
+            if (parseNode.GetChildNode("enableCompletedDownloadHandling") is { } nullNodeEnableCompletedDownloadHandling && nullNodeEnableCompletedDownloadHandling.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnableCompletedDownloadHandling = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+        }
+
         /// <summary>The autoRedownloadFailed property</summary>
-        public bool? AutoRedownloadFailed { get; set; }
+        public bool? AutoRedownloadFailed { get => _explicitNullValueAutoRedownloadFailed; set { _explicitNullValueAutoRedownloadFailed = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("autoRedownloadFailed"); else _explicitNullProperties?.Remove("autoRedownloadFailed"); } }
+        private bool? _explicitNullValueAutoRedownloadFailed = default!;
         /// <summary>The autoRedownloadFailedFromInteractiveSearch property</summary>
-        public bool? AutoRedownloadFailedFromInteractiveSearch { get; set; }
+        public bool? AutoRedownloadFailedFromInteractiveSearch { get => _explicitNullValueAutoRedownloadFailedFromInteractiveSearch; set { _explicitNullValueAutoRedownloadFailedFromInteractiveSearch = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("autoRedownloadFailedFromInteractiveSearch"); else _explicitNullProperties?.Remove("autoRedownloadFailedFromInteractiveSearch"); } }
+        private bool? _explicitNullValueAutoRedownloadFailedFromInteractiveSearch = default!;
         /// <summary>The downloadClientWorkingFolders property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DownloadClientWorkingFolders { get; set; }
+        public string? DownloadClientWorkingFolders { get => _explicitNullValueDownloadClientWorkingFolders; set { _explicitNullValueDownloadClientWorkingFolders = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("downloadClientWorkingFolders"); else _explicitNullProperties?.Remove("downloadClientWorkingFolders"); } }
+        private string? _explicitNullValueDownloadClientWorkingFolders = default!;
 #nullable restore
 #else
-        public string DownloadClientWorkingFolders { get; set; }
+        public string DownloadClientWorkingFolders { get => _explicitNullValueDownloadClientWorkingFolders; set { _explicitNullValueDownloadClientWorkingFolders = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("downloadClientWorkingFolders"); else _explicitNullProperties?.Remove("downloadClientWorkingFolders"); } }
+        private string _explicitNullValueDownloadClientWorkingFolders = default!;
 #endif
         /// <summary>The enableCompletedDownloadHandling property</summary>
-        public bool? EnableCompletedDownloadHandling { get; set; }
+        public bool? EnableCompletedDownloadHandling { get => _explicitNullValueEnableCompletedDownloadHandling; set { _explicitNullValueEnableCompletedDownloadHandling = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enableCompletedDownloadHandling"); else _explicitNullProperties?.Remove("enableCompletedDownloadHandling"); } }
+        private bool? _explicitNullValueEnableCompletedDownloadHandling = default!;
         /// <summary>The id property</summary>
-        public int? Id { get; set; }
+        public int? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private int? _explicitNullValueId = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -36,7 +54,7 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
         public static global::Soenneker.Sonarr.OpenApiClient.Models.DownloadClientConfigResource CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Sonarr.OpenApiClient.Models.DownloadClientConfigResource();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Sonarr.OpenApiClient.Models.DownloadClientConfigResource(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -64,7 +82,8 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
             writer.WriteBoolValue("autoRedownloadFailedFromInteractiveSearch", AutoRedownloadFailedFromInteractiveSearch);
             writer.WriteStringValue("downloadClientWorkingFolders", DownloadClientWorkingFolders);
             writer.WriteBoolValue("enableCompletedDownloadHandling", EnableCompletedDownloadHandling);
-            writer.WriteIntValue("id", Id);
+            writer.WriteIntValue("id", Id);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

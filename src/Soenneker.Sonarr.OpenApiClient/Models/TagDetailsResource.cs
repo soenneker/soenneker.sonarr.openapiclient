@@ -11,88 +11,127 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class TagDetailsResource : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("autoTagIds") is { } nullNodeAutoTagIds && nullNodeAutoTagIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AutoTagIds = null;
+            if (parseNode.GetChildNode("delayProfileIds") is { } nullNodeDelayProfileIds && nullNodeDelayProfileIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DelayProfileIds = null;
+            if (parseNode.GetChildNode("downloadClientIds") is { } nullNodeDownloadClientIds && nullNodeDownloadClientIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DownloadClientIds = null;
+            if (parseNode.GetChildNode("excludedReleaseProfileIds") is { } nullNodeExcludedReleaseProfileIds && nullNodeExcludedReleaseProfileIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExcludedReleaseProfileIds = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("importListIds") is { } nullNodeImportListIds && nullNodeImportListIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ImportListIds = null;
+            if (parseNode.GetChildNode("indexerIds") is { } nullNodeIndexerIds && nullNodeIndexerIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IndexerIds = null;
+            if (parseNode.GetChildNode("label") is { } nullNodeLabel && nullNodeLabel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Label = null;
+            if (parseNode.GetChildNode("notificationIds") is { } nullNodeNotificationIds && nullNodeNotificationIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NotificationIds = null;
+            if (parseNode.GetChildNode("restrictionIds") is { } nullNodeRestrictionIds && nullNodeRestrictionIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RestrictionIds = null;
+            if (parseNode.GetChildNode("seriesIds") is { } nullNodeSeriesIds && nullNodeSeriesIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SeriesIds = null;
+        }
+
         /// <summary>The autoTagIds property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<int?>? AutoTagIds { get; set; }
+        public List<int?>? AutoTagIds { get => _explicitNullValueAutoTagIds; set { _explicitNullValueAutoTagIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("autoTagIds"); else _explicitNullProperties?.Remove("autoTagIds"); } }
+        private List<int?>? _explicitNullValueAutoTagIds = default!;
 #nullable restore
 #else
-        public List<int?> AutoTagIds { get; set; }
+        public List<int?> AutoTagIds { get => _explicitNullValueAutoTagIds; set { _explicitNullValueAutoTagIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("autoTagIds"); else _explicitNullProperties?.Remove("autoTagIds"); } }
+        private List<int?> _explicitNullValueAutoTagIds = default!;
 #endif
         /// <summary>The delayProfileIds property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<int?>? DelayProfileIds { get; set; }
+        public List<int?>? DelayProfileIds { get => _explicitNullValueDelayProfileIds; set { _explicitNullValueDelayProfileIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("delayProfileIds"); else _explicitNullProperties?.Remove("delayProfileIds"); } }
+        private List<int?>? _explicitNullValueDelayProfileIds = default!;
 #nullable restore
 #else
-        public List<int?> DelayProfileIds { get; set; }
+        public List<int?> DelayProfileIds { get => _explicitNullValueDelayProfileIds; set { _explicitNullValueDelayProfileIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("delayProfileIds"); else _explicitNullProperties?.Remove("delayProfileIds"); } }
+        private List<int?> _explicitNullValueDelayProfileIds = default!;
 #endif
         /// <summary>The downloadClientIds property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<int?>? DownloadClientIds { get; set; }
+        public List<int?>? DownloadClientIds { get => _explicitNullValueDownloadClientIds; set { _explicitNullValueDownloadClientIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("downloadClientIds"); else _explicitNullProperties?.Remove("downloadClientIds"); } }
+        private List<int?>? _explicitNullValueDownloadClientIds = default!;
 #nullable restore
 #else
-        public List<int?> DownloadClientIds { get; set; }
+        public List<int?> DownloadClientIds { get => _explicitNullValueDownloadClientIds; set { _explicitNullValueDownloadClientIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("downloadClientIds"); else _explicitNullProperties?.Remove("downloadClientIds"); } }
+        private List<int?> _explicitNullValueDownloadClientIds = default!;
 #endif
         /// <summary>The excludedReleaseProfileIds property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<int?>? ExcludedReleaseProfileIds { get; set; }
+        public List<int?>? ExcludedReleaseProfileIds { get => _explicitNullValueExcludedReleaseProfileIds; set { _explicitNullValueExcludedReleaseProfileIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("excludedReleaseProfileIds"); else _explicitNullProperties?.Remove("excludedReleaseProfileIds"); } }
+        private List<int?>? _explicitNullValueExcludedReleaseProfileIds = default!;
 #nullable restore
 #else
-        public List<int?> ExcludedReleaseProfileIds { get; set; }
+        public List<int?> ExcludedReleaseProfileIds { get => _explicitNullValueExcludedReleaseProfileIds; set { _explicitNullValueExcludedReleaseProfileIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("excludedReleaseProfileIds"); else _explicitNullProperties?.Remove("excludedReleaseProfileIds"); } }
+        private List<int?> _explicitNullValueExcludedReleaseProfileIds = default!;
 #endif
         /// <summary>The id property</summary>
-        public int? Id { get; set; }
+        public int? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private int? _explicitNullValueId = default!;
         /// <summary>The importListIds property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<int?>? ImportListIds { get; set; }
+        public List<int?>? ImportListIds { get => _explicitNullValueImportListIds; set { _explicitNullValueImportListIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("importListIds"); else _explicitNullProperties?.Remove("importListIds"); } }
+        private List<int?>? _explicitNullValueImportListIds = default!;
 #nullable restore
 #else
-        public List<int?> ImportListIds { get; set; }
+        public List<int?> ImportListIds { get => _explicitNullValueImportListIds; set { _explicitNullValueImportListIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("importListIds"); else _explicitNullProperties?.Remove("importListIds"); } }
+        private List<int?> _explicitNullValueImportListIds = default!;
 #endif
         /// <summary>The indexerIds property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<int?>? IndexerIds { get; set; }
+        public List<int?>? IndexerIds { get => _explicitNullValueIndexerIds; set { _explicitNullValueIndexerIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("indexerIds"); else _explicitNullProperties?.Remove("indexerIds"); } }
+        private List<int?>? _explicitNullValueIndexerIds = default!;
 #nullable restore
 #else
-        public List<int?> IndexerIds { get; set; }
+        public List<int?> IndexerIds { get => _explicitNullValueIndexerIds; set { _explicitNullValueIndexerIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("indexerIds"); else _explicitNullProperties?.Remove("indexerIds"); } }
+        private List<int?> _explicitNullValueIndexerIds = default!;
 #endif
         /// <summary>The label property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Label { get; set; }
+        public string? Label { get => _explicitNullValueLabel; set { _explicitNullValueLabel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("label"); else _explicitNullProperties?.Remove("label"); } }
+        private string? _explicitNullValueLabel = default!;
 #nullable restore
 #else
-        public string Label { get; set; }
+        public string Label { get => _explicitNullValueLabel; set { _explicitNullValueLabel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("label"); else _explicitNullProperties?.Remove("label"); } }
+        private string _explicitNullValueLabel = default!;
 #endif
         /// <summary>The notificationIds property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<int?>? NotificationIds { get; set; }
+        public List<int?>? NotificationIds { get => _explicitNullValueNotificationIds; set { _explicitNullValueNotificationIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notificationIds"); else _explicitNullProperties?.Remove("notificationIds"); } }
+        private List<int?>? _explicitNullValueNotificationIds = default!;
 #nullable restore
 #else
-        public List<int?> NotificationIds { get; set; }
+        public List<int?> NotificationIds { get => _explicitNullValueNotificationIds; set { _explicitNullValueNotificationIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notificationIds"); else _explicitNullProperties?.Remove("notificationIds"); } }
+        private List<int?> _explicitNullValueNotificationIds = default!;
 #endif
         /// <summary>The restrictionIds property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<int?>? RestrictionIds { get; set; }
+        public List<int?>? RestrictionIds { get => _explicitNullValueRestrictionIds; set { _explicitNullValueRestrictionIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("restrictionIds"); else _explicitNullProperties?.Remove("restrictionIds"); } }
+        private List<int?>? _explicitNullValueRestrictionIds = default!;
 #nullable restore
 #else
-        public List<int?> RestrictionIds { get; set; }
+        public List<int?> RestrictionIds { get => _explicitNullValueRestrictionIds; set { _explicitNullValueRestrictionIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("restrictionIds"); else _explicitNullProperties?.Remove("restrictionIds"); } }
+        private List<int?> _explicitNullValueRestrictionIds = default!;
 #endif
         /// <summary>The seriesIds property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<int?>? SeriesIds { get; set; }
+        public List<int?>? SeriesIds { get => _explicitNullValueSeriesIds; set { _explicitNullValueSeriesIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("seriesIds"); else _explicitNullProperties?.Remove("seriesIds"); } }
+        private List<int?>? _explicitNullValueSeriesIds = default!;
 #nullable restore
 #else
-        public List<int?> SeriesIds { get; set; }
+        public List<int?> SeriesIds { get => _explicitNullValueSeriesIds; set { _explicitNullValueSeriesIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("seriesIds"); else _explicitNullProperties?.Remove("seriesIds"); } }
+        private List<int?> _explicitNullValueSeriesIds = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -102,7 +141,7 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
         public static global::Soenneker.Sonarr.OpenApiClient.Models.TagDetailsResource CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Sonarr.OpenApiClient.Models.TagDetailsResource();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Sonarr.OpenApiClient.Models.TagDetailsResource(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -142,7 +181,8 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
             writer.WriteStringValue("label", Label);
             writer.WriteCollectionOfPrimitiveValues<int?>("notificationIds", NotificationIds);
             writer.WriteCollectionOfPrimitiveValues<int?>("restrictionIds", RestrictionIds);
-            writer.WriteCollectionOfPrimitiveValues<int?>("seriesIds", SeriesIds);
+            writer.WriteCollectionOfPrimitiveValues<int?>("seriesIds", SeriesIds);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

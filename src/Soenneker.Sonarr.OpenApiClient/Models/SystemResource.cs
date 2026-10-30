@@ -11,168 +11,257 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class SystemResource : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("appData") is { } nullNodeAppData && nullNodeAppData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AppData = null;
+            if (parseNode.GetChildNode("appName") is { } nullNodeAppName && nullNodeAppName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AppName = null;
+            if (parseNode.GetChildNode("authentication") is { } nullNodeAuthentication && nullNodeAuthentication.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Authentication = null;
+            if (parseNode.GetChildNode("branch") is { } nullNodeBranch && nullNodeBranch.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Branch = null;
+            if (parseNode.GetChildNode("buildTime") is { } nullNodeBuildTime && nullNodeBuildTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BuildTime = null;
+            if (parseNode.GetChildNode("databaseType") is { } nullNodeDatabaseType && nullNodeDatabaseType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DatabaseType = null;
+            if (parseNode.GetChildNode("databaseVersion") is { } nullNodeDatabaseVersion && nullNodeDatabaseVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DatabaseVersion = null;
+            if (parseNode.GetChildNode("instanceName") is { } nullNodeInstanceName && nullNodeInstanceName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InstanceName = null;
+            if (parseNode.GetChildNode("isAdmin") is { } nullNodeIsAdmin && nullNodeIsAdmin.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsAdmin = null;
+            if (parseNode.GetChildNode("isContainerized") is { } nullNodeIsContainerized && nullNodeIsContainerized.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsContainerized = null;
+            if (parseNode.GetChildNode("isDebug") is { } nullNodeIsDebug && nullNodeIsDebug.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsDebug = null;
+            if (parseNode.GetChildNode("isDocker") is { } nullNodeIsDocker && nullNodeIsDocker.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsDocker = null;
+            if (parseNode.GetChildNode("isLinux") is { } nullNodeIsLinux && nullNodeIsLinux.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsLinux = null;
+            if (parseNode.GetChildNode("isNetCore") is { } nullNodeIsNetCore && nullNodeIsNetCore.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsNetCore = null;
+            if (parseNode.GetChildNode("isOsx") is { } nullNodeIsOsx && nullNodeIsOsx.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsOsx = null;
+            if (parseNode.GetChildNode("isProduction") is { } nullNodeIsProduction && nullNodeIsProduction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsProduction = null;
+            if (parseNode.GetChildNode("isUserInteractive") is { } nullNodeIsUserInteractive && nullNodeIsUserInteractive.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsUserInteractive = null;
+            if (parseNode.GetChildNode("isWindows") is { } nullNodeIsWindows && nullNodeIsWindows.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsWindows = null;
+            if (parseNode.GetChildNode("migrationVersion") is { } nullNodeMigrationVersion && nullNodeMigrationVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MigrationVersion = null;
+            if (parseNode.GetChildNode("mode") is { } nullNodeMode && nullNodeMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Mode = null;
+            if (parseNode.GetChildNode("osName") is { } nullNodeOsName && nullNodeOsName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OsName = null;
+            if (parseNode.GetChildNode("osVersion") is { } nullNodeOsVersion && nullNodeOsVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OsVersion = null;
+            if (parseNode.GetChildNode("packageAuthor") is { } nullNodePackageAuthor && nullNodePackageAuthor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PackageAuthor = null;
+            if (parseNode.GetChildNode("packageUpdateMechanism") is { } nullNodePackageUpdateMechanism && nullNodePackageUpdateMechanism.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PackageUpdateMechanism = null;
+            if (parseNode.GetChildNode("packageUpdateMechanismMessage") is { } nullNodePackageUpdateMechanismMessage && nullNodePackageUpdateMechanismMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PackageUpdateMechanismMessage = null;
+            if (parseNode.GetChildNode("packageVersion") is { } nullNodePackageVersion && nullNodePackageVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PackageVersion = null;
+            if (parseNode.GetChildNode("runtimeName") is { } nullNodeRuntimeName && nullNodeRuntimeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RuntimeName = null;
+            if (parseNode.GetChildNode("runtimeVersion") is { } nullNodeRuntimeVersion && nullNodeRuntimeVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RuntimeVersion = null;
+            if (parseNode.GetChildNode("sqliteVersion") is { } nullNodeSqliteVersion && nullNodeSqliteVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SqliteVersion = null;
+            if (parseNode.GetChildNode("startTime") is { } nullNodeStartTime && nullNodeStartTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartTime = null;
+            if (parseNode.GetChildNode("startupPath") is { } nullNodeStartupPath && nullNodeStartupPath.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartupPath = null;
+            if (parseNode.GetChildNode("urlBase") is { } nullNodeUrlBase && nullNodeUrlBase.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UrlBase = null;
+            if (parseNode.GetChildNode("version") is { } nullNodeVersion && nullNodeVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Version = null;
+        }
+
         /// <summary>The appData property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AppData { get; set; }
+        public string? AppData { get => _explicitNullValueAppData; set { _explicitNullValueAppData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("appData"); else _explicitNullProperties?.Remove("appData"); } }
+        private string? _explicitNullValueAppData = default!;
 #nullable restore
 #else
-        public string AppData { get; set; }
+        public string AppData { get => _explicitNullValueAppData; set { _explicitNullValueAppData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("appData"); else _explicitNullProperties?.Remove("appData"); } }
+        private string _explicitNullValueAppData = default!;
 #endif
         /// <summary>The appName property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AppName { get; set; }
+        public string? AppName { get => _explicitNullValueAppName; set { _explicitNullValueAppName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("appName"); else _explicitNullProperties?.Remove("appName"); } }
+        private string? _explicitNullValueAppName = default!;
 #nullable restore
 #else
-        public string AppName { get; set; }
+        public string AppName { get => _explicitNullValueAppName; set { _explicitNullValueAppName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("appName"); else _explicitNullProperties?.Remove("appName"); } }
+        private string _explicitNullValueAppName = default!;
 #endif
         /// <summary>The authentication property</summary>
-        public global::Soenneker.Sonarr.OpenApiClient.Models.AuthenticationType? Authentication { get; set; }
+        public global::Soenneker.Sonarr.OpenApiClient.Models.AuthenticationType? Authentication { get => _explicitNullValueAuthentication; set { _explicitNullValueAuthentication = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("authentication"); else _explicitNullProperties?.Remove("authentication"); } }
+        private global::Soenneker.Sonarr.OpenApiClient.Models.AuthenticationType? _explicitNullValueAuthentication = default!;
         /// <summary>The branch property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Branch { get; set; }
+        public string? Branch { get => _explicitNullValueBranch; set { _explicitNullValueBranch = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("branch"); else _explicitNullProperties?.Remove("branch"); } }
+        private string? _explicitNullValueBranch = default!;
 #nullable restore
 #else
-        public string Branch { get; set; }
+        public string Branch { get => _explicitNullValueBranch; set { _explicitNullValueBranch = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("branch"); else _explicitNullProperties?.Remove("branch"); } }
+        private string _explicitNullValueBranch = default!;
 #endif
         /// <summary>The buildTime property</summary>
-        public DateTimeOffset? BuildTime { get; set; }
+        public DateTimeOffset? BuildTime { get => _explicitNullValueBuildTime; set { _explicitNullValueBuildTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("buildTime"); else _explicitNullProperties?.Remove("buildTime"); } }
+        private DateTimeOffset? _explicitNullValueBuildTime = default!;
         /// <summary>The databaseType property</summary>
-        public global::Soenneker.Sonarr.OpenApiClient.Models.DatabaseType? DatabaseType { get; set; }
+        public global::Soenneker.Sonarr.OpenApiClient.Models.DatabaseType? DatabaseType { get => _explicitNullValueDatabaseType; set { _explicitNullValueDatabaseType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("databaseType"); else _explicitNullProperties?.Remove("databaseType"); } }
+        private global::Soenneker.Sonarr.OpenApiClient.Models.DatabaseType? _explicitNullValueDatabaseType = default!;
         /// <summary>The databaseVersion property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DatabaseVersion { get; set; }
+        public string? DatabaseVersion { get => _explicitNullValueDatabaseVersion; set { _explicitNullValueDatabaseVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("databaseVersion"); else _explicitNullProperties?.Remove("databaseVersion"); } }
+        private string? _explicitNullValueDatabaseVersion = default!;
 #nullable restore
 #else
-        public string DatabaseVersion { get; set; }
+        public string DatabaseVersion { get => _explicitNullValueDatabaseVersion; set { _explicitNullValueDatabaseVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("databaseVersion"); else _explicitNullProperties?.Remove("databaseVersion"); } }
+        private string _explicitNullValueDatabaseVersion = default!;
 #endif
         /// <summary>The instanceName property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? InstanceName { get; set; }
+        public string? InstanceName { get => _explicitNullValueInstanceName; set { _explicitNullValueInstanceName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("instanceName"); else _explicitNullProperties?.Remove("instanceName"); } }
+        private string? _explicitNullValueInstanceName = default!;
 #nullable restore
 #else
-        public string InstanceName { get; set; }
+        public string InstanceName { get => _explicitNullValueInstanceName; set { _explicitNullValueInstanceName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("instanceName"); else _explicitNullProperties?.Remove("instanceName"); } }
+        private string _explicitNullValueInstanceName = default!;
 #endif
         /// <summary>The isAdmin property</summary>
-        public bool? IsAdmin { get; set; }
+        public bool? IsAdmin { get => _explicitNullValueIsAdmin; set { _explicitNullValueIsAdmin = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isAdmin"); else _explicitNullProperties?.Remove("isAdmin"); } }
+        private bool? _explicitNullValueIsAdmin = default!;
         /// <summary>The isContainerized property</summary>
-        public bool? IsContainerized { get; set; }
+        public bool? IsContainerized { get => _explicitNullValueIsContainerized; set { _explicitNullValueIsContainerized = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isContainerized"); else _explicitNullProperties?.Remove("isContainerized"); } }
+        private bool? _explicitNullValueIsContainerized = default!;
         /// <summary>The isDebug property</summary>
-        public bool? IsDebug { get; set; }
+        public bool? IsDebug { get => _explicitNullValueIsDebug; set { _explicitNullValueIsDebug = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isDebug"); else _explicitNullProperties?.Remove("isDebug"); } }
+        private bool? _explicitNullValueIsDebug = default!;
         /// <summary>The isDocker property</summary>
-        public bool? IsDocker { get; set; }
+        public bool? IsDocker { get => _explicitNullValueIsDocker; set { _explicitNullValueIsDocker = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isDocker"); else _explicitNullProperties?.Remove("isDocker"); } }
+        private bool? _explicitNullValueIsDocker = default!;
         /// <summary>The isLinux property</summary>
-        public bool? IsLinux { get; set; }
+        public bool? IsLinux { get => _explicitNullValueIsLinux; set { _explicitNullValueIsLinux = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isLinux"); else _explicitNullProperties?.Remove("isLinux"); } }
+        private bool? _explicitNullValueIsLinux = default!;
         /// <summary>The isNetCore property</summary>
-        public bool? IsNetCore { get; set; }
+        public bool? IsNetCore { get => _explicitNullValueIsNetCore; set { _explicitNullValueIsNetCore = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isNetCore"); else _explicitNullProperties?.Remove("isNetCore"); } }
+        private bool? _explicitNullValueIsNetCore = default!;
         /// <summary>The isOsx property</summary>
-        public bool? IsOsx { get; set; }
+        public bool? IsOsx { get => _explicitNullValueIsOsx; set { _explicitNullValueIsOsx = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isOsx"); else _explicitNullProperties?.Remove("isOsx"); } }
+        private bool? _explicitNullValueIsOsx = default!;
         /// <summary>The isProduction property</summary>
-        public bool? IsProduction { get; set; }
+        public bool? IsProduction { get => _explicitNullValueIsProduction; set { _explicitNullValueIsProduction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isProduction"); else _explicitNullProperties?.Remove("isProduction"); } }
+        private bool? _explicitNullValueIsProduction = default!;
         /// <summary>The isUserInteractive property</summary>
-        public bool? IsUserInteractive { get; set; }
+        public bool? IsUserInteractive { get => _explicitNullValueIsUserInteractive; set { _explicitNullValueIsUserInteractive = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isUserInteractive"); else _explicitNullProperties?.Remove("isUserInteractive"); } }
+        private bool? _explicitNullValueIsUserInteractive = default!;
         /// <summary>The isWindows property</summary>
-        public bool? IsWindows { get; set; }
+        public bool? IsWindows { get => _explicitNullValueIsWindows; set { _explicitNullValueIsWindows = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isWindows"); else _explicitNullProperties?.Remove("isWindows"); } }
+        private bool? _explicitNullValueIsWindows = default!;
         /// <summary>The migrationVersion property</summary>
-        public int? MigrationVersion { get; set; }
+        public int? MigrationVersion { get => _explicitNullValueMigrationVersion; set { _explicitNullValueMigrationVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("migrationVersion"); else _explicitNullProperties?.Remove("migrationVersion"); } }
+        private int? _explicitNullValueMigrationVersion = default!;
         /// <summary>The mode property</summary>
-        public global::Soenneker.Sonarr.OpenApiClient.Models.RuntimeMode? Mode { get; set; }
+        public global::Soenneker.Sonarr.OpenApiClient.Models.RuntimeMode? Mode { get => _explicitNullValueMode; set { _explicitNullValueMode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mode"); else _explicitNullProperties?.Remove("mode"); } }
+        private global::Soenneker.Sonarr.OpenApiClient.Models.RuntimeMode? _explicitNullValueMode = default!;
         /// <summary>The osName property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OsName { get; set; }
+        public string? OsName { get => _explicitNullValueOsName; set { _explicitNullValueOsName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("osName"); else _explicitNullProperties?.Remove("osName"); } }
+        private string? _explicitNullValueOsName = default!;
 #nullable restore
 #else
-        public string OsName { get; set; }
+        public string OsName { get => _explicitNullValueOsName; set { _explicitNullValueOsName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("osName"); else _explicitNullProperties?.Remove("osName"); } }
+        private string _explicitNullValueOsName = default!;
 #endif
         /// <summary>The osVersion property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OsVersion { get; set; }
+        public string? OsVersion { get => _explicitNullValueOsVersion; set { _explicitNullValueOsVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("osVersion"); else _explicitNullProperties?.Remove("osVersion"); } }
+        private string? _explicitNullValueOsVersion = default!;
 #nullable restore
 #else
-        public string OsVersion { get; set; }
+        public string OsVersion { get => _explicitNullValueOsVersion; set { _explicitNullValueOsVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("osVersion"); else _explicitNullProperties?.Remove("osVersion"); } }
+        private string _explicitNullValueOsVersion = default!;
 #endif
         /// <summary>The packageAuthor property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PackageAuthor { get; set; }
+        public string? PackageAuthor { get => _explicitNullValuePackageAuthor; set { _explicitNullValuePackageAuthor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("packageAuthor"); else _explicitNullProperties?.Remove("packageAuthor"); } }
+        private string? _explicitNullValuePackageAuthor = default!;
 #nullable restore
 #else
-        public string PackageAuthor { get; set; }
+        public string PackageAuthor { get => _explicitNullValuePackageAuthor; set { _explicitNullValuePackageAuthor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("packageAuthor"); else _explicitNullProperties?.Remove("packageAuthor"); } }
+        private string _explicitNullValuePackageAuthor = default!;
 #endif
         /// <summary>The packageUpdateMechanism property</summary>
-        public global::Soenneker.Sonarr.OpenApiClient.Models.UpdateMechanism? PackageUpdateMechanism { get; set; }
+        public global::Soenneker.Sonarr.OpenApiClient.Models.UpdateMechanism? PackageUpdateMechanism { get => _explicitNullValuePackageUpdateMechanism; set { _explicitNullValuePackageUpdateMechanism = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("packageUpdateMechanism"); else _explicitNullProperties?.Remove("packageUpdateMechanism"); } }
+        private global::Soenneker.Sonarr.OpenApiClient.Models.UpdateMechanism? _explicitNullValuePackageUpdateMechanism = default!;
         /// <summary>The packageUpdateMechanismMessage property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PackageUpdateMechanismMessage { get; set; }
+        public string? PackageUpdateMechanismMessage { get => _explicitNullValuePackageUpdateMechanismMessage; set { _explicitNullValuePackageUpdateMechanismMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("packageUpdateMechanismMessage"); else _explicitNullProperties?.Remove("packageUpdateMechanismMessage"); } }
+        private string? _explicitNullValuePackageUpdateMechanismMessage = default!;
 #nullable restore
 #else
-        public string PackageUpdateMechanismMessage { get; set; }
+        public string PackageUpdateMechanismMessage { get => _explicitNullValuePackageUpdateMechanismMessage; set { _explicitNullValuePackageUpdateMechanismMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("packageUpdateMechanismMessage"); else _explicitNullProperties?.Remove("packageUpdateMechanismMessage"); } }
+        private string _explicitNullValuePackageUpdateMechanismMessage = default!;
 #endif
         /// <summary>The packageVersion property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PackageVersion { get; set; }
+        public string? PackageVersion { get => _explicitNullValuePackageVersion; set { _explicitNullValuePackageVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("packageVersion"); else _explicitNullProperties?.Remove("packageVersion"); } }
+        private string? _explicitNullValuePackageVersion = default!;
 #nullable restore
 #else
-        public string PackageVersion { get; set; }
+        public string PackageVersion { get => _explicitNullValuePackageVersion; set { _explicitNullValuePackageVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("packageVersion"); else _explicitNullProperties?.Remove("packageVersion"); } }
+        private string _explicitNullValuePackageVersion = default!;
 #endif
         /// <summary>The runtimeName property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RuntimeName { get; set; }
+        public string? RuntimeName { get => _explicitNullValueRuntimeName; set { _explicitNullValueRuntimeName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("runtimeName"); else _explicitNullProperties?.Remove("runtimeName"); } }
+        private string? _explicitNullValueRuntimeName = default!;
 #nullable restore
 #else
-        public string RuntimeName { get; set; }
+        public string RuntimeName { get => _explicitNullValueRuntimeName; set { _explicitNullValueRuntimeName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("runtimeName"); else _explicitNullProperties?.Remove("runtimeName"); } }
+        private string _explicitNullValueRuntimeName = default!;
 #endif
         /// <summary>The runtimeVersion property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RuntimeVersion { get; set; }
+        public string? RuntimeVersion { get => _explicitNullValueRuntimeVersion; set { _explicitNullValueRuntimeVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("runtimeVersion"); else _explicitNullProperties?.Remove("runtimeVersion"); } }
+        private string? _explicitNullValueRuntimeVersion = default!;
 #nullable restore
 #else
-        public string RuntimeVersion { get; set; }
+        public string RuntimeVersion { get => _explicitNullValueRuntimeVersion; set { _explicitNullValueRuntimeVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("runtimeVersion"); else _explicitNullProperties?.Remove("runtimeVersion"); } }
+        private string _explicitNullValueRuntimeVersion = default!;
 #endif
         /// <summary>The sqliteVersion property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SqliteVersion { get; set; }
+        public string? SqliteVersion { get => _explicitNullValueSqliteVersion; set { _explicitNullValueSqliteVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sqliteVersion"); else _explicitNullProperties?.Remove("sqliteVersion"); } }
+        private string? _explicitNullValueSqliteVersion = default!;
 #nullable restore
 #else
-        public string SqliteVersion { get; set; }
+        public string SqliteVersion { get => _explicitNullValueSqliteVersion; set { _explicitNullValueSqliteVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sqliteVersion"); else _explicitNullProperties?.Remove("sqliteVersion"); } }
+        private string _explicitNullValueSqliteVersion = default!;
 #endif
         /// <summary>The startTime property</summary>
-        public DateTimeOffset? StartTime { get; set; }
+        public DateTimeOffset? StartTime { get => _explicitNullValueStartTime; set { _explicitNullValueStartTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startTime"); else _explicitNullProperties?.Remove("startTime"); } }
+        private DateTimeOffset? _explicitNullValueStartTime = default!;
         /// <summary>The startupPath property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StartupPath { get; set; }
+        public string? StartupPath { get => _explicitNullValueStartupPath; set { _explicitNullValueStartupPath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startupPath"); else _explicitNullProperties?.Remove("startupPath"); } }
+        private string? _explicitNullValueStartupPath = default!;
 #nullable restore
 #else
-        public string StartupPath { get; set; }
+        public string StartupPath { get => _explicitNullValueStartupPath; set { _explicitNullValueStartupPath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startupPath"); else _explicitNullProperties?.Remove("startupPath"); } }
+        private string _explicitNullValueStartupPath = default!;
 #endif
         /// <summary>The urlBase property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UrlBase { get; set; }
+        public string? UrlBase { get => _explicitNullValueUrlBase; set { _explicitNullValueUrlBase = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("urlBase"); else _explicitNullProperties?.Remove("urlBase"); } }
+        private string? _explicitNullValueUrlBase = default!;
 #nullable restore
 #else
-        public string UrlBase { get; set; }
+        public string UrlBase { get => _explicitNullValueUrlBase; set { _explicitNullValueUrlBase = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("urlBase"); else _explicitNullProperties?.Remove("urlBase"); } }
+        private string _explicitNullValueUrlBase = default!;
 #endif
         /// <summary>The version property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Version { get; set; }
+        public string? Version { get => _explicitNullValueVersion; set { _explicitNullValueVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("version"); else _explicitNullProperties?.Remove("version"); } }
+        private string? _explicitNullValueVersion = default!;
 #nullable restore
 #else
-        public string Version { get; set; }
+        public string Version { get => _explicitNullValueVersion; set { _explicitNullValueVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("version"); else _explicitNullProperties?.Remove("version"); } }
+        private string _explicitNullValueVersion = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -182,7 +271,7 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
         public static global::Soenneker.Sonarr.OpenApiClient.Models.SystemResource CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Sonarr.OpenApiClient.Models.SystemResource();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Sonarr.OpenApiClient.Models.SystemResource(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -266,7 +355,8 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("startTime", StartTime);
             writer.WriteStringValue("startupPath", StartupPath);
             writer.WriteStringValue("urlBase", UrlBase);
-            writer.WriteStringValue("version", Version);
+            writer.WriteStringValue("version", Version);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

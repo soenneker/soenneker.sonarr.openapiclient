@@ -11,38 +11,62 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ImportListBulkResource : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("applyTags") is { } nullNodeApplyTags && nullNodeApplyTags.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApplyTags = null;
+            if (parseNode.GetChildNode("enableAutomaticAdd") is { } nullNodeEnableAutomaticAdd && nullNodeEnableAutomaticAdd.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnableAutomaticAdd = null;
+            if (parseNode.GetChildNode("ids") is { } nullNodeIds && nullNodeIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ids = null;
+            if (parseNode.GetChildNode("qualityProfileId") is { } nullNodeQualityProfileId && nullNodeQualityProfileId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) QualityProfileId = null;
+            if (parseNode.GetChildNode("rootFolderPath") is { } nullNodeRootFolderPath && nullNodeRootFolderPath.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RootFolderPath = null;
+            if (parseNode.GetChildNode("tagExisting") is { } nullNodeTagExisting && nullNodeTagExisting.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TagExisting = null;
+            if (parseNode.GetChildNode("tags") is { } nullNodeTags && nullNodeTags.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Tags = null;
+        }
+
         /// <summary>The applyTags property</summary>
-        public global::Soenneker.Sonarr.OpenApiClient.Models.ApplyTags? ApplyTags { get; set; }
+        public global::Soenneker.Sonarr.OpenApiClient.Models.ApplyTags? ApplyTags { get => _explicitNullValueApplyTags; set { _explicitNullValueApplyTags = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("applyTags"); else _explicitNullProperties?.Remove("applyTags"); } }
+        private global::Soenneker.Sonarr.OpenApiClient.Models.ApplyTags? _explicitNullValueApplyTags = default!;
         /// <summary>The enableAutomaticAdd property</summary>
-        public bool? EnableAutomaticAdd { get; set; }
+        public bool? EnableAutomaticAdd { get => _explicitNullValueEnableAutomaticAdd; set { _explicitNullValueEnableAutomaticAdd = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enableAutomaticAdd"); else _explicitNullProperties?.Remove("enableAutomaticAdd"); } }
+        private bool? _explicitNullValueEnableAutomaticAdd = default!;
         /// <summary>The ids property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<int?>? Ids { get; set; }
+        public List<int?>? Ids { get => _explicitNullValueIds; set { _explicitNullValueIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ids"); else _explicitNullProperties?.Remove("ids"); } }
+        private List<int?>? _explicitNullValueIds = default!;
 #nullable restore
 #else
-        public List<int?> Ids { get; set; }
+        public List<int?> Ids { get => _explicitNullValueIds; set { _explicitNullValueIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ids"); else _explicitNullProperties?.Remove("ids"); } }
+        private List<int?> _explicitNullValueIds = default!;
 #endif
         /// <summary>The qualityProfileId property</summary>
-        public int? QualityProfileId { get; set; }
+        public int? QualityProfileId { get => _explicitNullValueQualityProfileId; set { _explicitNullValueQualityProfileId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("qualityProfileId"); else _explicitNullProperties?.Remove("qualityProfileId"); } }
+        private int? _explicitNullValueQualityProfileId = default!;
         /// <summary>The rootFolderPath property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RootFolderPath { get; set; }
+        public string? RootFolderPath { get => _explicitNullValueRootFolderPath; set { _explicitNullValueRootFolderPath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rootFolderPath"); else _explicitNullProperties?.Remove("rootFolderPath"); } }
+        private string? _explicitNullValueRootFolderPath = default!;
 #nullable restore
 #else
-        public string RootFolderPath { get; set; }
+        public string RootFolderPath { get => _explicitNullValueRootFolderPath; set { _explicitNullValueRootFolderPath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rootFolderPath"); else _explicitNullProperties?.Remove("rootFolderPath"); } }
+        private string _explicitNullValueRootFolderPath = default!;
 #endif
         /// <summary>The tagExisting property</summary>
-        public global::Soenneker.Sonarr.OpenApiClient.Models.TagExistingType? TagExisting { get; set; }
+        public global::Soenneker.Sonarr.OpenApiClient.Models.TagExistingType? TagExisting { get => _explicitNullValueTagExisting; set { _explicitNullValueTagExisting = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tagExisting"); else _explicitNullProperties?.Remove("tagExisting"); } }
+        private global::Soenneker.Sonarr.OpenApiClient.Models.TagExistingType? _explicitNullValueTagExisting = default!;
         /// <summary>The tags property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<int?>? Tags { get; set; }
+        public List<int?>? Tags { get => _explicitNullValueTags; set { _explicitNullValueTags = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tags"); else _explicitNullProperties?.Remove("tags"); } }
+        private List<int?>? _explicitNullValueTags = default!;
 #nullable restore
 #else
-        public List<int?> Tags { get; set; }
+        public List<int?> Tags { get => _explicitNullValueTags; set { _explicitNullValueTags = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tags"); else _explicitNullProperties?.Remove("tags"); } }
+        private List<int?> _explicitNullValueTags = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -52,7 +76,7 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
         public static global::Soenneker.Sonarr.OpenApiClient.Models.ImportListBulkResource CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Sonarr.OpenApiClient.Models.ImportListBulkResource();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Sonarr.OpenApiClient.Models.ImportListBulkResource(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -84,7 +108,8 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
             writer.WriteIntValue("qualityProfileId", QualityProfileId);
             writer.WriteStringValue("rootFolderPath", RootFolderPath);
             writer.WriteEnumValue<global::Soenneker.Sonarr.OpenApiClient.Models.TagExistingType>("tagExisting", TagExisting);
-            writer.WriteCollectionOfPrimitiveValues<int?>("tags", Tags);
+            writer.WriteCollectionOfPrimitiveValues<int?>("tags", Tags);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

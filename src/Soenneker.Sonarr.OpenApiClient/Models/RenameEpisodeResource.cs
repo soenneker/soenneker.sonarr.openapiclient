@@ -11,39 +11,63 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class RenameEpisodeResource : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("episodeFileId") is { } nullNodeEpisodeFileId && nullNodeEpisodeFileId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EpisodeFileId = null;
+            if (parseNode.GetChildNode("episodeNumbers") is { } nullNodeEpisodeNumbers && nullNodeEpisodeNumbers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EpisodeNumbers = null;
+            if (parseNode.GetChildNode("existingPath") is { } nullNodeExistingPath && nullNodeExistingPath.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExistingPath = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("newPath") is { } nullNodeNewPath && nullNodeNewPath.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NewPath = null;
+            if (parseNode.GetChildNode("seasonNumber") is { } nullNodeSeasonNumber && nullNodeSeasonNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SeasonNumber = null;
+            if (parseNode.GetChildNode("seriesId") is { } nullNodeSeriesId && nullNodeSeriesId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SeriesId = null;
+        }
+
         /// <summary>The episodeFileId property</summary>
-        public int? EpisodeFileId { get; set; }
+        public int? EpisodeFileId { get => _explicitNullValueEpisodeFileId; set { _explicitNullValueEpisodeFileId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("episodeFileId"); else _explicitNullProperties?.Remove("episodeFileId"); } }
+        private int? _explicitNullValueEpisodeFileId = default!;
         /// <summary>The episodeNumbers property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<int?>? EpisodeNumbers { get; set; }
+        public List<int?>? EpisodeNumbers { get => _explicitNullValueEpisodeNumbers; set { _explicitNullValueEpisodeNumbers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("episodeNumbers"); else _explicitNullProperties?.Remove("episodeNumbers"); } }
+        private List<int?>? _explicitNullValueEpisodeNumbers = default!;
 #nullable restore
 #else
-        public List<int?> EpisodeNumbers { get; set; }
+        public List<int?> EpisodeNumbers { get => _explicitNullValueEpisodeNumbers; set { _explicitNullValueEpisodeNumbers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("episodeNumbers"); else _explicitNullProperties?.Remove("episodeNumbers"); } }
+        private List<int?> _explicitNullValueEpisodeNumbers = default!;
 #endif
         /// <summary>The existingPath property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExistingPath { get; set; }
+        public string? ExistingPath { get => _explicitNullValueExistingPath; set { _explicitNullValueExistingPath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("existingPath"); else _explicitNullProperties?.Remove("existingPath"); } }
+        private string? _explicitNullValueExistingPath = default!;
 #nullable restore
 #else
-        public string ExistingPath { get; set; }
+        public string ExistingPath { get => _explicitNullValueExistingPath; set { _explicitNullValueExistingPath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("existingPath"); else _explicitNullProperties?.Remove("existingPath"); } }
+        private string _explicitNullValueExistingPath = default!;
 #endif
         /// <summary>The id property</summary>
-        public int? Id { get; set; }
+        public int? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private int? _explicitNullValueId = default!;
         /// <summary>The newPath property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NewPath { get; set; }
+        public string? NewPath { get => _explicitNullValueNewPath; set { _explicitNullValueNewPath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("newPath"); else _explicitNullProperties?.Remove("newPath"); } }
+        private string? _explicitNullValueNewPath = default!;
 #nullable restore
 #else
-        public string NewPath { get; set; }
+        public string NewPath { get => _explicitNullValueNewPath; set { _explicitNullValueNewPath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("newPath"); else _explicitNullProperties?.Remove("newPath"); } }
+        private string _explicitNullValueNewPath = default!;
 #endif
         /// <summary>The seasonNumber property</summary>
-        public int? SeasonNumber { get; set; }
+        public int? SeasonNumber { get => _explicitNullValueSeasonNumber; set { _explicitNullValueSeasonNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("seasonNumber"); else _explicitNullProperties?.Remove("seasonNumber"); } }
+        private int? _explicitNullValueSeasonNumber = default!;
         /// <summary>The seriesId property</summary>
-        public int? SeriesId { get; set; }
+        public int? SeriesId { get => _explicitNullValueSeriesId; set { _explicitNullValueSeriesId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("seriesId"); else _explicitNullProperties?.Remove("seriesId"); } }
+        private int? _explicitNullValueSeriesId = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -52,7 +76,7 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
         public static global::Soenneker.Sonarr.OpenApiClient.Models.RenameEpisodeResource CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Sonarr.OpenApiClient.Models.RenameEpisodeResource();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Sonarr.OpenApiClient.Models.RenameEpisodeResource(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -84,7 +108,8 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
             writer.WriteIntValue("id", Id);
             writer.WriteStringValue("newPath", NewPath);
             writer.WriteIntValue("seasonNumber", SeasonNumber);
-            writer.WriteIntValue("seriesId", SeriesId);
+            writer.WriteIntValue("seriesId", SeriesId);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

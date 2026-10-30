@@ -11,11 +11,27 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class TaskResource : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("interval") is { } nullNodeInterval && nullNodeInterval.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Interval = null;
+            if (parseNode.GetChildNode("lastExecution") is { } nullNodeLastExecution && nullNodeLastExecution.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastExecution = null;
+            if (parseNode.GetChildNode("lastStartTime") is { } nullNodeLastStartTime && nullNodeLastStartTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastStartTime = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("nextExecution") is { } nullNodeNextExecution && nullNodeNextExecution.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NextExecution = null;
+            if (parseNode.GetChildNode("taskName") is { } nullNodeTaskName && nullNodeTaskName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaskName = null;
+        }
+
         /// <summary>The id property</summary>
-        public int? Id { get; set; }
+        public int? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private int? _explicitNullValueId = default!;
         /// <summary>The interval property</summary>
-        public int? Interval { get; set; }
+        public int? Interval { get => _explicitNullValueInterval; set { _explicitNullValueInterval = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("interval"); else _explicitNullProperties?.Remove("interval"); } }
+        private int? _explicitNullValueInterval = default!;
         /// <summary>The lastDuration property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -25,26 +41,33 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
         public string LastDuration { get; private set; }
 #endif
         /// <summary>The lastExecution property</summary>
-        public DateTimeOffset? LastExecution { get; set; }
+        public DateTimeOffset? LastExecution { get => _explicitNullValueLastExecution; set { _explicitNullValueLastExecution = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastExecution"); else _explicitNullProperties?.Remove("lastExecution"); } }
+        private DateTimeOffset? _explicitNullValueLastExecution = default!;
         /// <summary>The lastStartTime property</summary>
-        public DateTimeOffset? LastStartTime { get; set; }
+        public DateTimeOffset? LastStartTime { get => _explicitNullValueLastStartTime; set { _explicitNullValueLastStartTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastStartTime"); else _explicitNullProperties?.Remove("lastStartTime"); } }
+        private DateTimeOffset? _explicitNullValueLastStartTime = default!;
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>The nextExecution property</summary>
-        public DateTimeOffset? NextExecution { get; set; }
+        public DateTimeOffset? NextExecution { get => _explicitNullValueNextExecution; set { _explicitNullValueNextExecution = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nextExecution"); else _explicitNullProperties?.Remove("nextExecution"); } }
+        private DateTimeOffset? _explicitNullValueNextExecution = default!;
         /// <summary>The taskName property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TaskName { get; set; }
+        public string? TaskName { get => _explicitNullValueTaskName; set { _explicitNullValueTaskName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taskName"); else _explicitNullProperties?.Remove("taskName"); } }
+        private string? _explicitNullValueTaskName = default!;
 #nullable restore
 #else
-        public string TaskName { get; set; }
+        public string TaskName { get => _explicitNullValueTaskName; set { _explicitNullValueTaskName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taskName"); else _explicitNullProperties?.Remove("taskName"); } }
+        private string _explicitNullValueTaskName = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -54,7 +77,7 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
         public static global::Soenneker.Sonarr.OpenApiClient.Models.TaskResource CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Sonarr.OpenApiClient.Models.TaskResource();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Sonarr.OpenApiClient.Models.TaskResource(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -87,7 +110,8 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("lastStartTime", LastStartTime);
             writer.WriteStringValue("name", Name);
             writer.WriteDateTimeOffsetValue("nextExecution", NextExecution);
-            writer.WriteStringValue("taskName", TaskName);
+            writer.WriteStringValue("taskName", TaskName);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

@@ -11,61 +11,92 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class CustomFormatSpecificationSchema : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("fields") is { } nullNodeFields && nullNodeFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Fields = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("implementation") is { } nullNodeImplementation && nullNodeImplementation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Implementation = null;
+            if (parseNode.GetChildNode("implementationName") is { } nullNodeImplementationName && nullNodeImplementationName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ImplementationName = null;
+            if (parseNode.GetChildNode("infoLink") is { } nullNodeInfoLink && nullNodeInfoLink.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InfoLink = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("negate") is { } nullNodeNegate && nullNodeNegate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Negate = null;
+            if (parseNode.GetChildNode("presets") is { } nullNodePresets && nullNodePresets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Presets = null;
+            if (parseNode.GetChildNode("required") is { } nullNodeRequired && nullNodeRequired.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Required = null;
+        }
+
         /// <summary>The fields property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Sonarr.OpenApiClient.Models.Field>? Fields { get; set; }
+        public List<global::Soenneker.Sonarr.OpenApiClient.Models.Field>? Fields { get => _explicitNullValueFields; set { _explicitNullValueFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fields"); else _explicitNullProperties?.Remove("fields"); } }
+        private List<global::Soenneker.Sonarr.OpenApiClient.Models.Field>? _explicitNullValueFields = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Sonarr.OpenApiClient.Models.Field> Fields { get; set; }
+        public List<global::Soenneker.Sonarr.OpenApiClient.Models.Field> Fields { get => _explicitNullValueFields; set { _explicitNullValueFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fields"); else _explicitNullProperties?.Remove("fields"); } }
+        private List<global::Soenneker.Sonarr.OpenApiClient.Models.Field> _explicitNullValueFields = default!;
 #endif
         /// <summary>The id property</summary>
-        public int? Id { get; set; }
+        public int? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private int? _explicitNullValueId = default!;
         /// <summary>The implementation property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Implementation { get; set; }
+        public string? Implementation { get => _explicitNullValueImplementation; set { _explicitNullValueImplementation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("implementation"); else _explicitNullProperties?.Remove("implementation"); } }
+        private string? _explicitNullValueImplementation = default!;
 #nullable restore
 #else
-        public string Implementation { get; set; }
+        public string Implementation { get => _explicitNullValueImplementation; set { _explicitNullValueImplementation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("implementation"); else _explicitNullProperties?.Remove("implementation"); } }
+        private string _explicitNullValueImplementation = default!;
 #endif
         /// <summary>The implementationName property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ImplementationName { get; set; }
+        public string? ImplementationName { get => _explicitNullValueImplementationName; set { _explicitNullValueImplementationName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("implementationName"); else _explicitNullProperties?.Remove("implementationName"); } }
+        private string? _explicitNullValueImplementationName = default!;
 #nullable restore
 #else
-        public string ImplementationName { get; set; }
+        public string ImplementationName { get => _explicitNullValueImplementationName; set { _explicitNullValueImplementationName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("implementationName"); else _explicitNullProperties?.Remove("implementationName"); } }
+        private string _explicitNullValueImplementationName = default!;
 #endif
         /// <summary>The infoLink property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? InfoLink { get; set; }
+        public string? InfoLink { get => _explicitNullValueInfoLink; set { _explicitNullValueInfoLink = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("infoLink"); else _explicitNullProperties?.Remove("infoLink"); } }
+        private string? _explicitNullValueInfoLink = default!;
 #nullable restore
 #else
-        public string InfoLink { get; set; }
+        public string InfoLink { get => _explicitNullValueInfoLink; set { _explicitNullValueInfoLink = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("infoLink"); else _explicitNullProperties?.Remove("infoLink"); } }
+        private string _explicitNullValueInfoLink = default!;
 #endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>The negate property</summary>
-        public bool? Negate { get; set; }
+        public bool? Negate { get => _explicitNullValueNegate; set { _explicitNullValueNegate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("negate"); else _explicitNullProperties?.Remove("negate"); } }
+        private bool? _explicitNullValueNegate = default!;
         /// <summary>The presets property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Sonarr.OpenApiClient.Models.CustomFormatSpecificationSchema>? Presets { get; set; }
+        public List<global::Soenneker.Sonarr.OpenApiClient.Models.CustomFormatSpecificationSchema>? Presets { get => _explicitNullValuePresets; set { _explicitNullValuePresets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("presets"); else _explicitNullProperties?.Remove("presets"); } }
+        private List<global::Soenneker.Sonarr.OpenApiClient.Models.CustomFormatSpecificationSchema>? _explicitNullValuePresets = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Sonarr.OpenApiClient.Models.CustomFormatSpecificationSchema> Presets { get; set; }
+        public List<global::Soenneker.Sonarr.OpenApiClient.Models.CustomFormatSpecificationSchema> Presets { get => _explicitNullValuePresets; set { _explicitNullValuePresets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("presets"); else _explicitNullProperties?.Remove("presets"); } }
+        private List<global::Soenneker.Sonarr.OpenApiClient.Models.CustomFormatSpecificationSchema> _explicitNullValuePresets = default!;
 #endif
         /// <summary>The required property</summary>
-        public bool? Required { get; set; }
+        public bool? Required { get => _explicitNullValueRequired; set { _explicitNullValueRequired = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("required"); else _explicitNullProperties?.Remove("required"); } }
+        private bool? _explicitNullValueRequired = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -74,7 +105,7 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
         public static global::Soenneker.Sonarr.OpenApiClient.Models.CustomFormatSpecificationSchema CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Sonarr.OpenApiClient.Models.CustomFormatSpecificationSchema();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Sonarr.OpenApiClient.Models.CustomFormatSpecificationSchema(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -110,7 +141,8 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
             writer.WriteStringValue("name", Name);
             writer.WriteBoolValue("negate", Negate);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Sonarr.OpenApiClient.Models.CustomFormatSpecificationSchema>("presets", Presets);
-            writer.WriteBoolValue("required", Required);
+            writer.WriteBoolValue("required", Required);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

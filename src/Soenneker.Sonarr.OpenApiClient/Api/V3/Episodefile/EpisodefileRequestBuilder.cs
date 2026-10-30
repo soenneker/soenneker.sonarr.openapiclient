@@ -26,6 +26,7 @@ namespace Soenneker.Sonarr.OpenApiClient.Api.V3.Episodefile
             get => new global::Soenneker.Sonarr.OpenApiClient.Api.V3.Episodefile.Bulk.BulkRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The editor property</summary>
+        [Obsolete("")]
         public global::Soenneker.Sonarr.OpenApiClient.Api.V3.Episodefile.Editor.EditorRequestBuilder Editor
         {
             get => new global::Soenneker.Sonarr.OpenApiClient.Api.V3.Episodefile.Editor.EditorRequestBuilder(PathParameters, RequestAdapter);
@@ -71,7 +72,7 @@ namespace Soenneker.Sonarr.OpenApiClient.Api.V3.Episodefile
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            var collectionResult = await RequestAdapter.SendCollectionAsync<global::Soenneker.Sonarr.OpenApiClient.Models.EpisodeFileResource>(requestInfo, global::Soenneker.Sonarr.OpenApiClient.Models.EpisodeFileResource.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            var collectionResult = await RequestAdapter.SendCollectionAsync<global::Soenneker.Sonarr.OpenApiClient.Models.EpisodeFileResource>(requestInfo, global::Soenneker.Sonarr.OpenApiClient.Models.EpisodeFileResource.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
             return collectionResult?.AsList();
         }
         /// <returns>A <see cref="RequestInformation"/></returns>

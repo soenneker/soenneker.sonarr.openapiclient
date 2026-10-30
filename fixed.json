@@ -387,16 +387,28 @@
             "content": {
               "text/plain": {
                 "schema": {
+                  "type": "string",
+                  "format": "binary"
+                },
+                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/GetApiV3SystemBackup200PlainResponseSchema"
                 }
               },
               "application/json": {
                 "schema": {
+                  "type": "string",
+                  "format": "binary"
+                },
+                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/GetApiV3SystemBackup200ResponseSchema2"
                 }
               },
               "text/json": {
                 "schema": {
+                  "type": "string",
+                  "format": "binary"
+                },
+                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/GetApiV3SystemBackup200ResponseSchema3"
                 }
               }
@@ -1577,16 +1589,28 @@
             "content": {
               "text/plain": {
                 "schema": {
+                  "type": "string",
+                  "format": "binary"
+                },
+                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/PutApiV3DelayprofileReorderById200PlainResponseSchema"
                 }
               },
               "application/json": {
                 "schema": {
+                  "type": "string",
+                  "format": "binary"
+                },
+                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/PutApiV3DelayprofileReorderById200ResponseSchema2"
                 }
               },
               "text/json": {
                 "schema": {
+                  "type": "string",
+                  "format": "binary"
+                },
+                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/PutApiV3DelayprofileReorderById200ResponseSchema3"
                 }
               }
@@ -3984,16 +4008,28 @@
             "content": {
               "text/plain": {
                 "schema": {
+                  "type": "string",
+                  "format": "binary"
+                },
+                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/GetApiV3Indexerflag200PlainResponseSchema"
                 }
               },
               "application/json": {
                 "schema": {
+                  "type": "string",
+                  "format": "binary"
+                },
+                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/GetApiV3Indexerflag200ResponseSchema2"
                 }
               },
               "text/json": {
                 "schema": {
+                  "type": "string",
+                  "format": "binary"
+                },
+                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/GetApiV3Indexerflag200ResponseSchema3"
                 }
               }
@@ -4014,16 +4050,28 @@
             "content": {
               "text/plain": {
                 "schema": {
+                  "type": "string",
+                  "format": "binary"
+                },
+                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/GetApiV3Language200PlainResponseSchema"
                 }
               },
               "application/json": {
                 "schema": {
+                  "type": "string",
+                  "format": "binary"
+                },
+                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/GetApiV3Language200ResponseSchema2"
                 }
               },
               "text/json": {
                 "schema": {
+                  "type": "string",
+                  "format": "binary"
+                },
+                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/GetApiV3Language200ResponseSchema3"
                 }
               }
@@ -5675,16 +5723,28 @@
             "content": {
               "text/plain": {
                 "schema": {
+                  "type": "string",
+                  "format": "binary"
+                },
+                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/GetApiV3Qualitydefinition200PlainResponseSchema"
                 }
               },
               "application/json": {
                 "schema": {
+                  "type": "string",
+                  "format": "binary"
+                },
+                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/GetApiV3Qualitydefinition200ResponseSchema2"
                 }
               },
               "text/json": {
                 "schema": {
+                  "type": "string",
+                  "format": "binary"
+                },
+                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/GetApiV3Qualitydefinition200ResponseSchema3"
                 }
               }
@@ -6443,16 +6503,28 @@
             "content": {
               "text/plain": {
                 "schema": {
+                  "type": "string",
+                  "format": "binary"
+                },
+                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/GetApiV3Releaseprofile200PlainResponseSchema"
                 }
               },
               "application/json": {
                 "schema": {
+                  "type": "string",
+                  "format": "binary"
+                },
+                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/GetApiV3Releaseprofile200ResponseSchema2"
                 }
               },
               "text/json": {
                 "schema": {
+                  "type": "string",
+                  "format": "binary"
+                },
+                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/GetApiV3Releaseprofile200ResponseSchema3"
                 }
               }
@@ -6595,16 +6667,28 @@
             "content": {
               "text/plain": {
                 "schema": {
+                  "type": "string",
+                  "format": "binary"
+                },
+                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/PostApiV3ReleasePush200PlainResponseSchema"
                 }
               },
               "application/json": {
                 "schema": {
+                  "type": "string",
+                  "format": "binary"
+                },
+                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/PostApiV3ReleasePush200ResponseSchema2"
                 }
               },
               "text/json": {
                 "schema": {
+                  "type": "string",
+                  "format": "binary"
+                },
+                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/PostApiV3ReleasePush200ResponseSchema3"
                 }
               }
@@ -7323,16 +7407,28 @@
             "content": {
               "text/plain": {
                 "schema": {
+                  "type": "string",
+                  "format": "binary"
+                },
+                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/GetApiV3SeriesLookup200PlainResponseSchema"
                 }
               },
               "application/json": {
                 "schema": {
+                  "type": "string",
+                  "format": "binary"
+                },
+                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/GetApiV3SeriesLookup200ResponseSchema2"
                 }
               },
               "text/json": {
                 "schema": {
+                  "type": "string",
+                  "format": "binary"
+                },
+                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/GetApiV3SeriesLookup200ResponseSchema3"
                 }
               }
@@ -7713,16 +7809,28 @@
             "content": {
               "text/plain": {
                 "schema": {
+                  "type": "string",
+                  "format": "binary"
+                },
+                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/GetApiV3SystemTask200PlainResponseSchema"
                 }
               },
               "application/json": {
                 "schema": {
+                  "type": "string",
+                  "format": "binary"
+                },
+                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/GetApiV3SystemTask200ResponseSchema2"
                 }
               },
               "text/json": {
                 "schema": {
+                  "type": "string",
+                  "format": "binary"
+                },
+                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/GetApiV3SystemTask200ResponseSchema3"
                 }
               }

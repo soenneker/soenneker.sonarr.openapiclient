@@ -11,13 +11,26 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ImportListConfigResource : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("listSyncLevel") is { } nullNodeListSyncLevel && nullNodeListSyncLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ListSyncLevel = null;
+            if (parseNode.GetChildNode("listSyncTag") is { } nullNodeListSyncTag && nullNodeListSyncTag.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ListSyncTag = null;
+        }
+
         /// <summary>The id property</summary>
-        public int? Id { get; set; }
+        public int? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private int? _explicitNullValueId = default!;
         /// <summary>The listSyncLevel property</summary>
-        public global::Soenneker.Sonarr.OpenApiClient.Models.ListSyncLevelType? ListSyncLevel { get; set; }
+        public global::Soenneker.Sonarr.OpenApiClient.Models.ListSyncLevelType? ListSyncLevel { get => _explicitNullValueListSyncLevel; set { _explicitNullValueListSyncLevel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("listSyncLevel"); else _explicitNullProperties?.Remove("listSyncLevel"); } }
+        private global::Soenneker.Sonarr.OpenApiClient.Models.ListSyncLevelType? _explicitNullValueListSyncLevel = default!;
         /// <summary>The listSyncTag property</summary>
-        public int? ListSyncTag { get; set; }
+        public int? ListSyncTag { get => _explicitNullValueListSyncTag; set { _explicitNullValueListSyncTag = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("listSyncTag"); else _explicitNullProperties?.Remove("listSyncTag"); } }
+        private int? _explicitNullValueListSyncTag = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -26,7 +39,7 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
         public static global::Soenneker.Sonarr.OpenApiClient.Models.ImportListConfigResource CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Sonarr.OpenApiClient.Models.ImportListConfigResource();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Sonarr.OpenApiClient.Models.ImportListConfigResource(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -50,7 +63,8 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("id", Id);
             writer.WriteEnumValue<global::Soenneker.Sonarr.OpenApiClient.Models.ListSyncLevelType>("listSyncLevel", ListSyncLevel);
-            writer.WriteIntValue("listSyncTag", ListSyncTag);
+            writer.WriteIntValue("listSyncTag", ListSyncTag);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

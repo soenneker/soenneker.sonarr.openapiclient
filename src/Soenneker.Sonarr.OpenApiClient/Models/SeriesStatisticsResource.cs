@@ -11,27 +11,47 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class SeriesStatisticsResource : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("episodeCount") is { } nullNodeEpisodeCount && nullNodeEpisodeCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EpisodeCount = null;
+            if (parseNode.GetChildNode("episodeFileCount") is { } nullNodeEpisodeFileCount && nullNodeEpisodeFileCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EpisodeFileCount = null;
+            if (parseNode.GetChildNode("releaseGroups") is { } nullNodeReleaseGroups && nullNodeReleaseGroups.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReleaseGroups = null;
+            if (parseNode.GetChildNode("seasonCount") is { } nullNodeSeasonCount && nullNodeSeasonCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SeasonCount = null;
+            if (parseNode.GetChildNode("sizeOnDisk") is { } nullNodeSizeOnDisk && nullNodeSizeOnDisk.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SizeOnDisk = null;
+            if (parseNode.GetChildNode("totalEpisodeCount") is { } nullNodeTotalEpisodeCount && nullNodeTotalEpisodeCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalEpisodeCount = null;
+        }
+
         /// <summary>The episodeCount property</summary>
-        public int? EpisodeCount { get; set; }
+        public int? EpisodeCount { get => _explicitNullValueEpisodeCount; set { _explicitNullValueEpisodeCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("episodeCount"); else _explicitNullProperties?.Remove("episodeCount"); } }
+        private int? _explicitNullValueEpisodeCount = default!;
         /// <summary>The episodeFileCount property</summary>
-        public int? EpisodeFileCount { get; set; }
+        public int? EpisodeFileCount { get => _explicitNullValueEpisodeFileCount; set { _explicitNullValueEpisodeFileCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("episodeFileCount"); else _explicitNullProperties?.Remove("episodeFileCount"); } }
+        private int? _explicitNullValueEpisodeFileCount = default!;
         /// <summary>The percentOfEpisodes property</summary>
         public double? PercentOfEpisodes { get; private set; }
         /// <summary>The releaseGroups property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ReleaseGroups { get; set; }
+        public List<string>? ReleaseGroups { get => _explicitNullValueReleaseGroups; set { _explicitNullValueReleaseGroups = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("releaseGroups"); else _explicitNullProperties?.Remove("releaseGroups"); } }
+        private List<string>? _explicitNullValueReleaseGroups = default!;
 #nullable restore
 #else
-        public List<string> ReleaseGroups { get; set; }
+        public List<string> ReleaseGroups { get => _explicitNullValueReleaseGroups; set { _explicitNullValueReleaseGroups = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("releaseGroups"); else _explicitNullProperties?.Remove("releaseGroups"); } }
+        private List<string> _explicitNullValueReleaseGroups = default!;
 #endif
         /// <summary>The seasonCount property</summary>
-        public int? SeasonCount { get; set; }
+        public int? SeasonCount { get => _explicitNullValueSeasonCount; set { _explicitNullValueSeasonCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("seasonCount"); else _explicitNullProperties?.Remove("seasonCount"); } }
+        private int? _explicitNullValueSeasonCount = default!;
         /// <summary>The sizeOnDisk property</summary>
-        public long? SizeOnDisk { get; set; }
+        public long? SizeOnDisk { get => _explicitNullValueSizeOnDisk; set { _explicitNullValueSizeOnDisk = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sizeOnDisk"); else _explicitNullProperties?.Remove("sizeOnDisk"); } }
+        private long? _explicitNullValueSizeOnDisk = default!;
         /// <summary>The totalEpisodeCount property</summary>
-        public int? TotalEpisodeCount { get; set; }
+        public int? TotalEpisodeCount { get => _explicitNullValueTotalEpisodeCount; set { _explicitNullValueTotalEpisodeCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalEpisodeCount"); else _explicitNullProperties?.Remove("totalEpisodeCount"); } }
+        private int? _explicitNullValueTotalEpisodeCount = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -40,7 +60,7 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
         public static global::Soenneker.Sonarr.OpenApiClient.Models.SeriesStatisticsResource CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Sonarr.OpenApiClient.Models.SeriesStatisticsResource();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Sonarr.OpenApiClient.Models.SeriesStatisticsResource(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -71,7 +91,8 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("releaseGroups", ReleaseGroups);
             writer.WriteIntValue("seasonCount", SeasonCount);
             writer.WriteLongValue("sizeOnDisk", SizeOnDisk);
-            writer.WriteIntValue("totalEpisodeCount", TotalEpisodeCount);
+            writer.WriteIntValue("totalEpisodeCount", TotalEpisodeCount);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

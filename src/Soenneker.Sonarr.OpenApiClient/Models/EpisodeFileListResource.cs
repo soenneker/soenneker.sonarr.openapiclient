@@ -11,46 +11,68 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class EpisodeFileListResource : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("episodeFileIds") is { } nullNodeEpisodeFileIds && nullNodeEpisodeFileIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EpisodeFileIds = null;
+            if (parseNode.GetChildNode("languages") is { } nullNodeLanguages && nullNodeLanguages.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Languages = null;
+            if (parseNode.GetChildNode("quality") is { } nullNodeQuality && nullNodeQuality.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Quality = null;
+            if (parseNode.GetChildNode("releaseGroup") is { } nullNodeReleaseGroup && nullNodeReleaseGroup.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReleaseGroup = null;
+            if (parseNode.GetChildNode("sceneName") is { } nullNodeSceneName && nullNodeSceneName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SceneName = null;
+        }
+
         /// <summary>The episodeFileIds property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<int?>? EpisodeFileIds { get; set; }
+        public List<int?>? EpisodeFileIds { get => _explicitNullValueEpisodeFileIds; set { _explicitNullValueEpisodeFileIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("episodeFileIds"); else _explicitNullProperties?.Remove("episodeFileIds"); } }
+        private List<int?>? _explicitNullValueEpisodeFileIds = default!;
 #nullable restore
 #else
-        public List<int?> EpisodeFileIds { get; set; }
+        public List<int?> EpisodeFileIds { get => _explicitNullValueEpisodeFileIds; set { _explicitNullValueEpisodeFileIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("episodeFileIds"); else _explicitNullProperties?.Remove("episodeFileIds"); } }
+        private List<int?> _explicitNullValueEpisodeFileIds = default!;
 #endif
         /// <summary>The languages property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Sonarr.OpenApiClient.Models.Language>? Languages { get; set; }
+        public List<global::Soenneker.Sonarr.OpenApiClient.Models.Language>? Languages { get => _explicitNullValueLanguages; set { _explicitNullValueLanguages = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("languages"); else _explicitNullProperties?.Remove("languages"); } }
+        private List<global::Soenneker.Sonarr.OpenApiClient.Models.Language>? _explicitNullValueLanguages = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Sonarr.OpenApiClient.Models.Language> Languages { get; set; }
+        public List<global::Soenneker.Sonarr.OpenApiClient.Models.Language> Languages { get => _explicitNullValueLanguages; set { _explicitNullValueLanguages = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("languages"); else _explicitNullProperties?.Remove("languages"); } }
+        private List<global::Soenneker.Sonarr.OpenApiClient.Models.Language> _explicitNullValueLanguages = default!;
 #endif
         /// <summary>The quality property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Sonarr.OpenApiClient.Models.QualityModel? Quality { get; set; }
+        public global::Soenneker.Sonarr.OpenApiClient.Models.QualityModel? Quality { get => _explicitNullValueQuality; set { _explicitNullValueQuality = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quality"); else _explicitNullProperties?.Remove("quality"); } }
+        private global::Soenneker.Sonarr.OpenApiClient.Models.QualityModel? _explicitNullValueQuality = default!;
 #nullable restore
 #else
-        public global::Soenneker.Sonarr.OpenApiClient.Models.QualityModel Quality { get; set; }
+        public global::Soenneker.Sonarr.OpenApiClient.Models.QualityModel Quality { get => _explicitNullValueQuality; set { _explicitNullValueQuality = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quality"); else _explicitNullProperties?.Remove("quality"); } }
+        private global::Soenneker.Sonarr.OpenApiClient.Models.QualityModel _explicitNullValueQuality = default!;
 #endif
         /// <summary>The releaseGroup property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ReleaseGroup { get; set; }
+        public string? ReleaseGroup { get => _explicitNullValueReleaseGroup; set { _explicitNullValueReleaseGroup = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("releaseGroup"); else _explicitNullProperties?.Remove("releaseGroup"); } }
+        private string? _explicitNullValueReleaseGroup = default!;
 #nullable restore
 #else
-        public string ReleaseGroup { get; set; }
+        public string ReleaseGroup { get => _explicitNullValueReleaseGroup; set { _explicitNullValueReleaseGroup = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("releaseGroup"); else _explicitNullProperties?.Remove("releaseGroup"); } }
+        private string _explicitNullValueReleaseGroup = default!;
 #endif
         /// <summary>The sceneName property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SceneName { get; set; }
+        public string? SceneName { get => _explicitNullValueSceneName; set { _explicitNullValueSceneName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sceneName"); else _explicitNullProperties?.Remove("sceneName"); } }
+        private string? _explicitNullValueSceneName = default!;
 #nullable restore
 #else
-        public string SceneName { get; set; }
+        public string SceneName { get => _explicitNullValueSceneName; set { _explicitNullValueSceneName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sceneName"); else _explicitNullProperties?.Remove("sceneName"); } }
+        private string _explicitNullValueSceneName = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -60,7 +82,7 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
         public static global::Soenneker.Sonarr.OpenApiClient.Models.EpisodeFileListResource CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Sonarr.OpenApiClient.Models.EpisodeFileListResource();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Sonarr.OpenApiClient.Models.EpisodeFileListResource(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -88,7 +110,8 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Sonarr.OpenApiClient.Models.Language>("languages", Languages);
             writer.WriteObjectValue<global::Soenneker.Sonarr.OpenApiClient.Models.QualityModel>("quality", Quality);
             writer.WriteStringValue("releaseGroup", ReleaseGroup);
-            writer.WriteStringValue("sceneName", SceneName);
+            writer.WriteStringValue("sceneName", SceneName);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

@@ -11,140 +11,216 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ParsedEpisodeInfoResource : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("absoluteEpisodeNumbers") is { } nullNodeAbsoluteEpisodeNumbers && nullNodeAbsoluteEpisodeNumbers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AbsoluteEpisodeNumbers = null;
+            if (parseNode.GetChildNode("airDate") is { } nullNodeAirDate && nullNodeAirDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AirDate = null;
+            if (parseNode.GetChildNode("dailyPart") is { } nullNodeDailyPart && nullNodeDailyPart.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DailyPart = null;
+            if (parseNode.GetChildNode("episodeNumbers") is { } nullNodeEpisodeNumbers && nullNodeEpisodeNumbers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EpisodeNumbers = null;
+            if (parseNode.GetChildNode("fullSeason") is { } nullNodeFullSeason && nullNodeFullSeason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FullSeason = null;
+            if (parseNode.GetChildNode("isAbsoluteNumbering") is { } nullNodeIsAbsoluteNumbering && nullNodeIsAbsoluteNumbering.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsAbsoluteNumbering = null;
+            if (parseNode.GetChildNode("isDaily") is { } nullNodeIsDaily && nullNodeIsDaily.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsDaily = null;
+            if (parseNode.GetChildNode("isMiniSeries") is { } nullNodeIsMiniSeries && nullNodeIsMiniSeries.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsMiniSeries = null;
+            if (parseNode.GetChildNode("isMultiSeason") is { } nullNodeIsMultiSeason && nullNodeIsMultiSeason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsMultiSeason = null;
+            if (parseNode.GetChildNode("isPartialSeason") is { } nullNodeIsPartialSeason && nullNodeIsPartialSeason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsPartialSeason = null;
+            if (parseNode.GetChildNode("isPossibleSceneSeasonSpecial") is { } nullNodeIsPossibleSceneSeasonSpecial && nullNodeIsPossibleSceneSeasonSpecial.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsPossibleSceneSeasonSpecial = null;
+            if (parseNode.GetChildNode("isPossibleSpecialEpisode") is { } nullNodeIsPossibleSpecialEpisode && nullNodeIsPossibleSpecialEpisode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsPossibleSpecialEpisode = null;
+            if (parseNode.GetChildNode("isSeasonExtra") is { } nullNodeIsSeasonExtra && nullNodeIsSeasonExtra.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsSeasonExtra = null;
+            if (parseNode.GetChildNode("isSplitEpisode") is { } nullNodeIsSplitEpisode && nullNodeIsSplitEpisode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsSplitEpisode = null;
+            if (parseNode.GetChildNode("languages") is { } nullNodeLanguages && nullNodeLanguages.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Languages = null;
+            if (parseNode.GetChildNode("quality") is { } nullNodeQuality && nullNodeQuality.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Quality = null;
+            if (parseNode.GetChildNode("releaseGroup") is { } nullNodeReleaseGroup && nullNodeReleaseGroup.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReleaseGroup = null;
+            if (parseNode.GetChildNode("releaseHash") is { } nullNodeReleaseHash && nullNodeReleaseHash.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReleaseHash = null;
+            if (parseNode.GetChildNode("releaseTitle") is { } nullNodeReleaseTitle && nullNodeReleaseTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReleaseTitle = null;
+            if (parseNode.GetChildNode("releaseTokens") is { } nullNodeReleaseTokens && nullNodeReleaseTokens.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReleaseTokens = null;
+            if (parseNode.GetChildNode("releaseType") is { } nullNodeReleaseType && nullNodeReleaseType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReleaseType = null;
+            if (parseNode.GetChildNode("seasonNumber") is { } nullNodeSeasonNumber && nullNodeSeasonNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SeasonNumber = null;
+            if (parseNode.GetChildNode("seasonNumbers") is { } nullNodeSeasonNumbers && nullNodeSeasonNumbers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SeasonNumbers = null;
+            if (parseNode.GetChildNode("seasonPart") is { } nullNodeSeasonPart && nullNodeSeasonPart.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SeasonPart = null;
+            if (parseNode.GetChildNode("seriesTitle") is { } nullNodeSeriesTitle && nullNodeSeriesTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SeriesTitle = null;
+            if (parseNode.GetChildNode("seriesTitleInfo") is { } nullNodeSeriesTitleInfo && nullNodeSeriesTitleInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SeriesTitleInfo = null;
+            if (parseNode.GetChildNode("special") is { } nullNodeSpecial && nullNodeSpecial.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Special = null;
+            if (parseNode.GetChildNode("specialAbsoluteEpisodeNumbers") is { } nullNodeSpecialAbsoluteEpisodeNumbers && nullNodeSpecialAbsoluteEpisodeNumbers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SpecialAbsoluteEpisodeNumbers = null;
+        }
+
         /// <summary>The absoluteEpisodeNumbers property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<int?>? AbsoluteEpisodeNumbers { get; set; }
+        public List<int?>? AbsoluteEpisodeNumbers { get => _explicitNullValueAbsoluteEpisodeNumbers; set { _explicitNullValueAbsoluteEpisodeNumbers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("absoluteEpisodeNumbers"); else _explicitNullProperties?.Remove("absoluteEpisodeNumbers"); } }
+        private List<int?>? _explicitNullValueAbsoluteEpisodeNumbers = default!;
 #nullable restore
 #else
-        public List<int?> AbsoluteEpisodeNumbers { get; set; }
+        public List<int?> AbsoluteEpisodeNumbers { get => _explicitNullValueAbsoluteEpisodeNumbers; set { _explicitNullValueAbsoluteEpisodeNumbers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("absoluteEpisodeNumbers"); else _explicitNullProperties?.Remove("absoluteEpisodeNumbers"); } }
+        private List<int?> _explicitNullValueAbsoluteEpisodeNumbers = default!;
 #endif
         /// <summary>The airDate property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AirDate { get; set; }
+        public string? AirDate { get => _explicitNullValueAirDate; set { _explicitNullValueAirDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("airDate"); else _explicitNullProperties?.Remove("airDate"); } }
+        private string? _explicitNullValueAirDate = default!;
 #nullable restore
 #else
-        public string AirDate { get; set; }
+        public string AirDate { get => _explicitNullValueAirDate; set { _explicitNullValueAirDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("airDate"); else _explicitNullProperties?.Remove("airDate"); } }
+        private string _explicitNullValueAirDate = default!;
 #endif
         /// <summary>The dailyPart property</summary>
-        public int? DailyPart { get; set; }
+        public int? DailyPart { get => _explicitNullValueDailyPart; set { _explicitNullValueDailyPart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dailyPart"); else _explicitNullProperties?.Remove("dailyPart"); } }
+        private int? _explicitNullValueDailyPart = default!;
         /// <summary>The episodeNumbers property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<int?>? EpisodeNumbers { get; set; }
+        public List<int?>? EpisodeNumbers { get => _explicitNullValueEpisodeNumbers; set { _explicitNullValueEpisodeNumbers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("episodeNumbers"); else _explicitNullProperties?.Remove("episodeNumbers"); } }
+        private List<int?>? _explicitNullValueEpisodeNumbers = default!;
 #nullable restore
 #else
-        public List<int?> EpisodeNumbers { get; set; }
+        public List<int?> EpisodeNumbers { get => _explicitNullValueEpisodeNumbers; set { _explicitNullValueEpisodeNumbers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("episodeNumbers"); else _explicitNullProperties?.Remove("episodeNumbers"); } }
+        private List<int?> _explicitNullValueEpisodeNumbers = default!;
 #endif
         /// <summary>The fullSeason property</summary>
-        public bool? FullSeason { get; set; }
+        public bool? FullSeason { get => _explicitNullValueFullSeason; set { _explicitNullValueFullSeason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fullSeason"); else _explicitNullProperties?.Remove("fullSeason"); } }
+        private bool? _explicitNullValueFullSeason = default!;
         /// <summary>The isAbsoluteNumbering property</summary>
-        public bool? IsAbsoluteNumbering { get; set; }
+        public bool? IsAbsoluteNumbering { get => _explicitNullValueIsAbsoluteNumbering; set { _explicitNullValueIsAbsoluteNumbering = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isAbsoluteNumbering"); else _explicitNullProperties?.Remove("isAbsoluteNumbering"); } }
+        private bool? _explicitNullValueIsAbsoluteNumbering = default!;
         /// <summary>The isDaily property</summary>
-        public bool? IsDaily { get; set; }
+        public bool? IsDaily { get => _explicitNullValueIsDaily; set { _explicitNullValueIsDaily = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isDaily"); else _explicitNullProperties?.Remove("isDaily"); } }
+        private bool? _explicitNullValueIsDaily = default!;
         /// <summary>The isMiniSeries property</summary>
-        public bool? IsMiniSeries { get; set; }
+        public bool? IsMiniSeries { get => _explicitNullValueIsMiniSeries; set { _explicitNullValueIsMiniSeries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isMiniSeries"); else _explicitNullProperties?.Remove("isMiniSeries"); } }
+        private bool? _explicitNullValueIsMiniSeries = default!;
         /// <summary>The isMultiSeason property</summary>
-        public bool? IsMultiSeason { get; set; }
+        public bool? IsMultiSeason { get => _explicitNullValueIsMultiSeason; set { _explicitNullValueIsMultiSeason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isMultiSeason"); else _explicitNullProperties?.Remove("isMultiSeason"); } }
+        private bool? _explicitNullValueIsMultiSeason = default!;
         /// <summary>The isPartialSeason property</summary>
-        public bool? IsPartialSeason { get; set; }
+        public bool? IsPartialSeason { get => _explicitNullValueIsPartialSeason; set { _explicitNullValueIsPartialSeason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isPartialSeason"); else _explicitNullProperties?.Remove("isPartialSeason"); } }
+        private bool? _explicitNullValueIsPartialSeason = default!;
         /// <summary>The isPossibleSceneSeasonSpecial property</summary>
-        public bool? IsPossibleSceneSeasonSpecial { get; set; }
+        public bool? IsPossibleSceneSeasonSpecial { get => _explicitNullValueIsPossibleSceneSeasonSpecial; set { _explicitNullValueIsPossibleSceneSeasonSpecial = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isPossibleSceneSeasonSpecial"); else _explicitNullProperties?.Remove("isPossibleSceneSeasonSpecial"); } }
+        private bool? _explicitNullValueIsPossibleSceneSeasonSpecial = default!;
         /// <summary>The isPossibleSpecialEpisode property</summary>
-        public bool? IsPossibleSpecialEpisode { get; set; }
+        public bool? IsPossibleSpecialEpisode { get => _explicitNullValueIsPossibleSpecialEpisode; set { _explicitNullValueIsPossibleSpecialEpisode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isPossibleSpecialEpisode"); else _explicitNullProperties?.Remove("isPossibleSpecialEpisode"); } }
+        private bool? _explicitNullValueIsPossibleSpecialEpisode = default!;
         /// <summary>The isSeasonExtra property</summary>
-        public bool? IsSeasonExtra { get; set; }
+        public bool? IsSeasonExtra { get => _explicitNullValueIsSeasonExtra; set { _explicitNullValueIsSeasonExtra = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isSeasonExtra"); else _explicitNullProperties?.Remove("isSeasonExtra"); } }
+        private bool? _explicitNullValueIsSeasonExtra = default!;
         /// <summary>The isSplitEpisode property</summary>
-        public bool? IsSplitEpisode { get; set; }
+        public bool? IsSplitEpisode { get => _explicitNullValueIsSplitEpisode; set { _explicitNullValueIsSplitEpisode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isSplitEpisode"); else _explicitNullProperties?.Remove("isSplitEpisode"); } }
+        private bool? _explicitNullValueIsSplitEpisode = default!;
         /// <summary>The languages property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Sonarr.OpenApiClient.Models.Language>? Languages { get; set; }
+        public List<global::Soenneker.Sonarr.OpenApiClient.Models.Language>? Languages { get => _explicitNullValueLanguages; set { _explicitNullValueLanguages = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("languages"); else _explicitNullProperties?.Remove("languages"); } }
+        private List<global::Soenneker.Sonarr.OpenApiClient.Models.Language>? _explicitNullValueLanguages = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Sonarr.OpenApiClient.Models.Language> Languages { get; set; }
+        public List<global::Soenneker.Sonarr.OpenApiClient.Models.Language> Languages { get => _explicitNullValueLanguages; set { _explicitNullValueLanguages = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("languages"); else _explicitNullProperties?.Remove("languages"); } }
+        private List<global::Soenneker.Sonarr.OpenApiClient.Models.Language> _explicitNullValueLanguages = default!;
 #endif
         /// <summary>The quality property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Sonarr.OpenApiClient.Models.QualityModel? Quality { get; set; }
+        public global::Soenneker.Sonarr.OpenApiClient.Models.QualityModel? Quality { get => _explicitNullValueQuality; set { _explicitNullValueQuality = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quality"); else _explicitNullProperties?.Remove("quality"); } }
+        private global::Soenneker.Sonarr.OpenApiClient.Models.QualityModel? _explicitNullValueQuality = default!;
 #nullable restore
 #else
-        public global::Soenneker.Sonarr.OpenApiClient.Models.QualityModel Quality { get; set; }
+        public global::Soenneker.Sonarr.OpenApiClient.Models.QualityModel Quality { get => _explicitNullValueQuality; set { _explicitNullValueQuality = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quality"); else _explicitNullProperties?.Remove("quality"); } }
+        private global::Soenneker.Sonarr.OpenApiClient.Models.QualityModel _explicitNullValueQuality = default!;
 #endif
         /// <summary>The releaseGroup property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ReleaseGroup { get; set; }
+        public string? ReleaseGroup { get => _explicitNullValueReleaseGroup; set { _explicitNullValueReleaseGroup = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("releaseGroup"); else _explicitNullProperties?.Remove("releaseGroup"); } }
+        private string? _explicitNullValueReleaseGroup = default!;
 #nullable restore
 #else
-        public string ReleaseGroup { get; set; }
+        public string ReleaseGroup { get => _explicitNullValueReleaseGroup; set { _explicitNullValueReleaseGroup = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("releaseGroup"); else _explicitNullProperties?.Remove("releaseGroup"); } }
+        private string _explicitNullValueReleaseGroup = default!;
 #endif
         /// <summary>The releaseHash property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ReleaseHash { get; set; }
+        public string? ReleaseHash { get => _explicitNullValueReleaseHash; set { _explicitNullValueReleaseHash = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("releaseHash"); else _explicitNullProperties?.Remove("releaseHash"); } }
+        private string? _explicitNullValueReleaseHash = default!;
 #nullable restore
 #else
-        public string ReleaseHash { get; set; }
+        public string ReleaseHash { get => _explicitNullValueReleaseHash; set { _explicitNullValueReleaseHash = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("releaseHash"); else _explicitNullProperties?.Remove("releaseHash"); } }
+        private string _explicitNullValueReleaseHash = default!;
 #endif
         /// <summary>The releaseTitle property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ReleaseTitle { get; set; }
+        public string? ReleaseTitle { get => _explicitNullValueReleaseTitle; set { _explicitNullValueReleaseTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("releaseTitle"); else _explicitNullProperties?.Remove("releaseTitle"); } }
+        private string? _explicitNullValueReleaseTitle = default!;
 #nullable restore
 #else
-        public string ReleaseTitle { get; set; }
+        public string ReleaseTitle { get => _explicitNullValueReleaseTitle; set { _explicitNullValueReleaseTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("releaseTitle"); else _explicitNullProperties?.Remove("releaseTitle"); } }
+        private string _explicitNullValueReleaseTitle = default!;
 #endif
         /// <summary>The releaseTokens property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ReleaseTokens { get; set; }
+        public string? ReleaseTokens { get => _explicitNullValueReleaseTokens; set { _explicitNullValueReleaseTokens = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("releaseTokens"); else _explicitNullProperties?.Remove("releaseTokens"); } }
+        private string? _explicitNullValueReleaseTokens = default!;
 #nullable restore
 #else
-        public string ReleaseTokens { get; set; }
+        public string ReleaseTokens { get => _explicitNullValueReleaseTokens; set { _explicitNullValueReleaseTokens = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("releaseTokens"); else _explicitNullProperties?.Remove("releaseTokens"); } }
+        private string _explicitNullValueReleaseTokens = default!;
 #endif
         /// <summary>The releaseType property</summary>
-        public global::Soenneker.Sonarr.OpenApiClient.Models.ReleaseType? ReleaseType { get; set; }
+        public global::Soenneker.Sonarr.OpenApiClient.Models.ReleaseType? ReleaseType { get => _explicitNullValueReleaseType; set { _explicitNullValueReleaseType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("releaseType"); else _explicitNullProperties?.Remove("releaseType"); } }
+        private global::Soenneker.Sonarr.OpenApiClient.Models.ReleaseType? _explicitNullValueReleaseType = default!;
         /// <summary>The seasonNumber property</summary>
-        public int? SeasonNumber { get; set; }
+        public int? SeasonNumber { get => _explicitNullValueSeasonNumber; set { _explicitNullValueSeasonNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("seasonNumber"); else _explicitNullProperties?.Remove("seasonNumber"); } }
+        private int? _explicitNullValueSeasonNumber = default!;
         /// <summary>The seasonNumbers property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<int?>? SeasonNumbers { get; set; }
+        public List<int?>? SeasonNumbers { get => _explicitNullValueSeasonNumbers; set { _explicitNullValueSeasonNumbers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("seasonNumbers"); else _explicitNullProperties?.Remove("seasonNumbers"); } }
+        private List<int?>? _explicitNullValueSeasonNumbers = default!;
 #nullable restore
 #else
-        public List<int?> SeasonNumbers { get; set; }
+        public List<int?> SeasonNumbers { get => _explicitNullValueSeasonNumbers; set { _explicitNullValueSeasonNumbers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("seasonNumbers"); else _explicitNullProperties?.Remove("seasonNumbers"); } }
+        private List<int?> _explicitNullValueSeasonNumbers = default!;
 #endif
         /// <summary>The seasonPart property</summary>
-        public int? SeasonPart { get; set; }
+        public int? SeasonPart { get => _explicitNullValueSeasonPart; set { _explicitNullValueSeasonPart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("seasonPart"); else _explicitNullProperties?.Remove("seasonPart"); } }
+        private int? _explicitNullValueSeasonPart = default!;
         /// <summary>The seriesTitle property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SeriesTitle { get; set; }
+        public string? SeriesTitle { get => _explicitNullValueSeriesTitle; set { _explicitNullValueSeriesTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("seriesTitle"); else _explicitNullProperties?.Remove("seriesTitle"); } }
+        private string? _explicitNullValueSeriesTitle = default!;
 #nullable restore
 #else
-        public string SeriesTitle { get; set; }
+        public string SeriesTitle { get => _explicitNullValueSeriesTitle; set { _explicitNullValueSeriesTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("seriesTitle"); else _explicitNullProperties?.Remove("seriesTitle"); } }
+        private string _explicitNullValueSeriesTitle = default!;
 #endif
         /// <summary>The seriesTitleInfo property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Sonarr.OpenApiClient.Models.SeriesTitleInfo? SeriesTitleInfo { get; set; }
+        public global::Soenneker.Sonarr.OpenApiClient.Models.SeriesTitleInfo? SeriesTitleInfo { get => _explicitNullValueSeriesTitleInfo; set { _explicitNullValueSeriesTitleInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("seriesTitleInfo"); else _explicitNullProperties?.Remove("seriesTitleInfo"); } }
+        private global::Soenneker.Sonarr.OpenApiClient.Models.SeriesTitleInfo? _explicitNullValueSeriesTitleInfo = default!;
 #nullable restore
 #else
-        public global::Soenneker.Sonarr.OpenApiClient.Models.SeriesTitleInfo SeriesTitleInfo { get; set; }
+        public global::Soenneker.Sonarr.OpenApiClient.Models.SeriesTitleInfo SeriesTitleInfo { get => _explicitNullValueSeriesTitleInfo; set { _explicitNullValueSeriesTitleInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("seriesTitleInfo"); else _explicitNullProperties?.Remove("seriesTitleInfo"); } }
+        private global::Soenneker.Sonarr.OpenApiClient.Models.SeriesTitleInfo _explicitNullValueSeriesTitleInfo = default!;
 #endif
         /// <summary>The special property</summary>
-        public bool? Special { get; set; }
+        public bool? Special { get => _explicitNullValueSpecial; set { _explicitNullValueSpecial = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("special"); else _explicitNullProperties?.Remove("special"); } }
+        private bool? _explicitNullValueSpecial = default!;
         /// <summary>The specialAbsoluteEpisodeNumbers property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<double?>? SpecialAbsoluteEpisodeNumbers { get; set; }
+        public List<double?>? SpecialAbsoluteEpisodeNumbers { get => _explicitNullValueSpecialAbsoluteEpisodeNumbers; set { _explicitNullValueSpecialAbsoluteEpisodeNumbers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("specialAbsoluteEpisodeNumbers"); else _explicitNullProperties?.Remove("specialAbsoluteEpisodeNumbers"); } }
+        private List<double?>? _explicitNullValueSpecialAbsoluteEpisodeNumbers = default!;
 #nullable restore
 #else
-        public List<double?> SpecialAbsoluteEpisodeNumbers { get; set; }
+        public List<double?> SpecialAbsoluteEpisodeNumbers { get => _explicitNullValueSpecialAbsoluteEpisodeNumbers; set { _explicitNullValueSpecialAbsoluteEpisodeNumbers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("specialAbsoluteEpisodeNumbers"); else _explicitNullProperties?.Remove("specialAbsoluteEpisodeNumbers"); } }
+        private List<double?> _explicitNullValueSpecialAbsoluteEpisodeNumbers = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -154,7 +230,7 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
         public static global::Soenneker.Sonarr.OpenApiClient.Models.ParsedEpisodeInfoResource CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Sonarr.OpenApiClient.Models.ParsedEpisodeInfoResource();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Sonarr.OpenApiClient.Models.ParsedEpisodeInfoResource(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -228,7 +304,8 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
             writer.WriteStringValue("seriesTitle", SeriesTitle);
             writer.WriteObjectValue<global::Soenneker.Sonarr.OpenApiClient.Models.SeriesTitleInfo>("seriesTitleInfo", SeriesTitleInfo);
             writer.WriteBoolValue("special", Special);
-            writer.WriteCollectionOfPrimitiveValues<double?>("specialAbsoluteEpisodeNumbers", SpecialAbsoluteEpisodeNumbers);
+            writer.WriteCollectionOfPrimitiveValues<double?>("specialAbsoluteEpisodeNumbers", SpecialAbsoluteEpisodeNumbers);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

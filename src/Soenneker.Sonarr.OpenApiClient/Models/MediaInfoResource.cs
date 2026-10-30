@@ -11,93 +11,141 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class MediaInfoResource : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("audioBitrate") is { } nullNodeAudioBitrate && nullNodeAudioBitrate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AudioBitrate = null;
+            if (parseNode.GetChildNode("audioChannels") is { } nullNodeAudioChannels && nullNodeAudioChannels.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AudioChannels = null;
+            if (parseNode.GetChildNode("audioCodec") is { } nullNodeAudioCodec && nullNodeAudioCodec.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AudioCodec = null;
+            if (parseNode.GetChildNode("audioLanguages") is { } nullNodeAudioLanguages && nullNodeAudioLanguages.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AudioLanguages = null;
+            if (parseNode.GetChildNode("audioStreamCount") is { } nullNodeAudioStreamCount && nullNodeAudioStreamCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AudioStreamCount = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("resolution") is { } nullNodeResolution && nullNodeResolution.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Resolution = null;
+            if (parseNode.GetChildNode("runTime") is { } nullNodeRunTime && nullNodeRunTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RunTime = null;
+            if (parseNode.GetChildNode("scanType") is { } nullNodeScanType && nullNodeScanType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScanType = null;
+            if (parseNode.GetChildNode("subtitles") is { } nullNodeSubtitles && nullNodeSubtitles.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Subtitles = null;
+            if (parseNode.GetChildNode("videoBitDepth") is { } nullNodeVideoBitDepth && nullNodeVideoBitDepth.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VideoBitDepth = null;
+            if (parseNode.GetChildNode("videoBitrate") is { } nullNodeVideoBitrate && nullNodeVideoBitrate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VideoBitrate = null;
+            if (parseNode.GetChildNode("videoCodec") is { } nullNodeVideoCodec && nullNodeVideoCodec.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VideoCodec = null;
+            if (parseNode.GetChildNode("videoDynamicRange") is { } nullNodeVideoDynamicRange && nullNodeVideoDynamicRange.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VideoDynamicRange = null;
+            if (parseNode.GetChildNode("videoDynamicRangeType") is { } nullNodeVideoDynamicRangeType && nullNodeVideoDynamicRangeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VideoDynamicRangeType = null;
+            if (parseNode.GetChildNode("videoFps") is { } nullNodeVideoFps && nullNodeVideoFps.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VideoFps = null;
+        }
+
         /// <summary>The audioBitrate property</summary>
-        public long? AudioBitrate { get; set; }
+        public long? AudioBitrate { get => _explicitNullValueAudioBitrate; set { _explicitNullValueAudioBitrate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("audioBitrate"); else _explicitNullProperties?.Remove("audioBitrate"); } }
+        private long? _explicitNullValueAudioBitrate = default!;
         /// <summary>The audioChannels property</summary>
-        public double? AudioChannels { get; set; }
+        public double? AudioChannels { get => _explicitNullValueAudioChannels; set { _explicitNullValueAudioChannels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("audioChannels"); else _explicitNullProperties?.Remove("audioChannels"); } }
+        private double? _explicitNullValueAudioChannels = default!;
         /// <summary>The audioCodec property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AudioCodec { get; set; }
+        public string? AudioCodec { get => _explicitNullValueAudioCodec; set { _explicitNullValueAudioCodec = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("audioCodec"); else _explicitNullProperties?.Remove("audioCodec"); } }
+        private string? _explicitNullValueAudioCodec = default!;
 #nullable restore
 #else
-        public string AudioCodec { get; set; }
+        public string AudioCodec { get => _explicitNullValueAudioCodec; set { _explicitNullValueAudioCodec = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("audioCodec"); else _explicitNullProperties?.Remove("audioCodec"); } }
+        private string _explicitNullValueAudioCodec = default!;
 #endif
         /// <summary>The audioLanguages property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AudioLanguages { get; set; }
+        public string? AudioLanguages { get => _explicitNullValueAudioLanguages; set { _explicitNullValueAudioLanguages = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("audioLanguages"); else _explicitNullProperties?.Remove("audioLanguages"); } }
+        private string? _explicitNullValueAudioLanguages = default!;
 #nullable restore
 #else
-        public string AudioLanguages { get; set; }
+        public string AudioLanguages { get => _explicitNullValueAudioLanguages; set { _explicitNullValueAudioLanguages = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("audioLanguages"); else _explicitNullProperties?.Remove("audioLanguages"); } }
+        private string _explicitNullValueAudioLanguages = default!;
 #endif
         /// <summary>The audioStreamCount property</summary>
-        public int? AudioStreamCount { get; set; }
+        public int? AudioStreamCount { get => _explicitNullValueAudioStreamCount; set { _explicitNullValueAudioStreamCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("audioStreamCount"); else _explicitNullProperties?.Remove("audioStreamCount"); } }
+        private int? _explicitNullValueAudioStreamCount = default!;
         /// <summary>The id property</summary>
-        public int? Id { get; set; }
+        public int? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private int? _explicitNullValueId = default!;
         /// <summary>The resolution property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Resolution { get; set; }
+        public string? Resolution { get => _explicitNullValueResolution; set { _explicitNullValueResolution = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resolution"); else _explicitNullProperties?.Remove("resolution"); } }
+        private string? _explicitNullValueResolution = default!;
 #nullable restore
 #else
-        public string Resolution { get; set; }
+        public string Resolution { get => _explicitNullValueResolution; set { _explicitNullValueResolution = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resolution"); else _explicitNullProperties?.Remove("resolution"); } }
+        private string _explicitNullValueResolution = default!;
 #endif
         /// <summary>The runTime property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RunTime { get; set; }
+        public string? RunTime { get => _explicitNullValueRunTime; set { _explicitNullValueRunTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("runTime"); else _explicitNullProperties?.Remove("runTime"); } }
+        private string? _explicitNullValueRunTime = default!;
 #nullable restore
 #else
-        public string RunTime { get; set; }
+        public string RunTime { get => _explicitNullValueRunTime; set { _explicitNullValueRunTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("runTime"); else _explicitNullProperties?.Remove("runTime"); } }
+        private string _explicitNullValueRunTime = default!;
 #endif
         /// <summary>The scanType property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ScanType { get; set; }
+        public string? ScanType { get => _explicitNullValueScanType; set { _explicitNullValueScanType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scanType"); else _explicitNullProperties?.Remove("scanType"); } }
+        private string? _explicitNullValueScanType = default!;
 #nullable restore
 #else
-        public string ScanType { get; set; }
+        public string ScanType { get => _explicitNullValueScanType; set { _explicitNullValueScanType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scanType"); else _explicitNullProperties?.Remove("scanType"); } }
+        private string _explicitNullValueScanType = default!;
 #endif
         /// <summary>The subtitles property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Subtitles { get; set; }
+        public string? Subtitles { get => _explicitNullValueSubtitles; set { _explicitNullValueSubtitles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subtitles"); else _explicitNullProperties?.Remove("subtitles"); } }
+        private string? _explicitNullValueSubtitles = default!;
 #nullable restore
 #else
-        public string Subtitles { get; set; }
+        public string Subtitles { get => _explicitNullValueSubtitles; set { _explicitNullValueSubtitles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subtitles"); else _explicitNullProperties?.Remove("subtitles"); } }
+        private string _explicitNullValueSubtitles = default!;
 #endif
         /// <summary>The videoBitDepth property</summary>
-        public int? VideoBitDepth { get; set; }
+        public int? VideoBitDepth { get => _explicitNullValueVideoBitDepth; set { _explicitNullValueVideoBitDepth = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("videoBitDepth"); else _explicitNullProperties?.Remove("videoBitDepth"); } }
+        private int? _explicitNullValueVideoBitDepth = default!;
         /// <summary>The videoBitrate property</summary>
-        public long? VideoBitrate { get; set; }
+        public long? VideoBitrate { get => _explicitNullValueVideoBitrate; set { _explicitNullValueVideoBitrate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("videoBitrate"); else _explicitNullProperties?.Remove("videoBitrate"); } }
+        private long? _explicitNullValueVideoBitrate = default!;
         /// <summary>The videoCodec property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? VideoCodec { get; set; }
+        public string? VideoCodec { get => _explicitNullValueVideoCodec; set { _explicitNullValueVideoCodec = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("videoCodec"); else _explicitNullProperties?.Remove("videoCodec"); } }
+        private string? _explicitNullValueVideoCodec = default!;
 #nullable restore
 #else
-        public string VideoCodec { get; set; }
+        public string VideoCodec { get => _explicitNullValueVideoCodec; set { _explicitNullValueVideoCodec = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("videoCodec"); else _explicitNullProperties?.Remove("videoCodec"); } }
+        private string _explicitNullValueVideoCodec = default!;
 #endif
         /// <summary>The videoDynamicRange property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? VideoDynamicRange { get; set; }
+        public string? VideoDynamicRange { get => _explicitNullValueVideoDynamicRange; set { _explicitNullValueVideoDynamicRange = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("videoDynamicRange"); else _explicitNullProperties?.Remove("videoDynamicRange"); } }
+        private string? _explicitNullValueVideoDynamicRange = default!;
 #nullable restore
 #else
-        public string VideoDynamicRange { get; set; }
+        public string VideoDynamicRange { get => _explicitNullValueVideoDynamicRange; set { _explicitNullValueVideoDynamicRange = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("videoDynamicRange"); else _explicitNullProperties?.Remove("videoDynamicRange"); } }
+        private string _explicitNullValueVideoDynamicRange = default!;
 #endif
         /// <summary>The videoDynamicRangeType property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? VideoDynamicRangeType { get; set; }
+        public string? VideoDynamicRangeType { get => _explicitNullValueVideoDynamicRangeType; set { _explicitNullValueVideoDynamicRangeType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("videoDynamicRangeType"); else _explicitNullProperties?.Remove("videoDynamicRangeType"); } }
+        private string? _explicitNullValueVideoDynamicRangeType = default!;
 #nullable restore
 #else
-        public string VideoDynamicRangeType { get; set; }
+        public string VideoDynamicRangeType { get => _explicitNullValueVideoDynamicRangeType; set { _explicitNullValueVideoDynamicRangeType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("videoDynamicRangeType"); else _explicitNullProperties?.Remove("videoDynamicRangeType"); } }
+        private string _explicitNullValueVideoDynamicRangeType = default!;
 #endif
         /// <summary>The videoFps property</summary>
-        public double? VideoFps { get; set; }
+        public double? VideoFps { get => _explicitNullValueVideoFps; set { _explicitNullValueVideoFps = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("videoFps"); else _explicitNullProperties?.Remove("videoFps"); } }
+        private double? _explicitNullValueVideoFps = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -106,7 +154,7 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
         public static global::Soenneker.Sonarr.OpenApiClient.Models.MediaInfoResource CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Sonarr.OpenApiClient.Models.MediaInfoResource();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Sonarr.OpenApiClient.Models.MediaInfoResource(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -156,7 +204,8 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
             writer.WriteStringValue("videoCodec", VideoCodec);
             writer.WriteStringValue("videoDynamicRange", VideoDynamicRange);
             writer.WriteStringValue("videoDynamicRangeType", VideoDynamicRangeType);
-            writer.WriteDoubleValue("videoFps", VideoFps);
+            writer.WriteDoubleValue("videoFps", VideoFps);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }
