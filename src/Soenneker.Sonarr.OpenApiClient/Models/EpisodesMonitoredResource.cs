@@ -17,8 +17,10 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("episodeIds") is { } nullNodeEpisodeIds && nullNodeEpisodeIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EpisodeIds = null;
-            if (parseNode.GetChildNode("monitored") is { } nullNodeMonitored && nullNodeMonitored.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Monitored = null;
+            if (parseNode.GetChildNode("episodeIds") is null) { _explicitNullValueEpisodeIds = default!; _explicitNullProperties?.Remove("episodeIds"); }
+            else if (parseNode.GetChildNode("episodeIds") is { } nullNodeEpisodeIds && nullNodeEpisodeIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EpisodeIds = null;
+            if (parseNode.GetChildNode("monitored") is null) { _explicitNullValueMonitored = default!; _explicitNullProperties?.Remove("monitored"); }
+            else if (parseNode.GetChildNode("monitored") is { } nullNodeMonitored && nullNodeMonitored.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Monitored = null;
         }
 
         /// <summary>The episodeIds property</summary>

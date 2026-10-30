@@ -17,8 +17,10 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("monitoringOptions") is { } nullNodeMonitoringOptions && nullNodeMonitoringOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MonitoringOptions = null;
-            if (parseNode.GetChildNode("series") is { } nullNodeSeries && nullNodeSeries.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Series = null;
+            if (parseNode.GetChildNode("monitoringOptions") is null) { _explicitNullValueMonitoringOptions = default!; _explicitNullProperties?.Remove("monitoringOptions"); }
+            else if (parseNode.GetChildNode("monitoringOptions") is { } nullNodeMonitoringOptions && nullNodeMonitoringOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MonitoringOptions = null;
+            if (parseNode.GetChildNode("series") is null) { _explicitNullValueSeries = default!; _explicitNullProperties?.Remove("series"); }
+            else if (parseNode.GetChildNode("series") is { } nullNodeSeries && nullNodeSeries.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Series = null;
         }
 
         /// <summary>The monitoringOptions property</summary>

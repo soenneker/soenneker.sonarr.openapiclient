@@ -58,7 +58,7 @@ namespace Soenneker.Sonarr.OpenApiClient.Feed.V3.Calendar.SonarrIcs
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Sonarr.OpenApiClient.Feed.V3.Calendar.SonarrIcs.SonarrIcsRequestBuilder.SonarrIcsRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "http://localhost:8989", "/feed/v3/calendar/sonarr.ics", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             return requestInfo;
         }

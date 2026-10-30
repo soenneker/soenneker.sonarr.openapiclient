@@ -58,7 +58,7 @@ namespace Soenneker.Sonarr.OpenApiClient.Api.V3.Delayprofile.Reorder.Item
         public RequestInformation ToPutRequestInformation(Action<RequestConfiguration<global::Soenneker.Sonarr.OpenApiClient.Api.V3.Delayprofile.Reorder.Item.ReorderItemRequestBuilder.ReorderItemRequestBuilderPutQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.PUT, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.PUT, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "http://localhost:8989", "/api/v3/delayprofile/reorder/{id}", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "text/plain;q=0.9");
             return requestInfo;
