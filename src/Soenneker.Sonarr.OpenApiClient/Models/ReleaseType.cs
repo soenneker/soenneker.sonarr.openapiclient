@@ -24,5 +24,9 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
         #pragma warning disable CS1591
         SeasonPack,
         #pragma warning restore CS1591
+        [EnumMember(Value = "multiSeasonPack")]
+        #pragma warning disable CS1591
+        MultiSeasonPack,
+        #pragma warning restore CS1591
     }
 }

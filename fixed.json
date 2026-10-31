@@ -10060,6 +10060,7 @@
           "plex",
           "trakt",
           "simkl",
+          "tmdb",
           "other",
           "advanced"
         ],
@@ -10083,6 +10084,10 @@
             {
               "value": "simkl",
               "name": "Simkl"
+            },
+            {
+              "value": "tmdb",
+              "name": "Tmdb"
             },
             {
               "value": "other",
@@ -12528,7 +12533,8 @@
           "unknown",
           "singleEpisode",
           "multiEpisode",
-          "seasonPack"
+          "seasonPack",
+          "multiSeasonPack"
         ],
         "type": "string",
         "x-ms-enum": {
@@ -12550,6 +12556,10 @@
             {
               "value": "seasonPack",
               "name": "SeasonPack"
+            },
+            {
+              "value": "multiSeasonPack",
+              "name": "MultiSeasonPack"
             }
           ]
         }

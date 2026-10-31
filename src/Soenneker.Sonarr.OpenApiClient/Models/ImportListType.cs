@@ -24,6 +24,10 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
         #pragma warning disable CS1591
         Simkl,
         #pragma warning restore CS1591
+        [EnumMember(Value = "tmdb")]
+        #pragma warning disable CS1591
+        Tmdb,
+        #pragma warning restore CS1591
         [EnumMember(Value = "other")]
         #pragma warning disable CS1591
         Other,
