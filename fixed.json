@@ -221,12 +221,14 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/AutoTaggingResource"
                 }
-              },
-              "application/json": {
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/AutoTaggingResource"
                 }
@@ -288,12 +290,14 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/AutoTaggingResource"
                 }
-              },
-              "application/json": {
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/AutoTaggingResource"
                 }
@@ -385,30 +389,20 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/GetApiV3SystemBackup200PlainResponseSchema"
-                }
-              },
               "application/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/GetApiV3SystemBackup200ResponseSchema2"
+                }
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetApiV3SystemBackup200PlainResponseSchema"
                 }
               },
               "text/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/GetApiV3SystemBackup200ResponseSchema3"
                 }
               }
@@ -926,12 +920,14 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/CustomFilterResource"
                 }
-              },
-              "application/json": {
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/CustomFilterResource"
                 }
@@ -975,12 +971,14 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/CustomFilterResource"
                 }
-              },
-              "application/json": {
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/CustomFilterResource"
                 }
@@ -1086,12 +1084,14 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/CustomFormatResource"
                 }
-              },
-              "application/json": {
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/CustomFormatResource"
                 }
@@ -1135,12 +1135,14 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/CustomFormatResource"
                 }
-              },
-              "application/json": {
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/CustomFormatResource"
                 }
@@ -1417,12 +1419,14 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/DelayProfileResource"
                 }
-              },
-              "application/json": {
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/DelayProfileResource"
                 }
@@ -1506,12 +1510,14 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/DelayProfileResource"
                 }
-              },
-              "application/json": {
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/DelayProfileResource"
                 }
@@ -1587,30 +1593,20 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/PutApiV3DelayprofileReorderById200PlainResponseSchema"
-                }
-              },
               "application/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/PutApiV3DelayprofileReorderById200ResponseSchema2"
+                }
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/PutApiV3DelayprofileReorderById200PlainResponseSchema"
                 }
               },
               "text/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/PutApiV3DelayprofileReorderById200ResponseSchema3"
                 }
               }
@@ -1993,12 +1989,14 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/DownloadClientConfigResource"
                 }
-              },
-              "application/json": {
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/DownloadClientConfigResource"
                 }
@@ -2156,12 +2154,14 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/EpisodeResource"
                 }
-              },
-              "application/json": {
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/EpisodeResource"
                 }
@@ -2310,12 +2310,14 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/EpisodeFileResource"
                 }
-              },
-              "application/json": {
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/EpisodeFileResource"
                 }
@@ -2826,12 +2828,14 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/HostConfigResource"
                 }
-              },
-              "application/json": {
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/HostConfigResource"
                 }
@@ -2885,12 +2889,14 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/HostConfigResource"
                 }
-              },
-              "application/json": {
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/HostConfigResource"
                 }
@@ -3291,12 +3297,14 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ImportListConfigResource"
                 }
-              },
-              "application/json": {
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/ImportListConfigResource"
                 }
@@ -3381,12 +3389,14 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ImportListExclusionResource"
                 }
-              },
-              "application/json": {
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/ImportListExclusionResource"
                 }
@@ -3484,12 +3494,14 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ImportListExclusionResource"
                 }
-              },
-              "application/json": {
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/ImportListExclusionResource"
                 }
@@ -3944,12 +3956,14 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/IndexerConfigResource"
                 }
-              },
-              "application/json": {
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/IndexerConfigResource"
                 }
@@ -4006,30 +4020,20 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/GetApiV3Indexerflag200PlainResponseSchema"
-                }
-              },
               "application/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/GetApiV3Indexerflag200ResponseSchema2"
+                }
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetApiV3Indexerflag200PlainResponseSchema"
                 }
               },
               "text/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/GetApiV3Indexerflag200ResponseSchema3"
                 }
               }
@@ -4048,30 +4052,20 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/GetApiV3Language200PlainResponseSchema"
-                }
-              },
               "application/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/GetApiV3Language200ResponseSchema2"
+                }
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetApiV3Language200PlainResponseSchema"
                 }
               },
               "text/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/GetApiV3Language200ResponseSchema3"
                 }
               }
@@ -4620,12 +4614,14 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/MediaManagementConfigResource"
                 }
-              },
-              "application/json": {
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/MediaManagementConfigResource"
                 }
@@ -5050,12 +5046,14 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/NamingConfigResource"
                 }
-              },
-              "application/json": {
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/NamingConfigResource"
                 }
@@ -5109,12 +5107,14 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/NamingConfigResource"
                 }
-              },
-              "application/json": {
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/NamingConfigResource"
                 }
@@ -5659,12 +5659,14 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/QualityDefinitionResource"
                 }
-              },
-              "application/json": {
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/QualityDefinitionResource"
                 }
@@ -5721,30 +5723,20 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/GetApiV3Qualitydefinition200PlainResponseSchema"
-                }
-              },
               "application/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/GetApiV3Qualitydefinition200ResponseSchema2"
+                }
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetApiV3Qualitydefinition200PlainResponseSchema"
                 }
               },
               "text/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/GetApiV3Qualitydefinition200ResponseSchema3"
                 }
               }
@@ -5795,12 +5787,14 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/QualityDefinitionLimitsResource"
                 }
-              },
-              "application/json": {
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/QualityDefinitionLimitsResource"
                 }
@@ -5834,12 +5828,14 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/QualityProfileResource"
                 }
-              },
-              "application/json": {
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/QualityProfileResource"
                 }
@@ -5923,12 +5919,14 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/QualityProfileResource"
                 }
-              },
-              "application/json": {
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/QualityProfileResource"
                 }
@@ -5985,12 +5983,14 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/QualityProfileResource"
                 }
-              },
-              "application/json": {
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/QualityProfileResource"
                 }
@@ -6473,12 +6473,14 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ReleaseProfileResource"
                 }
-              },
-              "application/json": {
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/ReleaseProfileResource"
                 }
@@ -6501,30 +6503,20 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/GetApiV3Releaseprofile200PlainResponseSchema"
-                }
-              },
               "application/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/GetApiV3Releaseprofile200ResponseSchema2"
+                }
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetApiV3Releaseprofile200PlainResponseSchema"
                 }
               },
               "text/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/GetApiV3Releaseprofile200ResponseSchema3"
                 }
               }
@@ -6594,12 +6586,14 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ReleaseProfileResource"
                 }
-              },
-              "application/json": {
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/ReleaseProfileResource"
                 }
@@ -6665,30 +6659,20 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/PostApiV3ReleasePush200PlainResponseSchema"
-                }
-              },
               "application/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/PostApiV3ReleasePush200ResponseSchema2"
+                }
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/PostApiV3ReleasePush200PlainResponseSchema"
                 }
               },
               "text/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/PostApiV3ReleasePush200ResponseSchema3"
                 }
               }
@@ -6716,12 +6700,14 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/RemotePathMappingResource"
                 }
-              },
-              "application/json": {
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/RemotePathMappingResource"
                 }
@@ -6815,12 +6801,14 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/RemotePathMappingResource"
                 }
-              },
-              "application/json": {
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/RemotePathMappingResource"
                 }
@@ -6957,12 +6945,14 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/RootFolderResource"
                 }
-              },
-              "application/json": {
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/RootFolderResource"
                 }
@@ -7405,30 +7395,20 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/GetApiV3SeriesLookup200PlainResponseSchema"
-                }
-              },
               "application/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/GetApiV3SeriesLookup200ResponseSchema2"
+                }
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetApiV3SeriesLookup200PlainResponseSchema"
                 }
               },
               "text/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/GetApiV3SeriesLookup200ResponseSchema3"
                 }
               }
@@ -7620,12 +7600,14 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/TagResource"
                 }
-              },
-              "application/json": {
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/TagResource"
                 }
@@ -7669,12 +7651,14 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/TagResource"
                 }
-              },
-              "application/json": {
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/TagResource"
                 }
@@ -7807,30 +7791,20 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/GetApiV3SystemTask200PlainResponseSchema"
-                }
-              },
               "application/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/GetApiV3SystemTask200ResponseSchema2"
+                }
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetApiV3SystemTask200PlainResponseSchema"
                 }
               },
               "text/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/GetApiV3SystemTask200ResponseSchema3"
                 }
               }
@@ -7902,12 +7876,14 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/UiConfigResource"
                 }
-              },
-              "application/json": {
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/UiConfigResource"
                 }
