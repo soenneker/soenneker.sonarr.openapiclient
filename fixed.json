@@ -8555,8 +8555,8 @@
           },
           "duration": {
             "type": "string",
-            "format": "date-span",
-            "nullable": true
+            "nullable": true,
+            "x-client-original-format": "date-span"
           },
           "exception": {
             "type": "string",
@@ -10046,7 +10046,7 @@
           },
           "minRefreshInterval": {
             "type": "string",
-            "format": "date-span"
+            "x-client-original-format": "date-span"
           },
           "tagExisting": {
             "$ref": "#/components/schemas/TagExistingType"
@@ -11998,9 +11998,9 @@
           },
           "timeleft": {
             "type": "string",
-            "format": "date-span",
             "nullable": true,
-            "deprecated": true
+            "deprecated": true,
+            "x-client-original-format": "date-span"
           }
         },
         "additionalProperties": false
@@ -13667,8 +13667,8 @@
           },
           "lastDuration": {
             "type": "string",
-            "format": "date-span",
-            "readOnly": true
+            "readOnly": true,
+            "x-client-original-format": "date-span"
           }
         },
         "additionalProperties": false
@@ -13940,62 +13940,6 @@
         },
         "additionalProperties": false
       },
-      "PutApiV3QualitydefinitionUpdateJsonRequest": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/QualityDefinitionResource"
-        }
-      },
-      "PutApiV3QualitydefinitionUpdateJsonRequestRequestBody": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/QualityDefinitionResource"
-        }
-      },
-      "PutApiV3QualitydefinitionUpdateMediaRequest": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/QualityDefinitionResource"
-        }
-      },
-      "PostApiV3SeriesImportJsonRequest": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/SeriesResource"
-        }
-      },
-      "PostApiV3SeriesImportJsonRequestRequestBody": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/SeriesResource"
-        }
-      },
-      "PostApiV3SeriesImportMediaRequest": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/SeriesResource"
-        }
-      },
-      "CustomFilterResourceFiltersItem": {
-        "type": "object",
-        "additionalProperties": {}
-      },
-      "HistoryResourceData": {
-        "type": "object",
-        "additionalProperties": {
-          "type": "string",
-          "nullable": true
-        },
-        "nullable": true
-      },
-      "LocalizationResourceStrings": {
-        "type": "object",
-        "additionalProperties": {
-          "type": "string",
-          "nullable": true
-        },
-        "nullable": true
-      },
       "PostLoginFormDataRequest": {
         "type": "object",
         "properties": {
@@ -14027,437 +13971,13 @@
           }
         }
       },
-      "GetApiV3Autotagging200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/AutoTaggingResource"
-        }
-      },
-      "GetApiV3SystemBackup200PlainResponse": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/BackupResource"
-        }
-      },
-      "GetApiV3SystemBackup200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/BackupResource"
-        }
-      },
-      "GetApiV3SystemBackup200ResponseSchema": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/BackupResource"
-        }
-      },
-      "GetApiV3Calendar200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/EpisodeResource"
-        }
-      },
-      "GetApiV3Command200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/CommandResource"
-        }
-      },
-      "GetApiV3Customfilter200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/CustomFilterResource"
-        }
-      },
-      "GetApiV3Customformat200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/CustomFormatResource"
-        }
-      },
-      "GetApiV3CustomformatSchema200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/CustomFormatSpecificationSchema"
-        }
-      },
-      "GetApiV3Delayprofile200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/DelayProfileResource"
-        }
-      },
-      "PutApiV3DelayprofileReorderById200PlainResponse": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/DelayProfileResource"
-        }
-      },
-      "PutApiV3DelayprofileReorderById200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/DelayProfileResource"
-        }
-      },
-      "PutApiV3DelayprofileReorderById200ResponseSchema": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/DelayProfileResource"
-        }
-      },
-      "GetApiV3Diskspace200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/DiskSpaceResource"
-        }
-      },
-      "GetApiV3Downloadclient200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/DownloadClientResource"
-        }
-      },
-      "GetApiV3DownloadclientSchema200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/DownloadClientResource"
-        }
-      },
-      "GetApiV3Episode200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/EpisodeResource"
-        }
-      },
-      "GetApiV3Episodefile200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/EpisodeFileResource"
-        }
-      },
-      "PutApiV3EpisodefileBulkRequest": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/EpisodeFileResource"
-        }
-      },
-      "GetApiV3Health200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/HealthResource"
-        }
-      },
-      "GetApiV3HistorySince200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/HistoryResource"
-        }
-      },
-      "GetApiV3HistorySeries200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/HistoryResource"
-        }
-      },
-      "GetApiV3Importlist200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ImportListResource"
-        }
-      },
-      "GetApiV3ImportlistSchema200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ImportListResource"
-        }
-      },
-      "GetApiV3Importlistexclusion200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ImportListExclusionResource"
-        }
-      },
-      "GetApiV3Indexer200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/IndexerResource"
-        }
-      },
-      "GetApiV3IndexerSchema200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/IndexerResource"
-        }
-      },
-      "GetApiV3Indexerflag200PlainResponse": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/IndexerFlagResource"
-        }
-      },
-      "GetApiV3Indexerflag200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/IndexerFlagResource"
-        }
-      },
-      "GetApiV3Indexerflag200ResponseSchema": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/IndexerFlagResource"
-        }
-      },
-      "GetApiV3Language200PlainResponse": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/LanguageResource"
-        }
-      },
-      "GetApiV3Language200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/LanguageResource"
-        }
-      },
-      "GetApiV3Language200ResponseSchema": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/LanguageResource"
-        }
-      },
-      "GetApiV3Languageprofile200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/LanguageProfileResource"
-        }
-      },
-      "GetApiV3LogFile200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/LogFileResource"
-        }
-      },
-      "GetApiV3Manualimport200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ManualImportResource"
-        }
-      },
-      "PostApiV3ManualimportRequest": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ManualImportReprocessResource"
-        }
-      },
-      "GetApiV3Metadata200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/MetadataResource"
-        }
-      },
-      "GetApiV3MetadataSchema200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/MetadataResource"
-        }
-      },
-      "GetApiV3Notification200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/NotificationResource"
-        }
-      },
-      "GetApiV3NotificationSchema200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/NotificationResource"
-        }
-      },
-      "GetApiV3Qualitydefinition200PlainResponse": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/QualityDefinitionResource"
-        }
-      },
-      "GetApiV3Qualitydefinition200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/QualityDefinitionResource"
-        }
-      },
-      "GetApiV3Qualitydefinition200ResponseSchema": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/QualityDefinitionResource"
-        }
-      },
-      "GetApiV3Qualityprofile200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/QualityProfileResource"
-        }
-      },
-      "GetApiV3QueueDetails200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/QueueResource"
-        }
-      },
-      "GetApiV3Release200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ReleaseResource"
-        }
-      },
-      "GetApiV3Releaseprofile200PlainResponse": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ReleaseProfileResource"
-        }
-      },
-      "GetApiV3Releaseprofile200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ReleaseProfileResource"
-        }
-      },
-      "GetApiV3Releaseprofile200ResponseSchema": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ReleaseProfileResource"
-        }
-      },
-      "PostApiV3ReleasePush200PlainResponse": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ReleaseResource"
-        }
-      },
-      "PostApiV3ReleasePush200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ReleaseResource"
-        }
-      },
-      "PostApiV3ReleasePush200ResponseSchema": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ReleaseResource"
-        }
-      },
-      "GetApiV3Remotepathmapping200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/RemotePathMappingResource"
-        }
-      },
-      "GetApiV3Rename200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/RenameEpisodeResource"
-        }
-      },
-      "GetApiV3RenameBulk200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/RenameEpisodeResource"
-        }
-      },
-      "GetApiV3Rootfolder200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/RootFolderResource"
-        }
-      },
-      "GetApiV3Series200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/SeriesResource"
-        }
-      },
-      "GetApiV3SeriesLookup200PlainResponse": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/SeriesResource"
-        }
-      },
-      "GetApiV3SeriesLookup200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/SeriesResource"
-        }
-      },
-      "GetApiV3SeriesLookup200ResponseSchema": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/SeriesResource"
-        }
-      },
-      "GetApiV3Tag200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/TagResource"
-        }
-      },
-      "GetApiV3TagDetail200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/TagDetailsResource"
-        }
-      },
-      "GetApiV3SystemTask200PlainResponse": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/TaskResource"
-        }
-      },
-      "GetApiV3SystemTask200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/TaskResource"
-        }
-      },
-      "GetApiV3SystemTask200ResponseSchema": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/TaskResource"
-        }
-      },
-      "GetApiV3Update200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/UpdateResource"
-        }
-      },
-      "GetApiV3LogFileUpdate200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/LogFileResource"
-        }
-      },
-      "ExamplePayload": {
-        "type": "object",
-        "description": "Placeholder schema for path example refs"
-      },
       "GetApiV3Autotagging200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/AutoTaggingResource"
         }
       },
-      "GetApiV3SystemBackup200PlainResponseSchema": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/BackupResource"
-        }
-      },
       "GetApiV3SystemBackup200ResponseSchema2": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/BackupResource"
-        }
-      },
-      "GetApiV3SystemBackup200ResponseSchema3": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/BackupResource"
@@ -14499,19 +14019,7 @@
           "$ref": "#/components/schemas/DelayProfileResource"
         }
       },
-      "PutApiV3DelayprofileReorderById200PlainResponseSchema": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/DelayProfileResource"
-        }
-      },
       "PutApiV3DelayprofileReorderById200ResponseSchema2": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/DelayProfileResource"
-        }
-      },
-      "PutApiV3DelayprofileReorderById200ResponseSchema3": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/DelayProfileResource"
@@ -14601,37 +14109,13 @@
           "$ref": "#/components/schemas/IndexerResource"
         }
       },
-      "GetApiV3Indexerflag200PlainResponseSchema": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/IndexerFlagResource"
-        }
-      },
       "GetApiV3Indexerflag200ResponseSchema2": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/IndexerFlagResource"
         }
       },
-      "GetApiV3Indexerflag200ResponseSchema3": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/IndexerFlagResource"
-        }
-      },
-      "GetApiV3Language200PlainResponseSchema": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/LanguageResource"
-        }
-      },
       "GetApiV3Language200ResponseSchema2": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/LanguageResource"
-        }
-      },
-      "GetApiV3Language200ResponseSchema3": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/LanguageResource"
@@ -14685,19 +14169,7 @@
           "$ref": "#/components/schemas/NotificationResource"
         }
       },
-      "GetApiV3Qualitydefinition200PlainResponseSchema": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/QualityDefinitionResource"
-        }
-      },
       "GetApiV3Qualitydefinition200ResponseSchema2": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/QualityDefinitionResource"
-        }
-      },
-      "GetApiV3Qualitydefinition200ResponseSchema3": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/QualityDefinitionResource"
@@ -14739,37 +14211,13 @@
           "$ref": "#/components/schemas/ReleaseResource"
         }
       },
-      "GetApiV3Releaseprofile200PlainResponseSchema": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ReleaseProfileResource"
-        }
-      },
       "GetApiV3Releaseprofile200ResponseSchema2": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/ReleaseProfileResource"
         }
       },
-      "GetApiV3Releaseprofile200ResponseSchema3": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ReleaseProfileResource"
-        }
-      },
-      "PostApiV3ReleasePush200PlainResponseSchema": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ReleaseResource"
-        }
-      },
       "PostApiV3ReleasePush200ResponseSchema2": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ReleaseResource"
-        }
-      },
-      "PostApiV3ReleasePush200ResponseSchema3": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/ReleaseResource"
@@ -14823,19 +14271,7 @@
           "$ref": "#/components/schemas/SeriesResource"
         }
       },
-      "GetApiV3SeriesLookup200PlainResponseSchema": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/SeriesResource"
-        }
-      },
       "GetApiV3SeriesLookup200ResponseSchema2": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/SeriesResource"
-        }
-      },
-      "GetApiV3SeriesLookup200ResponseSchema3": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/SeriesResource"
@@ -14853,19 +14289,7 @@
           "$ref": "#/components/schemas/TagDetailsResource"
         }
       },
-      "GetApiV3SystemTask200PlainResponseSchema": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/TaskResource"
-        }
-      },
       "GetApiV3SystemTask200ResponseSchema2": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/TaskResource"
-        }
-      },
-      "GetApiV3SystemTask200ResponseSchema3": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/TaskResource"
@@ -15135,5 +14559,583 @@
     {
       "name": "UpdateLogFile"
     }
-  ]
+  ],
+  "x-client-unused-schemas": {
+    "PutApiV3QualitydefinitionUpdateJsonRequest": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/QualityDefinitionResource"
+      }
+    },
+    "PutApiV3QualitydefinitionUpdateJsonRequestRequestBody": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/QualityDefinitionResource"
+      }
+    },
+    "PutApiV3QualitydefinitionUpdateMediaRequest": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/QualityDefinitionResource"
+      }
+    },
+    "PostApiV3SeriesImportJsonRequest": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/SeriesResource"
+      }
+    },
+    "PostApiV3SeriesImportJsonRequestRequestBody": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/SeriesResource"
+      }
+    },
+    "PostApiV3SeriesImportMediaRequest": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/SeriesResource"
+      }
+    },
+    "CustomFilterResourceFiltersItem": {
+      "type": "object",
+      "additionalProperties": {}
+    },
+    "HistoryResourceData": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string",
+        "nullable": true
+      },
+      "nullable": true
+    },
+    "LocalizationResourceStrings": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string",
+        "nullable": true
+      },
+      "nullable": true
+    },
+    "GetApiV3Autotagging200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/AutoTaggingResource"
+      }
+    },
+    "GetApiV3SystemBackup200PlainResponse": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/BackupResource"
+      }
+    },
+    "GetApiV3SystemBackup200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/BackupResource"
+      }
+    },
+    "GetApiV3SystemBackup200ResponseSchema": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/BackupResource"
+      }
+    },
+    "GetApiV3Calendar200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/EpisodeResource"
+      }
+    },
+    "GetApiV3Command200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/CommandResource"
+      }
+    },
+    "GetApiV3Customfilter200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/CustomFilterResource"
+      }
+    },
+    "GetApiV3Customformat200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/CustomFormatResource"
+      }
+    },
+    "GetApiV3CustomformatSchema200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/CustomFormatSpecificationSchema"
+      }
+    },
+    "GetApiV3Delayprofile200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/DelayProfileResource"
+      }
+    },
+    "PutApiV3DelayprofileReorderById200PlainResponse": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/DelayProfileResource"
+      }
+    },
+    "PutApiV3DelayprofileReorderById200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/DelayProfileResource"
+      }
+    },
+    "PutApiV3DelayprofileReorderById200ResponseSchema": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/DelayProfileResource"
+      }
+    },
+    "GetApiV3Diskspace200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/DiskSpaceResource"
+      }
+    },
+    "GetApiV3Downloadclient200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/DownloadClientResource"
+      }
+    },
+    "GetApiV3DownloadclientSchema200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/DownloadClientResource"
+      }
+    },
+    "GetApiV3Episode200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/EpisodeResource"
+      }
+    },
+    "GetApiV3Episodefile200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/EpisodeFileResource"
+      }
+    },
+    "PutApiV3EpisodefileBulkRequest": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/EpisodeFileResource"
+      }
+    },
+    "GetApiV3Health200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/HealthResource"
+      }
+    },
+    "GetApiV3HistorySince200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/HistoryResource"
+      }
+    },
+    "GetApiV3HistorySeries200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/HistoryResource"
+      }
+    },
+    "GetApiV3Importlist200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ImportListResource"
+      }
+    },
+    "GetApiV3ImportlistSchema200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ImportListResource"
+      }
+    },
+    "GetApiV3Importlistexclusion200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ImportListExclusionResource"
+      }
+    },
+    "GetApiV3Indexer200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/IndexerResource"
+      }
+    },
+    "GetApiV3IndexerSchema200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/IndexerResource"
+      }
+    },
+    "GetApiV3Indexerflag200PlainResponse": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/IndexerFlagResource"
+      }
+    },
+    "GetApiV3Indexerflag200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/IndexerFlagResource"
+      }
+    },
+    "GetApiV3Indexerflag200ResponseSchema": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/IndexerFlagResource"
+      }
+    },
+    "GetApiV3Language200PlainResponse": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/LanguageResource"
+      }
+    },
+    "GetApiV3Language200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/LanguageResource"
+      }
+    },
+    "GetApiV3Language200ResponseSchema": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/LanguageResource"
+      }
+    },
+    "GetApiV3Languageprofile200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/LanguageProfileResource"
+      }
+    },
+    "GetApiV3LogFile200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/LogFileResource"
+      }
+    },
+    "GetApiV3Manualimport200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ManualImportResource"
+      }
+    },
+    "PostApiV3ManualimportRequest": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ManualImportReprocessResource"
+      }
+    },
+    "GetApiV3Metadata200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/MetadataResource"
+      }
+    },
+    "GetApiV3MetadataSchema200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/MetadataResource"
+      }
+    },
+    "GetApiV3Notification200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/NotificationResource"
+      }
+    },
+    "GetApiV3NotificationSchema200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/NotificationResource"
+      }
+    },
+    "GetApiV3Qualitydefinition200PlainResponse": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/QualityDefinitionResource"
+      }
+    },
+    "GetApiV3Qualitydefinition200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/QualityDefinitionResource"
+      }
+    },
+    "GetApiV3Qualitydefinition200ResponseSchema": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/QualityDefinitionResource"
+      }
+    },
+    "GetApiV3Qualityprofile200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/QualityProfileResource"
+      }
+    },
+    "GetApiV3QueueDetails200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/QueueResource"
+      }
+    },
+    "GetApiV3Release200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ReleaseResource"
+      }
+    },
+    "GetApiV3Releaseprofile200PlainResponse": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ReleaseProfileResource"
+      }
+    },
+    "GetApiV3Releaseprofile200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ReleaseProfileResource"
+      }
+    },
+    "GetApiV3Releaseprofile200ResponseSchema": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ReleaseProfileResource"
+      }
+    },
+    "PostApiV3ReleasePush200PlainResponse": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ReleaseResource"
+      }
+    },
+    "PostApiV3ReleasePush200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ReleaseResource"
+      }
+    },
+    "PostApiV3ReleasePush200ResponseSchema": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ReleaseResource"
+      }
+    },
+    "GetApiV3Remotepathmapping200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/RemotePathMappingResource"
+      }
+    },
+    "GetApiV3Rename200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/RenameEpisodeResource"
+      }
+    },
+    "GetApiV3RenameBulk200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/RenameEpisodeResource"
+      }
+    },
+    "GetApiV3Rootfolder200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/RootFolderResource"
+      }
+    },
+    "GetApiV3Series200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/SeriesResource"
+      }
+    },
+    "GetApiV3SeriesLookup200PlainResponse": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/SeriesResource"
+      }
+    },
+    "GetApiV3SeriesLookup200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/SeriesResource"
+      }
+    },
+    "GetApiV3SeriesLookup200ResponseSchema": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/SeriesResource"
+      }
+    },
+    "GetApiV3Tag200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/TagResource"
+      }
+    },
+    "GetApiV3TagDetail200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/TagDetailsResource"
+      }
+    },
+    "GetApiV3SystemTask200PlainResponse": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/TaskResource"
+      }
+    },
+    "GetApiV3SystemTask200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/TaskResource"
+      }
+    },
+    "GetApiV3SystemTask200ResponseSchema": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/TaskResource"
+      }
+    },
+    "GetApiV3Update200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/UpdateResource"
+      }
+    },
+    "GetApiV3LogFileUpdate200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/LogFileResource"
+      }
+    },
+    "ExamplePayload": {
+      "type": "object",
+      "description": "Placeholder schema for path example refs"
+    },
+    "GetApiV3SystemBackup200PlainResponseSchema": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/BackupResource"
+      }
+    },
+    "GetApiV3SystemBackup200ResponseSchema3": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/BackupResource"
+      }
+    },
+    "PutApiV3DelayprofileReorderById200PlainResponseSchema": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/DelayProfileResource"
+      }
+    },
+    "PutApiV3DelayprofileReorderById200ResponseSchema3": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/DelayProfileResource"
+      }
+    },
+    "GetApiV3Indexerflag200PlainResponseSchema": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/IndexerFlagResource"
+      }
+    },
+    "GetApiV3Indexerflag200ResponseSchema3": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/IndexerFlagResource"
+      }
+    },
+    "GetApiV3Language200PlainResponseSchema": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/LanguageResource"
+      }
+    },
+    "GetApiV3Language200ResponseSchema3": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/LanguageResource"
+      }
+    },
+    "GetApiV3Qualitydefinition200PlainResponseSchema": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/QualityDefinitionResource"
+      }
+    },
+    "GetApiV3Qualitydefinition200ResponseSchema3": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/QualityDefinitionResource"
+      }
+    },
+    "GetApiV3Releaseprofile200PlainResponseSchema": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ReleaseProfileResource"
+      }
+    },
+    "GetApiV3Releaseprofile200ResponseSchema3": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ReleaseProfileResource"
+      }
+    },
+    "PostApiV3ReleasePush200PlainResponseSchema": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ReleaseResource"
+      }
+    },
+    "PostApiV3ReleasePush200ResponseSchema3": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ReleaseResource"
+      }
+    },
+    "GetApiV3SeriesLookup200PlainResponseSchema": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/SeriesResource"
+      }
+    },
+    "GetApiV3SeriesLookup200ResponseSchema3": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/SeriesResource"
+      }
+    },
+    "GetApiV3SystemTask200PlainResponseSchema": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/TaskResource"
+      }
+    },
+    "GetApiV3SystemTask200ResponseSchema3": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/TaskResource"
+      }
+    }
+  }
 }
