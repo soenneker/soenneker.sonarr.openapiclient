@@ -137,7 +137,7 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(12)
             {
                 { "branch", n => { Branch = n.GetStringValue(); } },
                 { "changes", n => { Changes = n.GetObjectValue<global::Soenneker.Sonarr.OpenApiClient.Models.UpdateChanges>(global::Soenneker.Sonarr.OpenApiClient.Models.UpdateChanges.CreateFromDiscriminatorValue); } },

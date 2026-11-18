@@ -512,7 +512,7 @@ namespace Soenneker.Sonarr.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(53)
             {
                 { "addOptions", n => { AddOptions = n.GetObjectValue<global::Soenneker.Sonarr.OpenApiClient.Models.AddSeriesOptions>(global::Soenneker.Sonarr.OpenApiClient.Models.AddSeriesOptions.CreateFromDiscriminatorValue); } },
                 { "added", n => { Added = n.GetDateTimeOffsetValue(); } },
